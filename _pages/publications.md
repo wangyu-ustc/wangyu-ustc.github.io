@@ -24,7 +24,7 @@ Huaxiu Yao$^*$, Yu Wang$^*$, Sai Li, Weixin Liang, Linjun Zhang, James Zou, Chel
 Submitted to ICLR 2022.
 
 [Probabilistic and Variational Recommendation Denoising.](https://arxiv.org/abs/2105.09605)  
-Yu Wang, Xin Xin, Zaiqiao Meng, Xiangnan He, Joemon Jose, Fuli Feng.  
+$\color{#0ff}{\textrm{Yu Wang}}$, Xin Xin, Zaiqiao Meng, Xiangnan He, Joemon Jose, Fuli Feng.  
 Submitted to WWW2022.
 
 Invariant Causal Discovery.  
@@ -36,7 +36,7 @@ Xin Xin$^*$, Yu Wang$^*$, Zaiqiao Meng, Xiangnan He, Joemon Jose, Fuli Feng.
 Under Submission.
 
 AutoOD: Automatic Outlier Detection.  
-Lei Cao, Yizhou Yan, Yu Wang, Samuel Madden, Elke A. Rundensteiner.
+Lei Cao, Yizhou Yan, Yu Wang, Samuel Madden, Elke A. Rundensteiner.  
 Under Submission.
 
 
