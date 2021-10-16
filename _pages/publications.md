@@ -16,11 +16,11 @@ author_profile: true
 {% endfor %} -->
 
 [Meta-learning with an Adaptive Task Scheduler.](http://yuwang.site)  
-Huaxiu Yao<sup>*</sup>, **Yu Wang**$^*$, Peilin Zhao, Mehrdad Mahdavi, Defu Lian, Ying Wei, Chelsea Finn.  
+Huaxiu Yao<sup>*</sup>, **Yu Wang**<sup>*</sup>, Peilin Zhao, Mehrdad Mahdavi, Defu Lian, Ying Wei, Chelsea Finn.  
 Published as a poster paper in NeurIPS 2021.
 
 [Improving Out-of-Distribution Robustness via Selective Augmentation.](https://openreview.net/forum?id=zXne1klXIQ)  
-Huaxiu Yao$^*$, **Yu Wang**$^*$, Sai Li, Weixin Liang, Linjun Zhang, James Zou, Chelsea Finn.  
+Huaxiu Yao<sup>*</sup>, **Yu Wang**<sup>*</sup>, Sai Li, Weixin Liang, Linjun Zhang, James Zou, Chelsea Finn.  
 Submitted to ICLR 2022.
 
 [Probabilistic and Variational Recommendation Denoising.](https://arxiv.org/abs/2105.09605)  
