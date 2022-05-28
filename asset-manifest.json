@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/homepage/static/css/main.48141ecb.css",
-    "main.js": "/homepage/static/js/main.82b6cd0c.js",
-    "static/js/787.5c39024c.chunk.js": "/homepage/static/js/787.5c39024c.chunk.js",
-    "static/media/about4.jpg": "/homepage/static/media/about4.89ac2002411ba8f8a7f5.jpg",
-    "index.html": "/homepage/index.html",
-    "main.48141ecb.css.map": "/homepage/static/css/main.48141ecb.css.map",
-    "main.82b6cd0c.js.map": "/homepage/static/js/main.82b6cd0c.js.map",
-    "787.5c39024c.chunk.js.map": "/homepage/static/js/787.5c39024c.chunk.js.map"
+    "main.css": "/wangyu-ustc.github.io/static/css/main.48141ecb.css",
+    "main.js": "/wangyu-ustc.github.io/static/js/main.c958081f.js",
+    "static/js/787.5c39024c.chunk.js": "/wangyu-ustc.github.io/static/js/787.5c39024c.chunk.js",
+    "static/media/about4.jpg": "/wangyu-ustc.github.io/static/media/about4.89ac2002411ba8f8a7f5.jpg",
+    "index.html": "/wangyu-ustc.github.io/index.html",
+    "main.48141ecb.css.map": "/wangyu-ustc.github.io/static/css/main.48141ecb.css.map",
+    "main.c958081f.js.map": "/wangyu-ustc.github.io/static/js/main.c958081f.js.map",
+    "787.5c39024c.chunk.js.map": "/wangyu-ustc.github.io/static/js/787.5c39024c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.48141ecb.css",
-    "static/js/main.82b6cd0c.js"
+    "static/js/main.c958081f.js"
   ]
 }
