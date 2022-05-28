@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/wangyu-ustc.github.io/static/css/main.48141ecb.css",
-    "main.js": "/wangyu-ustc.github.io/static/js/main.c958081f.js",
+    "main.js": "/wangyu-ustc.github.io/static/js/main.99075d9a.js",
     "static/js/787.5c39024c.chunk.js": "/wangyu-ustc.github.io/static/js/787.5c39024c.chunk.js",
     "static/media/about4.jpg": "/wangyu-ustc.github.io/static/media/about4.89ac2002411ba8f8a7f5.jpg",
     "index.html": "/wangyu-ustc.github.io/index.html",
     "main.48141ecb.css.map": "/wangyu-ustc.github.io/static/css/main.48141ecb.css.map",
-    "main.c958081f.js.map": "/wangyu-ustc.github.io/static/js/main.c958081f.js.map",
+    "main.99075d9a.js.map": "/wangyu-ustc.github.io/static/js/main.99075d9a.js.map",
     "787.5c39024c.chunk.js.map": "/wangyu-ustc.github.io/static/js/787.5c39024c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.48141ecb.css",
-    "static/js/main.c958081f.js"
+    "static/js/main.99075d9a.js"
   ]
 }
