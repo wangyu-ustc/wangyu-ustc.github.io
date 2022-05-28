@@ -25,8 +25,8 @@ function App() {
     <div style={{height: '100%'}}>
       {/* <h1>Welcome to React Router!</h1> */}
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="publications" element={<Publications />} />
+        <Route path="/homepage" element={<Homepage />} />
+        <Route path="/homepage/publications" element={<Publications />} />
       </Routes>
     </div>
   );
