@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components'
-import { List, Button, Avatar } from '@mui/material';
+import { List } from '@mui/material';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
