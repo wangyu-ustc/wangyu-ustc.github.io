@@ -151,7 +151,7 @@ export function ItemList() {
                         </slot>
                     </h3>
                     <slot>
-                        <a href='./wangyu-ustc.github.io/publications'> Publications </a> <br></br>
+                        <a href='./homepage/publications'> Publications </a> <br></br>
                         <a> Experiences </a>
                     </slot>
                 </div>
