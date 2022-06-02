@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+// import selectPublication from './Homepage';
 
 
 const StyledItem = styled.div`
@@ -147,12 +147,15 @@ export function ItemList() {
                 <div className="details">
                     <h3>
                         <slot name="heading">
-                            Research
+                            Research Interest
                         </slot>
                     </h3>
                     <slot>
-                        <a href='./homepage/publications'> Publications </a> <br></br>
-                        <a> Experiences </a>
+                        {/* <a onClick={() => {}}> Publications </a> <br></br>
+                        <a> Experiences </a> */}
+                        <a>Machine Learning</a><br></br>
+                        <a>Data Mining</a><br></br>
+                        <a>Natural Language Processing</a>
                     </slot>
                 </div>
             </StyledItem>

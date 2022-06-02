@@ -1,6 +1,6 @@
 import * as React from 'react';
-import styled from 'styled-components'
-import { List } from '@mui/material';
+import styled from 'styled-components';
+import { List, Button, Avatar } from '@mui/material';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -8,27 +8,22 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Slider from '@mui/material/Slider';
+import Slider, { SliderThumb } from '@mui/material/Slider';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
-// import { setInterval } from 'timers/promises';
-// import { useWith } from 'ramda';
 
-// import NestedList from './nested-list';
-// import CheckboxList from './nested-list';
-
-// interface pubProps {
-//     //    publicationProp:
-//     //    {
-//     name: string,
-//     url: string,
-//     authors: string[],
-//     status: string,
-//     conference: string,
-//     year: number,
-//     acceptRate: number,
-//     //    }
-// }
+interface pubProps {
+    //    publicationProp:
+    //    {
+    name: string,
+    url: string,
+    authors: string[],
+    status: string,
+    conference: string,
+    year: number,
+    acceptRate: number,
+    //    }
+}
 
 
 const StyledDiv = styled.div`
@@ -43,7 +38,7 @@ const StyledDiv = styled.div`
         position: sticky;
     }
 
-    &> .left {
+    &> .right {
     width: 300px;
     min-width: 300px;
     max-height: 100%;
@@ -51,20 +46,29 @@ const StyledDiv = styled.div`
     overflow-y: auto;
     }
 
-    @media only screen and (max-width: 640px) {
-    &> .left {
+    @media only screen and (max-width: 1000px) {
+    &> .right {
         display: none;
     }
     }
 
-    &> .right {
+    &> .left {
     max-height: 100%;
     height: 100%;
     padding-bottom: 100px;
+    padding-top: 30px;
     flex-grow: 1;
     overflow-y: auto;
+    display: flex;
+    justify-content: center
     }
 `;
+
+
+// axios.get('https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ').then(resp => {
+//     console.log(resp.data);
+// });
+
 
 const citationAll = 7;
 const publicationItemListAll = [
@@ -97,7 +101,7 @@ const publicationItemListAll = [
     },
     {
         'name': "Differentiable Invariant Causal Discovery.",
-        'url': '',
+        'url': 'https://arxiv.org/abs/2205.15638',
         'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Xiangnan He', 'Tat-Seng Chua'],
         'status': "Submitted",
         'conference': 'NeurIPS',
@@ -127,18 +131,18 @@ const publicationItemListAll = [
         'url': '',
         'authors': ['Xin Xin*', 'Yu Wang*', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
         'status': 'Submitted',
-        'conference': 'TOIS',
+        'conference': 'TKDE',
         'year': 2022,
         'acceptRate': 0,
     }
 ]
 
 
-function PublicationItem(props) {
+function PublicationItem(props: pubProps) {
     return (<>
         <div className="display-12 mb-8">
             <a className="text-white">{props.name + ' '}</a>
-            {props.status === 'Accepted' ? <a href={props.url}>PDF</a> : <></>}
+            {props.url !== '' ? <a href={props.url}>PDF</a> : <></>}
             <br />
             {/* <div> */}
             {props.authors.map(
@@ -160,7 +164,7 @@ function PublicationItem(props) {
     </>)
 }
 
-export function authorship(value) {
+export function authorship(value: string[]) {
     if (value[0] === 'Yu Wang') {
         return 'First';
     }
@@ -172,7 +176,7 @@ export function authorship(value) {
 
 export function Publications() {
 
-    // const [checked, setChecked] = React.useState([2021, 2022, 2023]);
+    const [checked, setChecked] = React.useState([2021, 2022, 2023]);
     const [authorChecked, setAuthorChecked] = React.useState(['First', 'Co-First', 'Other']);
     const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
@@ -206,7 +210,7 @@ export function Publications() {
 
     }, []);
 
-    const handleStatusToggle = (value) => () => {
+    const handleStatusToggle = (value: string) => () => {
         const currentIndex = statusChecked.indexOf(value);
         const newChecked = [...statusChecked];
 
@@ -221,7 +225,7 @@ export function Publications() {
 
 
 
-    const handleAuthorToggle = (value) => () => {
+    const handleAuthorToggle = (value: string) => () => {
         const currentIndex = authorChecked.indexOf(value);
         const newAuthorChecked = [...authorChecked];
 
@@ -237,7 +241,7 @@ export function Publications() {
     // function valuetext(value: number) {
     //     return `year: ${value}`;
     // }
-    function valuetext(value) {
+    function valuetext(value: number) {
         return `${value}°C`;
     }
 
@@ -259,10 +263,10 @@ export function Publications() {
         },
     ];
 
-    const [range, setRange] = React.useState([0, 100]);
+    const [range, setRange] = React.useState<number[]>([0, 100]);
 
-    const handleChange = (newValue) => {
-        setRange(newValue);
+    const handleChange = (event: Event, newValue: number | number[]) => {
+        setRange(newValue as number[]);
     };
 
     return (
@@ -273,17 +277,59 @@ export function Publications() {
             display: 'flex',
             flexDirection: 'column'
         }}>
-            <div className='up' style={{
+            {/* <div className='up' style={{
                 display: 'flex',
                 justifyContent: 'center',
-                backgroundColor: 'grey',
+                backgroundColor: 'forestgreen',
                 fontSize: '0.7cm'
             }}>
                 Publications
-            </div>
+            </div> */}
             <StyledDiv>
+                <div className='left' style={{
+                    paddingBottom: '200px',
+                    paddingTop: '40px'
+                }}>
+                    {/* <br /> */}
+                    {/* <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        width: '20%'
+                    }}>
+                    </div> */}
+                    <div style={{ width: '70%' }}>
+                        <div>
+                            {
+                                Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
+                                    (idx) => {
+                                        const endYearItem = marks.find((item) => (item.value === range[1]))
+                                        const endYear = !endYearItem ? 2023 : endYearItem.year
 
-                <div className="left">
+                                        const beginYearItem = marks.find((item) => (item.value === range[0]))
+                                        const beginYear = !beginYearItem ? 2021 : beginYearItem.year
+
+                                        return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
+                                            && (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
+                                            && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
+                                    }
+                                ).map((idx) => (
+                                    <div key={idx} className='board-row'>
+                                        <PublicationItem {...publicationItemList[idx]} />
+                                    </div>))
+                            }
+
+                        </div>
+                        <Box sx={{ width: "60%" }}>
+                            <Skeleton width={'60%'} />
+                            <Skeleton width={'100%'} />
+                            <Skeleton width={'30%'} />
+                        </Box>
+                    </div>
+
+
+                </div>
+                <div className="right">
+                    <br></br>
                     <br></br>
                     <div style={{ display: 'flex', justifyContent: 'center', height: 200 }}>
                         <Box sx={{ width: '90%', height: '80%' }}>
@@ -383,59 +429,8 @@ export function Publications() {
                         <Typography>Collecting...</Typography>
                     </div>
 
-
-                    {/* <CheckboxList /> */}
-                    {/* <br /><br />
-                    <div >
-                        <img
-                            alt="My picture"
-                            className="logo"
-                            src="../assets/about4.jpg"
-                            width="250"
-                            height="200"
-                        />
-                    </div> */}
                 </div>
-                <div className='right'>
-                    <br />
-                    <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                    }}>
-                    </div>
-                    <div>
-                        {
-                            Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
-                                (idx) => {
-                                    const endYearItem = marks.find((item) => (item.value === range[1]))
-                                    const endYear = !endYearItem ? 2023 : endYearItem.year
 
-                                    const beginYearItem = marks.find((item) => (item.value === range[0]))
-                                    const beginYear = !beginYearItem ? 2021 : beginYearItem.year
-
-                                    return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
-                                        && (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
-                                        && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
-                                }
-                            ).map((idx) => (
-                                <div key={idx} className='board-row'>
-                                    <PublicationItem {...publicationItemList[idx]} />
-                                </div>))
-                        }
-
-
-
-
-
-
-                    </div>
-                    <Box sx={{ width: "60%" }}>
-                        <Skeleton width={'60%'} />
-                        <Skeleton width={'100%'} />
-                        <Skeleton width={'30%'} />
-                    </Box>
-
-                </div>
             </StyledDiv>
         </div>
     )
