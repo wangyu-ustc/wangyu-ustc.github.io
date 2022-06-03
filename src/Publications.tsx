@@ -324,6 +324,9 @@ export function Publications() {
                             <Skeleton width={'100%'} />
                             <Skeleton width={'30%'} />
                         </Box>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
 
 

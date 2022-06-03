@@ -16,6 +16,7 @@ import ustcBadge from './assets/ustc_badge.png'
 import stanfordBadge from './assets/stanford_badge.png'
 import nusBadge from './assets/nus_badge.png'
 import mitBadge from './assets/MIT_badge.png'
+import ucsdBadge from './assets/ucsd_badge.png'
 
 
 
@@ -119,6 +120,18 @@ const experienceItemListAll = [
         'endYear': 2022,
         'endMonth': 1,
         'project': 'Outlier Detection'
+    },
+    {
+        'lab': 'Lab',
+        'univ': 'University of California, San Diego',
+        'badge': ucsdBadge,
+        'professor': 'Prof. Julian McAuley',
+        'profUrl': 'https://cseweb.ucsd.edu/~jmcauley/',
+        'startYear': 2022,
+        'startMonth': 4,
+        'endYear': 'Present',
+        'endMonth': '',
+        'project': 'Natural Language Processing & Data Mining'
     }
 ]
 
@@ -139,29 +152,35 @@ function ExpItem(props: expProps) {
         {props.startYear}.{props.startMonth} - {props.endYear}.{props.endMonth}</>)
 }
 
+const MyA = styled.a`
+    &:hover {
+        background: #addee4;
+    }
+`;
 
 export function Experiences() {
+
 
     const marks = [
         {
             value: 0,
-            year: 2020,
-            label: 'Year 2020',
+            year: 2023,
+            label: 'Year 2023',
         },
         {
             value: 33,
-            year: 2021,
-            label: 'Year 2021',
-        },
-        {
-            value: 66,
             year: 2022,
             label: 'Year 2022',
         },
         {
+            value: 66,
+            year: 2021,
+            label: 'Year 2021',
+        },
+        {
             value: 99,
-            year: 2023,
-            label: 'Year 2023',
+            year: 2020,
+            label: 'Year 2020',
         },
     ];
 
@@ -192,11 +211,11 @@ export function Experiences() {
                         {
                             experienceItemListAll.filter(
                                 (item) => {
-                                    const endYearItem = marks.find((item) => (item.value === range[1]))
+                                    const endYearItem = marks.find((item) => (item.value === range[0]))
                                     const endYear = !endYearItem ? 2023 : endYearItem.year
 
-                                    const beginYearItem = marks.find((item) => (item.value === range[0]))
-                                    const beginYear = !beginYearItem ? 2021 : beginYearItem.year
+                                    const beginYearItem = marks.find((item) => (item.value === range[1]))
+                                    const beginYear = !beginYearItem ? 2020 : beginYearItem.year
 
                                     return (item.startYear <= endYear && item.startYear >= beginYear)
                                 }
@@ -211,16 +230,18 @@ export function Experiences() {
                                                 width="100"
                                                 height="100"
                                             />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            {item.lab}.&nbsp; {item.univ} <br></br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                            {item.startYear}.{item.startMonth} - {item.endYear}.{item.endMonth}, &nbsp; 
-                                            {/* <a href={item.profUrl}>Advisor: {item.professor}</a> */}
-                                            Advisor: {item.professor}, <br></br>
-                                            &nbsp;&nbsp;&nbsp;
-                                            About: {item.project}
+
+
+                                            <div>
+                                                <Typography fontSize='20px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.lab}.&nbsp; {item.univ}</Typography>
+                                                <Typography fontSize='20px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.startYear}.{item.startMonth} - {item.endYear}.{item.endMonth},
+                                                Advisor: <MyA href={item.profUrl} style={{color:'#265d75', textDecoration: 'none'}}>{item.professor}</MyA> <br></br> </Typography>
+                                                <Typography fontSize='20px'>&nbsp;&nbsp;&nbsp;&nbsp; About: {item.project}</Typography>
+                                                {/* Advisor: {item.professor}, <br></br> */}
+                                            </div>
+
                                         </div>
-                                        <br/>
+                                        <br />
                                     </>
 
                                 }
