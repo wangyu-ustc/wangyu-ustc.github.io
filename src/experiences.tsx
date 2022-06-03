@@ -227,16 +227,16 @@ export function Experiences() {
                                                 alt="badge"
                                                 className="logo"
                                                 src={item.badge}
-                                                width="100"
-                                                height="100"
+                                                width="80"
+                                                height="80"
                                             />
 
 
                                             <div>
-                                                <Typography fontSize='20px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.lab}.&nbsp; {item.univ}</Typography>
-                                                <Typography fontSize='20px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.startYear}.{item.startMonth} - {item.endYear}.{item.endMonth},
+                                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.lab}.&nbsp; {item.univ}</Typography>
+                                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.startYear}.{item.startMonth} - {item.endYear}.{item.endMonth},
                                                 Advisor: <MyA href={item.profUrl} style={{color:'#265d75', textDecoration: 'none'}}>{item.professor}</MyA> <br></br> </Typography>
-                                                <Typography fontSize='20px'>&nbsp;&nbsp;&nbsp;&nbsp; About: {item.project}</Typography>
+                                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; About: {item.project}</Typography>
                                                 {/* Advisor: {item.professor}, <br></br> */}
                                             </div>
 
