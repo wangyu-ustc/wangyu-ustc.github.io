@@ -203,27 +203,14 @@ export function Publications() {
     function PublicationItem(props: pubProps) {
         return (<>
             <div className="display-12 mb-8">
-                {/* {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
-                {props.authors.map(
-                    (item, index) => {
-                        if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                            return <Typography display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
-                        } else {
-                            return <Typography display="inline" key={index}>{item + ', '}</Typography>
-                        }
-                    }
-                )}
-                <br></br>
-                <strong>{props.status} to {props.conference} {props.year}. {
-                    props.status === 'Accepted' ? '(Accept rate: ' + props.acceptRate + '%)' : ''
-                }</strong> */}
                 <Accordion expanded={expanded[props.idx] === props.name} onChange={handleAccordionChange(props.name, props.idx)}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1bh-content"
                         id="panel1bh-header"
                     >
-                        <div style={{ width: '100%' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                        <div >
                             <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
                                 <img
                                     alt='githubBadge'
@@ -248,9 +235,10 @@ export function Publications() {
                                 alt='githubBadge'
                                 src={'https://badgen.net/badge/' + props.conference + ' ' + props.year + '/' + props.status +'/' + (props.status === 'Accepted' ? 'orange' : 'blue')} />
                         </div> */}
-                        <Typography>
-                            {props.conference + ' ' + props.year}
+                        <Typography style={{textAlign: 'right', minWidth: '15ch'}} >
+                            {props.conference} {props.year}
                         </Typography>
+                        </div>
                     </AccordionSummary>
                     <AccordionDetails>
                         {props.img && <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -282,7 +270,7 @@ export function Publications() {
         // console.log('useEffect called')
         let pub = 0;
         const appendPublication = () => {
-            if (pub === publicationItemListAll.length) return;
+            if (pub > publicationItemListAll.length) return;
             setPublicationItemList((publicationItemList) => {
                 return publicationItemListAll.slice(0, pub++);
             });
