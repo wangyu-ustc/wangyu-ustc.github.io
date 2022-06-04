@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import './base.css';
 import { ItemList } from './itemslist';
+import myPicture from './assets/about4.jpg';
 
 
 
@@ -187,9 +188,9 @@ export function BasicInformation() {
                     <div id="home">
                         <header>
                             <img
-                                alt="My picture"
+                                alt="Mylogo"
                                 className="logo"
-                                src={require("./assets/about4.jpg")}
+                                src={myPicture}
                                 width="150"
                                 height="125"
                             />

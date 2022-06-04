@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { List} from '@mui/material';
+import { List } from '@mui/material';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -11,10 +11,22 @@ import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import ats from './assets/ats.png'
+import deca from './assets/deca.png'
+import lisa from './assets/lisa.png'
+import dicd from './assets/dicd.png'
+
+
 
 interface pubProps {
     //    publicationProp:
     //    {
+    idx: number,
     name: string,
     url: string,
     authors: string[],
@@ -22,6 +34,8 @@ interface pubProps {
     conference: string,
     year: number,
     acceptRate: number,
+    img: string,
+    abstract: string
     //    }
 }
 
@@ -80,6 +94,8 @@ const publicationItemListAll = [
         'conference': "NeurIPS",
         'year': 2021,
         'acceptRate': 26,
+        'img': ats,
+        'abstract': 'We propose an adaptive task scheduler (ATS) for the meta-training process with a neural scheduler to decide which meta-training tasks to use next and train the scheduler to optimize the generalization capacity of the meta-model to unseen tasks. We identify two meta-model-related factors as the input of the neural scheduler, which characterize the difficulty of a candidate task to the meta-model. Theoretically, we show that a scheduler taking the two factors into account improves the meta-training loss and also the optimization landscape.',
     },
     {
         'name': "Learning Robust Recommenders through Cross-Model Agreement.",
@@ -89,6 +105,8 @@ const publicationItemListAll = [
         'conference': 'WWW',
         'year': 2022,
         'acceptRate': 17.7,
+        'img': deca,
+        'abstract': 'We propose a novel framework to learn robust recommenders from implicit feedback. Through an empirical study, we find that different models make more similar predictions on clean examples than noisy examples. Motivated by this observation, we propose DeCA which aims to minimize the KL-divergence between the real user preference distributions parameterized by two recommendation models while maximizing the likelihood of data observation. We employ the proposed DeCA on four state-of-the-art recommendation models and conduct experiments on four datasets.'
     },
     {
         'name': "Improving Out-of-Distribution Robustness via Selective Augmentation.",
@@ -98,6 +116,8 @@ const publicationItemListAll = [
         'conference': 'ICML',
         'year': 2022,
         'acceptRate': 21.9,
+        'img': lisa,
+        'abstract': "We specifically consider the problems of subpopulation shifts (e.g., imbalanced data) and domain shifts. We propose LISA, which selectively interpolates samples either with the same labels but different domains or with the same domain but different labels. Empirically, we study the effectiveness of LISA on nine benchmarks ranging from subpopulation shifts to domain shifts. We further analyze a linear setting and theoretically show how LISA leads to a smaller worst-group error."
     },
     {
         'name': "Differentiable Invariant Causal Discovery.",
@@ -107,6 +127,8 @@ const publicationItemListAll = [
         'conference': 'NeurIPS',
         'year': 2022,
         'acceptRate': 0,
+        'img': dicd,
+        'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. '
     },
     {
         'name': 'AutoOD: Automatic Outlier Detection.',
@@ -116,6 +138,8 @@ const publicationItemListAll = [
         'conference': 'SIGMOD',
         'year': 2023,
         'acceptRate': 0,
+        'img': '',
+        'abstract': ''
     },
     {
         'name': 'Interpretable Outlier Summarization.',
@@ -125,6 +149,8 @@ const publicationItemListAll = [
         'conference': 'SIGMOD',
         'year': 2023,
         'acceptRate': 0,
+        'img': '',
+        'abstract': ''
     },
     {
         'name': 'Probabilistic and Variational Label Denoising.',
@@ -134,35 +160,12 @@ const publicationItemListAll = [
         'conference': 'TKDE',
         'year': 2022,
         'acceptRate': 0,
+        'img': '',
+        'abstract': ''
     }
 ]
 
 
-function PublicationItem(props: pubProps) {
-    return (<>
-        <div className="display-12 mb-8">
-            <a className="text-white">{props.name + ' '}</a>
-            {props.url !== '' ? <a href={props.url}>PDF</a> : <></>}
-            <br />
-            {/* <div> */}
-            {props.authors.map(
-                (item, index) => {
-                    if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                        return <a key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></a>;
-                    } else {
-                        return <a key={index}>{item + ', '}</a>
-                    }
-                }
-            )}
-            {/* </div> */}
-            <br />
-            <strong>{props.status} to {props.conference} {props.year}. {
-                props.status === 'Accepted' ? '(Accept rate: ' + props.acceptRate + '%)' : ''
-            }</strong>
-        </div>
-        <br></br>
-    </>)
-}
 
 export function authorship(value: string[]) {
     if (value[0] === 'Yu Wang') {
@@ -179,8 +182,86 @@ export function Publications() {
     const [authorChecked, setAuthorChecked] = React.useState(['First', 'Co-First', 'Other']);
     const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
-
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
+    const [expanded, setExpanded] = React.useState<(string | boolean)[]>(Array.from({ length: publicationItemListAll.length }, () => false));
+    // const [expanded, setExpanded] = React.useState<string | false>(false);
+
+
+    // const handleAccordionChange =
+    //     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    //         setExpanded(isExpanded ? panel : false);
+    //     };
+
+    const handleAccordionChange =
+        (panel: string, idx: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+            console.log(expanded)
+            let newExpanded = expanded.slice();
+            newExpanded[idx] = isExpanded ? panel : false;
+            setExpanded(newExpanded);
+        };
+
+    function PublicationItem(props: pubProps) {
+        return (<>
+            <div className="display-12 mb-8">
+                {/* {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
+                {props.authors.map(
+                    (item, index) => {
+                        if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                            return <Typography display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
+                        } else {
+                            return <Typography display="inline" key={index}>{item + ', '}</Typography>
+                        }
+                    }
+                )}
+                <br></br>
+                <strong>{props.status} to {props.conference} {props.year}. {
+                    props.status === 'Accepted' ? '(Accept rate: ' + props.acceptRate + '%)' : ''
+                }</strong> */}
+                <Accordion expanded={expanded[props.idx] === props.name} onChange={handleAccordionChange(props.name, props.idx)}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1bh-content"
+                        id="panel1bh-header"
+                    >
+                        <Typography sx={{ width: '80%', flexShrink: 0 }}>
+                            {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
+                            {props.authors.map(
+                                (item, index) => {
+                                    if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                        return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
+                                    } else {
+                                        return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
+                                    }
+                                }
+                            )}
+                        </Typography>
+                        <Typography sx={{ color: 'text.secondary' }}>{props.conference} {props.year}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        {props.img && <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <div>
+                                <img
+                                    alt=""
+                                    className="paperImage"
+                                    src={props.img}
+                                    width="250"
+                                    height="200"
+                                />
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <Typography>
+                                {props.abstract}
+                            </Typography>
+                        </div>}
+                    </AccordionDetails>
+                </Accordion>
+            </div>
+            <br></br>
+        </>)
+    }
+
+
+
 
     React.useEffect(() => {
         // console.log('useEffect called')
@@ -297,6 +378,44 @@ export function Publications() {
                     }}>
                     </div> */}
                     <div style={{ width: '70%' }}>
+                        {/* <Accordion expanded={expanded === 'panel1'} onChange={handleAccordionChange('panel1')}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1bh-content"
+                                id="panel1bh-header"
+                            >
+                                <Typography sx={{ width: '80%', flexShrink: 0 }}>
+                                    {publicationItemListAll[0].name} {publicationItemListAll[0].url !== '' ? <a href={publicationItemListAll[0].url}>PDF</a> : <></>} <br></br>
+                                    {publicationItemListAll[0].authors.map(
+                                        (item, index) => {
+                                            if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                                return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
+                                            } else {
+                                                return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
+                                            }
+                                        }
+                                    )}
+                                </Typography>
+                                <Typography sx={{ color: 'text.secondary' }}>{publicationItemListAll[0].conference} {publicationItemListAll[0].year}</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <div>
+                                        <img
+                                            alt=""
+                                            className="paperImage"
+                                            src={publicationItemListAll[1].img}
+                                            width="250"
+                                            height="200"
+                                        />
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <Typography>
+                                        {publicationItemListAll[1].abstract}
+                                    </Typography>
+                                </div>
+                            </AccordionDetails>
+                        </Accordion> */}
                         <div>
                             {
                                 Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
@@ -313,7 +432,7 @@ export function Publications() {
                                     }
                                 ).map((idx) => (
                                     <div key={idx} className='board-row'>
-                                        <PublicationItem {...publicationItemList[idx]} />
+                                        <PublicationItem idx={idx} {...publicationItemList[idx]} />
                                     </div>))
                             }
 
@@ -323,9 +442,9 @@ export function Publications() {
                             <Skeleton width={'100%'} />
                             <Skeleton width={'30%'} />
                         </Box>
-                        <br/>
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
+                        <br />
                     </div>
 
 
@@ -433,7 +552,7 @@ export function Publications() {
 
                 </div>
 
-            </StyledDiv>
-        </div>
+            </StyledDiv >
+        </div >
     )
 }
