@@ -1,16 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { List, Button, Avatar } from '@mui/material';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Slider, { SliderThumb } from '@mui/material/Slider';
-import Skeleton from '@mui/material/Skeleton';
-import CircularProgress from '@mui/material/CircularProgress';
+import Slider from '@mui/material/Slider';
 
 import ustcBadge from './assets/ustc_badge.png'
 import stanfordBadge from './assets/stanford_badge.png'
@@ -34,8 +26,8 @@ const StyledDiv = styled.div`
     }
 
     &> .right {
-    width: 300px;
-    min-width: 300px;
+    width: 200px;
+    min-width: 200px;
     max-height: 100%;
     height: 100%;
     overflow-y: auto;
@@ -59,18 +51,6 @@ const StyledDiv = styled.div`
     }
 `;
 
-
-interface expProps {
-    lab: string,
-    univ: string,
-    badge: string,
-    professor: string,
-    profUrl: string,
-    startYear: number,
-    endYear: number,
-    startMonth: number,
-    endMonth: number
-}
 
 const experienceItemListAll = [
     {
@@ -136,21 +116,6 @@ const experienceItemListAll = [
 ]
 
 
-function ExpItem(props: expProps) {
-    return (<>
-
-        <img
-            alt="badge"
-            className="logo"
-            src={require(props.badge)}
-            width="100"
-            height="100"
-        />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        {props.lab}, {props.univ} <br></br>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        {props.startYear}.{props.startMonth} - {props.endYear}.{props.endMonth}</>)
-}
 
 const MyA = styled.a`
     &:hover {
@@ -206,7 +171,8 @@ export function Experiences() {
                     display: 'flex'
                 }}>
                     <div style={{ width: '70%', fontSize: '20px' }}>
-
+                        <Typography fontSize='20px'>Research Experiences: </Typography>
+                        <br></br>
                         {/* <ExpItem {...experienceItemListAll[0]}/> */}
                         {
                             experienceItemListAll.filter(
@@ -235,7 +201,7 @@ export function Experiences() {
                                             <div>
                                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.lab}.&nbsp; {item.univ}</Typography>
                                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; {item.startYear}.{item.startMonth} - {item.endYear}.{item.endMonth},
-                                                Advisor: <MyA href={item.profUrl} style={{color:'#265d75', textDecoration: 'none'}}>{item.professor}</MyA> <br></br> </Typography>
+                                                    Advisor: <MyA href={item.profUrl} style={{ color: '#265d75', textDecoration: 'none' }}>{item.professor}</MyA> <br></br> </Typography>
                                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; About: {item.project}</Typography>
                                                 {/* Advisor: {item.professor}, <br></br> */}
                                             </div>
@@ -247,6 +213,41 @@ export function Experiences() {
                                 }
                             )
                         }
+                        <Typography fontSize='20px'>Education Experiences:</Typography>
+                        <br></br>
+                        <div style={{ width: '100%', display: 'flex', }}>
+                            <img
+                                alt="badge"
+                                className="logo"
+                                src={ustcBadge}
+                                width="80"
+                                height="80"
+                            />
+                            <div>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; University of Science and Technology of China</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2018.9 - 2022.7</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; B.S. in Data Science and Big Data Technology</Typography>
+                                {/* Advisor: {item.professor}, <br></br> */}
+                            </div>
+                        </div>
+                        <br></br>
+                        <div style={{ width: '100%', display: 'flex', }}>
+                            <img
+                                alt="badge"
+                                className="logo"
+                                src={ucsdBadge}
+                                width="80"
+                                height="80"
+                            />
+                            <div>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; University of California, San Diego</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2022.7 - Unknown</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; P.h.D in Computer Science Engineering</Typography>
+                                {/* Advisor: {item.professor}, <br></br> */}
+                            </div>
+                        </div>
+                        <br></br>
+
                     </div>
 
                 </div>

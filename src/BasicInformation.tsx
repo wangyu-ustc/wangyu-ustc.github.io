@@ -200,7 +200,7 @@ export function BasicInformation() {
                                         A senior student from University of Science and Technology of China.
                                     </h3>
                                     <h4>
-                                        <a href='https://yuwang.site/CV.pdf'>CV</a>
+                                        <a href='https://yuwang.site/home/CV.pdf'>CV</a>
                                         &nbsp;&nbsp;
                                         <a href='https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ'>Google Scholar</a>
                                     </h4>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { List, Button, Avatar } from '@mui/material';
+import { List} from '@mui/material';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Slider, { SliderThumb } from '@mui/material/Slider';
+import Slider from '@mui/material/Slider';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -39,8 +39,8 @@ const StyledDiv = styled.div`
     }
 
     &> .right {
-    width: 300px;
-    min-width: 300px;
+    width: 250px;
+    min-width: 250px;
     max-height: 100%;
     height: 100%;
     overflow-y: auto;
@@ -176,7 +176,6 @@ export function authorship(value: string[]) {
 
 export function Publications() {
 
-    const [checked, setChecked] = React.useState([2021, 2022, 2023]);
     const [authorChecked, setAuthorChecked] = React.useState(['First', 'Co-First', 'Other']);
     const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
@@ -351,7 +350,7 @@ export function Publications() {
                         </Box>
                     </div>
 
-                    <List sx={{ width: '80%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                         {['First', 'Co-First', 'Other'].map((value) => {
                             const labelId = `checkbox-list-label-${value}`;
 
@@ -383,7 +382,7 @@ export function Publications() {
                     </List>
 
 
-                    <List sx={{ width: '80%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                         {['Accepted', 'Submitted'].map((value) => {
                             const labelId = `checkbox-list-label-${value}`;
 
@@ -416,7 +415,7 @@ export function Publications() {
                     <div style={{
                         display: 'flex',
                         justifyContent: 'center',
-                        width: '50%'
+                        width: '70%'
                     }}>
                         <Typography>Citation {citation}</Typography>
                         &nbsp;&nbsp;
@@ -427,7 +426,7 @@ export function Publications() {
                     <div style={{
                         display: 'flex',
                         justifyContent: 'center',
-                        width: '50%'
+                        width: '70%'
                     }}>
                         <Typography>Collecting...</Typography>
                     </div>

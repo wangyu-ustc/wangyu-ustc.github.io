@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import selectPublication from './Homepage';
 
 
 const StyledItem = styled.div`

@@ -1,8 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Homepage } from './Homepage';
-import { Publications } from './Publications';
 
 function App() {
   return <Homepage/>

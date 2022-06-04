@@ -1,50 +1,12 @@
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
 
 import { Publications } from './Publications';
 import { BasicInformation } from './BasicInformation';
 import { Experiences } from './experiences';
-
-const StyledDiv = styled.div`
-    flex-grow: 1;
-    overflow-y: auto;    
-    display: flex;
-    max-height: 100%;
-
-    /* &> .up {
-        width: 100%;
-        height: 200px;
-        position: sticky;
-    } */
-
-    &> .left {
-    width: 300px;
-    min-width: 300px;
-    max-height: 100%;
-    height: 100%;
-    overflow-y: auto;
-    }
-
-    @media only screen and (max-width: 640px) {
-    &> .left {
-        display: none;
-    }
-    }
-
-    &> .right {
-    max-height: 100%;
-    height: 100%;
-    padding-bottom: 100px;
-    flex-grow: 1;
-    overflow-y: auto;
-    }
-`;
-
-
 
 
 interface TabPanelProps {
