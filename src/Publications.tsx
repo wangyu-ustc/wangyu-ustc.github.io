@@ -184,13 +184,13 @@ export function Publications() {
     const [citation, setCitation] = React.useState(0);
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
     const [expanded, setExpanded] = React.useState<(string | boolean)[]>(Array.from({ length: publicationItemListAll.length }, () => false));
-    // const [expanded, setExpanded] = React.useState<string | false>(false);
+    const [expandedSingle, setExpandedSingle] = React.useState<string | false>(false);
 
 
-    // const handleAccordionChange =
-    //     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-    //         setExpanded(isExpanded ? panel : false);
-    //     };
+    const handleAccordionChangeSingle =
+        (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+            setExpandedSingle(isExpanded ? panel : false);
+        };
 
     const handleAccordionChange =
         (panel: string, idx: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -229,6 +229,7 @@ export function Publications() {
                                     alt='githubBadge'
                                     src={'https://badgen.net/badge/' + ' ' + '/' + props.status + '/' + (props.status === 'Accepted' ? 'orange' : 'blue')}
                                     height='15px' />
+                                &nbsp;
                                 {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
                                 {props.authors.map(
                                     (item, index) => {
@@ -279,15 +280,15 @@ export function Publications() {
 
     React.useEffect(() => {
         // console.log('useEffect called')
+        let pub = 0;
         const appendPublication = () => {
-            if (publicationItemList.length === publicationItemListAll.length) return;
+            if (pub === publicationItemListAll.length) return;
             setPublicationItemList((publicationItemList) => {
-                return publicationItemListAll.slice(0, publicationItemList.length + 1);
+                return publicationItemListAll.slice(0, pub++);
             });
             setTimeout(appendPublication, 100);
         };
         appendPublication();
-
     }, []);
 
     React.useEffect(() => {
@@ -392,7 +393,7 @@ export function Publications() {
                     }}>
                     </div> */}
                     <div style={{ width: '70%' }}>
-                        {/* <Accordion expanded={expanded === 'panel1'} onChange={handleAccordionChange('panel1')}>
+                        {/* <Accordion expanded={expandedSingle === 'panel1'} onChange={handleAccordionChangeSingle('panel1')}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1bh-content"
