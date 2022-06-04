@@ -223,19 +223,33 @@ export function Publications() {
                         aria-controls="panel1bh-content"
                         id="panel1bh-header"
                     >
-                        <Typography sx={{ width: '80%', flexShrink: 0 }}>
-                            {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
-                            {props.authors.map(
-                                (item, index) => {
-                                    if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                                        return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
-                                    } else {
-                                        return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
+                        <div style={{ width: '100%' }}>
+                            <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
+                                <img
+                                    alt='githubBadge'
+                                    src={'https://badgen.net/badge/' + ' ' + '/' + props.status + '/' + (props.status === 'Accepted' ? 'orange' : 'blue')}
+                                    height='15px' />
+                                {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
+                                {props.authors.map(
+                                    (item, index) => {
+                                        if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                            return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
+                                        } else {
+                                            return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
+                                        }
                                     }
-                                }
-                            )}
+                                )}
+                            </Typography>
+                        </div>
+                        {/* <Typography sx={{ color: 'text.secondary' }}>{props.conference} {props.year}</Typography> */}
+                        {/* <div style={{width: '100%', alignContent:'right', justifyContent: 'center'}}>
+                            <img
+                                alt='githubBadge'
+                                src={'https://badgen.net/badge/' + props.conference + ' ' + props.year + '/' + props.status +'/' + (props.status === 'Accepted' ? 'orange' : 'blue')} />
+                        </div> */}
+                        <Typography>
+                            {props.conference + ' ' + props.year}
                         </Typography>
-                        <Typography sx={{ color: 'text.secondary' }}>{props.conference} {props.year}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         {props.img && <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -438,9 +452,9 @@ export function Publications() {
 
                         </div>
                         <Box sx={{ width: "60%" }}>
-                            <Skeleton width={'60%'} />
+                            <Skeleton width={'80%'} />
                             <Skeleton width={'100%'} />
-                            <Skeleton width={'30%'} />
+                            {/* <Skeleton width={'30%'} /> */}
                         </Box>
                         <br />
                         <br />
