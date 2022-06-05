@@ -180,7 +180,7 @@ export function authorship(value: string[]) {
 export function Publications() {
 
     const [authorChecked, setAuthorChecked] = React.useState(['First', 'Co-First', 'Other']);
-    const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
+    // const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
     const [expanded, setExpanded] = React.useState<(string | boolean)[]>(Array.from({ length: publicationItemListAll.length }, () => false));
@@ -200,68 +200,67 @@ export function Publications() {
             setExpanded(newExpanded);
         };
 
-    function PublicationItem(props: pubProps) {
-        return (<>
-            <div className="display-12 mb-8">
-                <Accordion expanded={expanded[props.idx] === props.name} onChange={handleAccordionChange(props.name, props.idx)}>
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1bh-content"
-                        id="panel1bh-header"
-                    >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                        <div >
-                            <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
-                                <img
-                                    alt='githubBadge'
-                                    src={'https://badgen.net/badge/' + ' ' + '/' + props.status + '/' + (props.status === 'Accepted' ? 'orange' : 'blue')}
-                                    height='15px' />
-                                &nbsp;
-                                {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
-                                {props.authors.map(
-                                    (item, index) => {
-                                        if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                                            return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
-                                        } else {
-                                            return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
-                                        }
-                                    }
-                                )}
-                            </Typography>
-                        </div>
-                        {/* <Typography sx={{ color: 'text.secondary' }}>{props.conference} {props.year}</Typography> */}
-                        {/* <div style={{width: '100%', alignContent:'right', justifyContent: 'center'}}>
-                            <img
-                                alt='githubBadge'
-                                src={'https://badgen.net/badge/' + props.conference + ' ' + props.year + '/' + props.status +'/' + (props.status === 'Accepted' ? 'orange' : 'blue')} />
-                        </div> */}
-                        <Typography style={{textAlign: 'right', minWidth: '15ch'}} >
-                            {props.conference} {props.year}
-                        </Typography>
-                        </div>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        {props.img && <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <div>
-                                <img
-                                    alt=""
-                                    className="paperImage"
-                                    src={props.img}
-                                    width="250"
-                                    height="200"
-                                />
-                            </div>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <Typography>
-                                {props.abstract}
-                            </Typography>
-                        </div>}
-                    </AccordionDetails>
-                </Accordion>
-            </div>
-            <br></br>
-        </>)
-    }
+    // function PublicationItem(props: pubProps) {
+    //     return (
+    //         <div className="display-12 mb-8">
+    //             <Accordion expanded={expanded[props.idx] === props.name} onChange={handleAccordionChange(props.name, props.idx)}>
+    //                 <AccordionSummary
+    //                     expandIcon={<ExpandMoreIcon />}
+    //                     aria-controls="panel1bh-content"
+    //                     id="panel1bh-header"
+    //                 >
+    //                     <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+    //                         <div >
+    //                             <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
+    //                                 {/* <img
+    //                                     alt='githubBadge'
+    //                                     src={'https://badgen.net/badge/' + ' ' + '/' + props.status + '/' + (props.status === 'Accepted' ? 'orange' : 'blue')}
+    //                                     height='15px' />
+    //                                 &nbsp; */}
+    //                                 {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
+    //                                 {props.authors.map(
+    //                                     (item, index) => {
+    //                                         if (item === 'Yu Wang' || item === 'Yu Wang*') {
+    //                                             return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
+    //                                         } else {
+    //                                             return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
+    //                                         }
+    //                                     }
+    //                                 )}
+    //                             </Typography>
+    //                         </div>
+    //                         {/* <Typography sx={{ color: 'text.secondary' }}>{props.conference} {props.year}</Typography> */}
+    //                         {/* <div style={{width: '100%', alignContent:'right', justifyContent: 'center'}}>
+    //                         <img
+    //                             alt='githubBadge'
+    //                             src={'https://badgen.net/badge/' + props.conference + ' ' + props.year + '/' + props.status +'/' + (props.status === 'Accepted' ? 'orange' : 'blue')} />
+    //                     </div> */}
+    //                         <Typography style={{ textAlign: 'right', minWidth: '15ch' }} >
+    //                             {props.conference} {props.year}
+    //                         </Typography>
+    //                     </div>
+    //                 </AccordionSummary>
+    //                 <AccordionDetails>
+    //                     {props.img && <div style={{ display: 'flex', justifyContent: 'center' }}>
+    //                         <div>
+    //                             <img
+    //                                 alt=""
+    //                                 className="paperImage"
+    //                                 src={props.img}
+    //                                 width="250"
+    //                                 height="200"
+    //                             />
+    //                         </div>
+    //                         &nbsp;&nbsp;&nbsp;&nbsp;
+    //                         <Typography>
+    //                             {props.abstract}
+    //                         </Typography>
+    //                     </div>}
+    //                 </AccordionDetails>
+    //             </Accordion>
+    //             <br></br>
+    //         </div>)
+    // }
 
 
 
@@ -293,18 +292,18 @@ export function Publications() {
 
     }, []);
 
-    const handleStatusToggle = (value: string) => () => {
-        const currentIndex = statusChecked.indexOf(value);
-        const newChecked = [...statusChecked];
+    // const handleStatusToggle = (value: string) => () => {
+    //     const currentIndex = statusChecked.indexOf(value);
+    //     const newChecked = [...statusChecked];
 
-        if (currentIndex === -1) {
-            newChecked.push(value);
-        } else {
-            newChecked.splice(currentIndex, 1);
-        }
+    //     if (currentIndex === -1) {
+    //         newChecked.push(value);
+    //     } else {
+    //         newChecked.splice(currentIndex, 1);
+    //     }
 
-        setStatusChecked(newChecked);
-    };
+    //     setStatusChecked(newChecked);
+    // };
 
 
 
@@ -341,8 +340,8 @@ export function Publications() {
         },
         {
             value: 100,
-            year: 2023,
-            label: 'Year 2023',
+            year: 3000,
+            label: 'Submitted',
         },
     ];
 
@@ -373,69 +372,87 @@ export function Publications() {
                     paddingBottom: '200px',
                     paddingTop: '40px'
                 }}>
-                    {/* <br /> */}
-                    {/* <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        width: '20%'
-                    }}>
-                    </div> */}
-                    <div style={{ width: '70%' }}>
-                        {/* <Accordion expanded={expandedSingle === 'panel1'} onChange={handleAccordionChangeSingle('panel1')}>
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1bh-content"
-                                id="panel1bh-header"
-                            >
-                                <Typography sx={{ width: '80%', flexShrink: 0 }}>
-                                    {publicationItemListAll[0].name} {publicationItemListAll[0].url !== '' ? <a href={publicationItemListAll[0].url}>PDF</a> : <></>} <br></br>
-                                    {publicationItemListAll[0].authors.map(
-                                        (item, index) => {
-                                            if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                                                return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
-                                            } else {
-                                                return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
-                                            }
-                                        }
-                                    )}
-                                </Typography>
-                                <Typography sx={{ color: 'text.secondary' }}>{publicationItemListAll[0].conference} {publicationItemListAll[0].year}</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                    <div>
-                                        <img
-                                            alt=""
-                                            className="paperImage"
-                                            src={publicationItemListAll[1].img}
-                                            width="250"
-                                            height="200"
-                                        />
-                                    </div>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <Typography>
-                                        {publicationItemListAll[1].abstract}
-                                    </Typography>
-                                </div>
-                            </AccordionDetails>
-                        </Accordion> */}
+                    <div style={{ width: '65%' }}>
                         <div>
                             {
                                 Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
                                     (idx) => {
                                         const endYearItem = marks.find((item) => (item.value === range[1]))
-                                        const endYear = !endYearItem ? 2023 : endYearItem.year
+                                        const endYear = !endYearItem ? 3000 : endYearItem.year
 
                                         const beginYearItem = marks.find((item) => (item.value === range[0]))
                                         const beginYear = !beginYearItem ? 2021 : beginYearItem.year
 
-                                        return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
-                                            && (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
-                                            && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
+                                        if (endYear === 3000) {
+                                            if (beginYear === 3000) {
+                                                return (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
+                                                    && (publicationItemList[idx].status === 'Submitted')
+                                            }
+                                            return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
+                                                && (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
+                                            // && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
+                                        } else {
+                                            return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
+                                                && (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
+                                                && (publicationItemList[idx].status === 'Accepted')
+                                        }
                                     }
                                 ).map((idx) => (
                                     <div key={idx} className='board-row'>
-                                        <PublicationItem idx={idx} {...publicationItemList[idx]} />
+                                        {/* <PublicationItem idx={idx} {...publicationItemList[idx]} /> */}
+                                        <div className="display-12 mb-8">
+
+                                            <Accordion expanded={expanded[idx] === publicationItemList[idx].name} onChange={handleAccordionChange(publicationItemList[idx].name, idx)}>
+                                                <AccordionSummary
+                                                    expandIcon={<ExpandMoreIcon />}
+                                                    aria-controls="panel1bh-content"
+                                                    id="panel1bh-header"
+                                                >
+                                                    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                                                        <div >
+                                                            <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
+                                                                <img
+                                                                    alt='githubBadge'
+                                                                    src={'https://badgen.net/badge/' + ' ' + '/' + publicationItemList[idx].status + '/' + (publicationItemList[idx].status === 'Accepted' ? 'orange' : 'blue')}
+                                                                    height='15px' />
+                                                                &nbsp;
+                                                                {publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
+                                                                {publicationItemList[idx].authors.map(
+                                                                    (item, index) => {
+                                                                        if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                                                            return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
+                                                                        } else {
+                                                                            return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
+                                                                        }
+                                                                    }
+                                                                )}
+                                                            </Typography>
+                                                        </div>
+                                                        <Typography style={{ textAlign: 'right', minWidth: '15ch' }} >
+                                                            {publicationItemList[idx].conference} {publicationItemList[idx].year}
+                                                        </Typography>
+                                                    </div>
+                                                </AccordionSummary>
+                                                <AccordionDetails>
+                                                    {publicationItemList[idx].img && <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                                        <div>
+                                                            <img
+                                                                alt=""
+                                                                className="paperImage"
+                                                                src={publicationItemList[idx].img}
+                                                                width="200"
+                                                                height="150"
+                                                            />
+                                                        </div>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <Typography fontSize='15px'>
+                                                            {publicationItemList[idx].abstract}
+                                                        </Typography>
+                                                    </div>}
+                                                </AccordionDetails>
+                                            </Accordion>
+                                            <br></br>
+                                        </div>
                                     </div>))
                             }
 
@@ -504,36 +521,7 @@ export function Publications() {
                     </List>
 
 
-                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                        {['Accepted', 'Submitted'].map((value) => {
-                            const labelId = `checkbox-list-label-${value}`;
 
-                            return (
-                                <ListItem
-                                    key={value}
-                                    // secondaryAction={
-                                    //   <IconButton edge="end" aria-label="comments">
-                                    //     <CommentIcon />
-                                    //   </IconButton>
-                                    // }
-                                    disablePadding
-                                >
-                                    <ListItemButton role={undefined} onClick={handleStatusToggle(value)} dense>
-                                        <ListItemIcon>
-                                            <Checkbox
-                                                edge="start"
-                                                checked={statusChecked.indexOf(value) !== -1}
-                                                tabIndex={-1}
-                                                disableRipple
-                                                inputProps={{ 'aria-labelledby': labelId }}
-                                            />
-                                        </ListItemIcon>
-                                        <ListItemText id={labelId} primary={`${value}`} />
-                                    </ListItemButton>
-                                </ListItem>
-                            );
-                        })}
-                    </List>
                     <div style={{
                         display: 'flex',
                         justifyContent: 'center',
