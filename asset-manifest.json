@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.d916a340.css",
-    "main.js": "/static/js/main.7f77e762.js",
+    "main.js": "/static/js/main.88c845d4.js",
     "static/js/787.1e2b66a9.chunk.js": "/static/js/787.1e2b66a9.chunk.js",
     "static/media/about4.jpg": "/static/media/about4.89ac2002411ba8f8a7f5.jpg",
     "static/media/MIT_badge.png": "/static/media/MIT_badge.6c2e85fdc113961cb212.png",
-    "static/media/deca.png": "/static/media/deca.225f114526e92c505006.png",
-    "static/media/dicd.png": "/static/media/dicd.567b7df37b463e4d35f7.png",
-    "static/media/lisa.png": "/static/media/lisa.d7d0ec737d9af1ab5850.png",
-    "static/media/ats.png": "/static/media/ats.2a98b344e4e444d02a04.png",
+    "static/media/dicd.png": "/static/media/dicd.ce0e67006db9ebc5f2e6.png",
+    "static/media/lisa.png": "/static/media/lisa.b74d05080fec4c7732bd.png",
+    "static/media/deca.png": "/static/media/deca.43882e758b21c76fd901.png",
+    "static/media/ats.png": "/static/media/ats.53b099dceb65cb665ecc.png",
     "static/media/ustc_badge.png": "/static/media/ustc_badge.959e0e38c5f7b12ef66f.png",
     "static/media/ucsd_badge.png": "/static/media/ucsd_badge.214cfb083e26ac71a80a.png",
     "static/media/stanford_badge.png": "/static/media/stanford_badge.f2243e942c3347f656dc.png",
     "static/media/nus_badge.png": "/static/media/nus_badge.445c096a21fb45610796.png",
     "index.html": "/index.html",
     "main.d916a340.css.map": "/static/css/main.d916a340.css.map",
-    "main.7f77e762.js.map": "/static/js/main.7f77e762.js.map",
+    "main.88c845d4.js.map": "/static/js/main.88c845d4.js.map",
     "787.1e2b66a9.chunk.js.map": "/static/js/787.1e2b66a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d916a340.css",
-    "static/js/main.7f77e762.js"
+    "static/js/main.88c845d4.js"
   ]
 }
