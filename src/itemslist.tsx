@@ -96,7 +96,7 @@ export function ItemList() {
                     </h3>
                     <slot>
                         Phone | (+86) 18055363965 <br></br>
-                        email | wy2001@mail.ustc.edu.cn
+                        Email | wy2001@mail.ustc.edu.cn
                     </slot>
                 </div>
             </StyledItem>
