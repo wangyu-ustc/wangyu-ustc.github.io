@@ -84,40 +84,18 @@ const StyledDiv = styled.div`
 // });
 
 
-const citationAll = 7;
+const citationAll = 9;
 const publicationItemListAll = [
     {
-        'name': "Meta-Learning with an Adaptive Scheduler.",
-        'url': "https://arxiv.org/abs/2110.14057",
-        'authors': ["Huaxiu Yao*", "Yu Wang*", "Peilin Zhao", "Mehrdad Mahdavi", "Defu Lian", "Ying Wei", "Chelsea Finn"],
-        'status': "Accepted",
-        'conference': "NeurIPS",
-        'year': 2021,
-        'acceptRate': 26,
-        'img': ats,
-        'abstract': 'We propose an adaptive task scheduler (ATS) for the meta-training process with a neural scheduler to decide which meta-training tasks to use next and train the scheduler to optimize the generalization capacity of the meta-model to unseen tasks. We identify two meta-model-related factors as the input of the neural scheduler, which characterize the difficulty of a candidate task to the meta-model. Theoretically, we show that a scheduler taking the two factors into account improves the meta-training loss and also the optimization landscape.',
-    },
-    {
-        'name': "Learning Robust Recommenders through Cross-Model Agreement.",
-        'url': "https://arxiv.org/abs/2105.09605",
-        'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
-        'status': "Accepted",
-        'conference': 'WWW',
+        'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
+        'url': '',
+        'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
+        'status': 'submitted',
+        'conference': 'EMNLP',
         'year': 2022,
-        'acceptRate': 17.7,
-        'img': deca,
-        'abstract': 'We propose a novel framework to learn robust recommenders from implicit feedback. Through an empirical study, we find that different models make more similar predictions on clean examples than noisy examples. Motivated by this observation, we propose DeCA which aims to minimize the KL-divergence between the real user preference distributions parameterized by two recommendation models while maximizing the likelihood of data observation. We employ the proposed DeCA on four state-of-the-art recommendation models and conduct experiments on four datasets.'
-    },
-    {
-        'name': "Improving Out-of-Distribution Robustness via Selective Augmentation.",
-        'url': "https://arxiv.org/abs/2201.00299",
-        'authors': ['Huaxiu Yao*', 'Yu Wang*', 'Sai Li', 'Weixin Liang', 'Linjun Zhang', 'James Zou', 'Chelsea Finn'],
-        'status': "Accepted",
-        'conference': 'ICML',
-        'year': 2022,
-        'acceptRate': 21.9,
-        'img': lisa,
-        'abstract': "We specifically consider the problems of subpopulation shifts (e.g., imbalanced data) and domain shifts. We propose LISA, which selectively interpolates samples either with the same labels but different domains or with the same domain but different labels. Empirically, we study the effectiveness of LISA on nine benchmarks ranging from subpopulation shifts to domain shifts. We further analyze a linear setting and theoretically show how LISA leads to a smaller worst-group error."
+        'acceptRate': 0,
+        'img': '',
+        'abstract': ''
     },
     {
         'name': "Differentiable Invariant Causal Discovery.",
@@ -131,10 +109,10 @@ const publicationItemListAll = [
         'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. '
     },
     {
-        'name': 'AutoOD: Automatic Outlier Detection.',
+        'name': 'Interpretable Outlier Summarization.',
         'url': '',
-        'authors': ['Lei Cao', 'Yizhou Yan', 'Yu Wang', 'Samuel Madden', 'Elke A. Rundensteiner'],
-        'status': "Submitted",
+        'authors': ['Yu Wang', 'Lei Cao', 'Samuel Madden'],
+        'status': 'Submitted',
         'conference': 'SIGMOD',
         'year': 2023,
         'acceptRate': 0,
@@ -142,10 +120,10 @@ const publicationItemListAll = [
         'abstract': ''
     },
     {
-        'name': 'Interpretable Outlier Summarization.',
+        'name': 'AutoOD: Automatic Outlier Detection.',
         'url': '',
-        'authors': ['Yu Wang', 'Lei Cao', 'Samuel Madden'],
-        'status': 'Submitted',
+        'authors': ['Lei Cao', 'Yizhou Yan', 'Yu Wang', 'Samuel Madden', 'Elke A. Rundensteiner'],
+        'status': "Submitted",
         'conference': 'SIGMOD',
         'year': 2023,
         'acceptRate': 0,
@@ -162,7 +140,40 @@ const publicationItemListAll = [
         'acceptRate': 0,
         'img': '',
         'abstract': ''
-    }
+    },
+    {
+        'name': "Improving Out-of-Distribution Robustness via Selective Augmentation.",
+        'url': "https://arxiv.org/abs/2201.00299",
+        'authors': ['Huaxiu Yao*', 'Yu Wang*', 'Sai Li', 'Weixin Liang', 'Linjun Zhang', 'James Zou', 'Chelsea Finn'],
+        'status': "Accepted",
+        'conference': 'ICML',
+        'year': 2022,
+        'acceptRate': 21.9,
+        'img': lisa,
+        'abstract': "We specifically consider the problems of subpopulation shifts (e.g., imbalanced data) and domain shifts. We propose LISA, which selectively interpolates samples either with the same labels but different domains or with the same domain but different labels. Empirically, we study the effectiveness of LISA on nine benchmarks ranging from subpopulation shifts to domain shifts. We further analyze a linear setting and theoretically show how LISA leads to a smaller worst-group error."
+    },
+    {
+        'name': "Learning Robust Recommenders through Cross-Model Agreement.",
+        'url': "https://arxiv.org/abs/2105.09605",
+        'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
+        'status': "Accepted",
+        'conference': 'WWW',
+        'year': 2022,
+        'acceptRate': 17.7,
+        'img': deca,
+        'abstract': 'We propose a novel framework to learn robust recommenders from implicit feedback. Through an empirical study, we find that different models make more similar predictions on clean examples than noisy examples. Motivated by this observation, we propose DeCA which aims to minimize the KL-divergence between the real user preference distributions parameterized by two recommendation models while maximizing the likelihood of data observation. We employ the proposed DeCA on four state-of-the-art recommendation models and conduct experiments on four datasets.'
+    },
+    {
+        'name': "Meta-Learning with an Adaptive Scheduler.",
+        'url': "https://arxiv.org/abs/2110.14057",
+        'authors': ["Huaxiu Yao*", "Yu Wang*", "Peilin Zhao", "Mehrdad Mahdavi", "Defu Lian", "Ying Wei", "Chelsea Finn"],
+        'status': "Accepted",
+        'conference': "NeurIPS",
+        'year': 2021,
+        'acceptRate': 26,
+        'img': ats,
+        'abstract': 'We propose an adaptive task scheduler (ATS) for the meta-training process with a neural scheduler to decide which meta-training tasks to use next and train the scheduler to optimize the generalization capacity of the meta-model to unseen tasks. We identify two meta-model-related factors as the input of the neural scheduler, which characterize the difficulty of a candidate task to the meta-model. Theoretically, we show that a scheduler taking the two factors into account improves the meta-training loss and also the optimization landscape.',
+    },
 ]
 
 
@@ -370,9 +381,13 @@ export function Publications() {
             <StyledDiv>
                 <div className='left' style={{
                     paddingBottom: '200px',
-                    paddingTop: '40px'
+                    paddingTop: '40px',
+                    // backgroundColor: 'blue'
+                    background: 'url(./assets/background.png)',
+                    // backgroundRepeat: 'no-repeat', 
+                    // backgroundSize: '100%'
                 }}>
-                    <div style={{ width: '65%' }}>
+                    <div style={{ width: '65%'}}>
                         <div>
                             {
                                 Array.from({ length: publicationItemList.length }, (item, index) => index).filter(

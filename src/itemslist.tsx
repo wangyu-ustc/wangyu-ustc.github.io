@@ -95,7 +95,7 @@ export function ItemList() {
                         </slot>
                     </h3>
                     <slot>
-                        Phone | (+86) 18055363965 <br></br>
+                        Phone/WeChat | (+86)18055363965 <br></br>
                         Email | wy2001@mail.ustc.edu.cn
                     </slot>
                 </div>
@@ -148,15 +148,14 @@ export function ItemList() {
                 <div className="details">
                     <h3>
                         <slot name="heading">
-                            Research Interest
+                            Current Research Interest
                         </slot>
                     </h3>
                     <slot>
                         {/* <a onClick={() => {}}> Publications </a> <br></br>
                         <a> Experiences </a> */}
-                        <a>Machine Learning</a><br></br>
-                        <a>Data Mining</a><br></br>
-                        <a>Natural Language Processing</a>
+                        <a>MultiModality and comprehensive understanding on image.</a><br></br>
+                        <a>Fashion Explanation with natural language comments</a><br></br>
                     </slot>
                 </div>
             </StyledItem>

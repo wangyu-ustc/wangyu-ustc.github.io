@@ -196,7 +196,7 @@ export function BasicInformation() {
                             />
                             <div className='wrapper'>
                                 <div className="greetings">
-                                    <h1 className="green"> Yu Wang </h1>
+                                    <h1 className="green"> Yu (Aries) Wang </h1>
                                     <h3>
                                         A senior student from University of Science and Technology of China.
                                     </h3>
