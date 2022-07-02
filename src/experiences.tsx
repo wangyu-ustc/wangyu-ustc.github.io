@@ -225,7 +225,7 @@ export function Experiences() {
                             />
                             <div>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; University of Science and Technology of China</Typography>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2018.9 - 2022.7;  GPA: 3.95/4.3 (Ranking: 2/28)</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2018.9 - 2022.7</Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; B.S. in Data Science and Big Data Technology</Typography>
                                 {/* Advisor: {item.professor}, <br></br> */}
                             </div>
