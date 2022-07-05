@@ -35,7 +35,8 @@ interface pubProps {
     year: number,
     acceptRate: number,
     img: string,
-    abstract: string
+    abstract: string,
+    field: string
     //    }
 }
 
@@ -85,6 +86,10 @@ const StyledDiv = styled.div`
 
 
 const citationAll = 9;
+const NLP = 'Natural Language Processing';
+const ML = 'Machine Learning';
+const RS = 'Recommendation System';
+
 const publicationItemListAll = [
     {
         'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
@@ -95,7 +100,8 @@ const publicationItemListAll = [
         'year': 2022,
         'acceptRate': 0,
         'img': '',
-        'abstract': ''
+        'abstract': '',
+        'field': NLP
     },
     {
         'name': "Differentiable Invariant Causal Discovery.",
@@ -106,7 +112,8 @@ const publicationItemListAll = [
         'year': 2022,
         'acceptRate': 0,
         'img': dicd,
-        'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. '
+        'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
+        'field': ML
     },
     {
         'name': 'Interpretable Outlier Summarization.',
@@ -117,7 +124,8 @@ const publicationItemListAll = [
         'year': 2023,
         'acceptRate': 0,
         'img': '',
-        'abstract': ''
+        'abstract': '',
+        'field': 'Others'
     },
     {
         'name': 'AutoOD: Automatic Outlier Detection.',
@@ -128,7 +136,8 @@ const publicationItemListAll = [
         'year': 2023,
         'acceptRate': 0,
         'img': '',
-        'abstract': ''
+        'abstract': '',
+        'field': 'Others'
     },
     {
         'name': 'Probabilistic and Variational Label Denoising.',
@@ -139,7 +148,8 @@ const publicationItemListAll = [
         'year': 2022,
         'acceptRate': 0,
         'img': '',
-        'abstract': ''
+        'abstract': '',
+        'field': ML
     },
     {
         'name': "Improving Out-of-Distribution Robustness via Selective Augmentation.",
@@ -150,7 +160,8 @@ const publicationItemListAll = [
         'year': 2022,
         'acceptRate': 21.9,
         'img': lisa,
-        'abstract': "We specifically consider the problems of subpopulation shifts (e.g., imbalanced data) and domain shifts. We propose LISA, which selectively interpolates samples either with the same labels but different domains or with the same domain but different labels. Empirically, we study the effectiveness of LISA on nine benchmarks ranging from subpopulation shifts to domain shifts. We further analyze a linear setting and theoretically show how LISA leads to a smaller worst-group error."
+        'abstract': "We specifically consider the problems of subpopulation shifts (e.g., imbalanced data) and domain shifts. We propose LISA, which selectively interpolates samples either with the same labels but different domains or with the same domain but different labels. Empirically, we study the effectiveness of LISA on nine benchmarks ranging from subpopulation shifts to domain shifts. We further analyze a linear setting and theoretically show how LISA leads to a smaller worst-group error.",
+        'field': ML
     },
     {
         'name': "Learning Robust Recommenders through Cross-Model Agreement.",
@@ -161,7 +172,8 @@ const publicationItemListAll = [
         'year': 2022,
         'acceptRate': 17.7,
         'img': deca,
-        'abstract': 'We propose a novel framework to learn robust recommenders from implicit feedback. Through an empirical study, we find that different models make more similar predictions on clean examples than noisy examples. Motivated by this observation, we propose DeCA which aims to minimize the KL-divergence between the real user preference distributions parameterized by two recommendation models while maximizing the likelihood of data observation. We employ the proposed DeCA on four state-of-the-art recommendation models and conduct experiments on four datasets.'
+        'abstract': 'We propose a novel framework to learn robust recommenders from implicit feedback. Through an empirical study, we find that different models make more similar predictions on clean examples than noisy examples. Motivated by this observation, we propose DeCA which aims to minimize the KL-divergence between the real user preference distributions parameterized by two recommendation models while maximizing the likelihood of data observation. We employ the proposed DeCA on four state-of-the-art recommendation models and conduct experiments on four datasets.',
+        'field': RS
     },
     {
         'name': "Meta-Learning with an Adaptive Scheduler.",
@@ -173,6 +185,7 @@ const publicationItemListAll = [
         'acceptRate': 26,
         'img': ats,
         'abstract': 'We propose an adaptive task scheduler (ATS) for the meta-training process with a neural scheduler to decide which meta-training tasks to use next and train the scheduler to optimize the generalization capacity of the meta-model to unseen tasks. We identify two meta-model-related factors as the input of the neural scheduler, which characterize the difficulty of a candidate task to the meta-model. Theoretically, we show that a scheduler taking the two factors into account improves the meta-training loss and also the optimization landscape.',
+        'field': ML
     },
 ]
 
@@ -191,17 +204,11 @@ export function authorship(value: string[]) {
 export function Publications() {
 
     const [authorChecked, setAuthorChecked] = React.useState(['First', 'Co-First', 'Other']);
+    const [fieldChecked, setFieldChecked] = React.useState([NLP, ML, RS, 'Others'])
     // const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
     const [expanded, setExpanded] = React.useState<(string | boolean)[]>(Array.from({ length: publicationItemListAll.length }, () => false));
-    const [expandedSingle, setExpandedSingle] = React.useState<string | false>(false);
-
-
-    const handleAccordionChangeSingle =
-        (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-            setExpandedSingle(isExpanded ? panel : false);
-        };
 
     const handleAccordionChange =
         (panel: string, idx: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -210,71 +217,6 @@ export function Publications() {
             newExpanded[idx] = isExpanded ? panel : false;
             setExpanded(newExpanded);
         };
-
-    // function PublicationItem(props: pubProps) {
-    //     return (
-    //         <div className="display-12 mb-8">
-    //             <Accordion expanded={expanded[props.idx] === props.name} onChange={handleAccordionChange(props.name, props.idx)}>
-    //                 <AccordionSummary
-    //                     expandIcon={<ExpandMoreIcon />}
-    //                     aria-controls="panel1bh-content"
-    //                     id="panel1bh-header"
-    //                 >
-    //                     <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-    //                         <div >
-    //                             <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
-    //                                 {/* <img
-    //                                     alt='githubBadge'
-    //                                     src={'https://badgen.net/badge/' + ' ' + '/' + props.status + '/' + (props.status === 'Accepted' ? 'orange' : 'blue')}
-    //                                     height='15px' />
-    //                                 &nbsp; */}
-    //                                 {props.name} {props.url !== '' ? <a href={props.url}>PDF</a> : <></>} <br></br>
-    //                                 {props.authors.map(
-    //                                     (item, index) => {
-    //                                         if (item === 'Yu Wang' || item === 'Yu Wang*') {
-    //                                             return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
-    //                                         } else {
-    //                                             return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
-    //                                         }
-    //                                     }
-    //                                 )}
-    //                             </Typography>
-    //                         </div>
-    //                         {/* <Typography sx={{ color: 'text.secondary' }}>{props.conference} {props.year}</Typography> */}
-    //                         {/* <div style={{width: '100%', alignContent:'right', justifyContent: 'center'}}>
-    //                         <img
-    //                             alt='githubBadge'
-    //                             src={'https://badgen.net/badge/' + props.conference + ' ' + props.year + '/' + props.status +'/' + (props.status === 'Accepted' ? 'orange' : 'blue')} />
-    //                     </div> */}
-    //                         <Typography style={{ textAlign: 'right', minWidth: '15ch' }} >
-    //                             {props.conference} {props.year}
-    //                         </Typography>
-    //                     </div>
-    //                 </AccordionSummary>
-    //                 <AccordionDetails>
-    //                     {props.img && <div style={{ display: 'flex', justifyContent: 'center' }}>
-    //                         <div>
-    //                             <img
-    //                                 alt=""
-    //                                 className="paperImage"
-    //                                 src={props.img}
-    //                                 width="250"
-    //                                 height="200"
-    //                             />
-    //                         </div>
-    //                         &nbsp;&nbsp;&nbsp;&nbsp;
-    //                         <Typography>
-    //                             {props.abstract}
-    //                         </Typography>
-    //                     </div>}
-    //                 </AccordionDetails>
-    //             </Accordion>
-    //             <br></br>
-    //         </div>)
-    // }
-
-
-
 
     React.useEffect(() => {
         // console.log('useEffect called')
@@ -331,9 +273,20 @@ export function Publications() {
         setAuthorChecked(newAuthorChecked);
     };
 
-    // function valuetext(value: number) {
-    //     return `year: ${value}`;
-    // }
+    const handleFieldToggle = (value: string) => () => {
+        const currentIndex = fieldChecked.indexOf(value);
+        const newFieldChecked = [...fieldChecked];
+
+        if (currentIndex === -1) {
+            newFieldChecked.push(value);
+        } else {
+            newFieldChecked.splice(currentIndex, 1);
+        }
+
+        setFieldChecked(newFieldChecked);
+    };
+
+
     function valuetext(value: number) {
         return `${value}°C`;
     }
@@ -397,18 +350,22 @@ export function Publications() {
 
                                         const beginYearItem = marks.find((item) => (item.value === range[0]))
                                         const beginYear = !beginYearItem ? 2021 : beginYearItem.year
+                                        
+                                        if (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) === -1){
+                                            return false
+                                        }
+                                        if (fieldChecked.indexOf(publicationItemList[idx].field) === -1){
+                                            return false
+                                        }
 
                                         if (endYear === 3000) {
                                             if (beginYear === 3000) {
-                                                return (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
-                                                    && (publicationItemList[idx].status === 'Submitted')
+                                                return (publicationItemList[idx].status === 'Submitted')
                                             }
                                             return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
-                                                && (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
                                             // && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
                                         } else {
                                             return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
-                                                && (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) !== -1)
                                                 && (publicationItemList[idx].status === 'Accepted')
                                         }
                                     }
@@ -523,6 +480,37 @@ export function Publications() {
                                             <Checkbox
                                                 edge="start"
                                                 checked={authorChecked.indexOf(value) !== -1}
+                                                tabIndex={-1}
+                                                disableRipple
+                                                inputProps={{ 'aria-labelledby': labelId }}
+                                            />
+                                        </ListItemIcon>
+                                        <ListItemText id={labelId} primary={`${value}`} />
+                                    </ListItemButton>
+                                </ListItem>
+                            );
+                        })}
+                    </List>
+
+                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                        {[NLP, ML, RS, 'Others'].map((value) => {
+                            const labelId = `checkbox-list-label-${value}`;
+
+                            return (
+                                <ListItem
+                                    key={value}
+                                    // secondaryAction={
+                                    //   <IconButton edge="end" aria-label="comments">
+                                    //     <CommentIcon />
+                                    //   </IconButton>
+                                    // }
+                                    disablePadding
+                                >
+                                    <ListItemButton role={undefined} onClick={handleFieldToggle(value)} dense>
+                                        <ListItemIcon>
+                                            <Checkbox
+                                                edge="start"
+                                                checked={fieldChecked.indexOf(value) !== -1}
                                                 tabIndex={-1}
                                                 disableRipple
                                                 inputProps={{ 'aria-labelledby': labelId }}
