@@ -90,7 +90,7 @@ const publicationItemListAll = [
         'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
         'url': '',
         'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
-        'status': 'submitted',
+        'status': 'Submitted',
         'conference': 'EMNLP',
         'year': 2022,
         'acceptRate': 0,
