@@ -195,13 +195,13 @@ export function Publications() {
     const [citation, setCitation] = React.useState(0);
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
     const [expanded, setExpanded] = React.useState<(string | boolean)[]>(Array.from({ length: publicationItemListAll.length }, () => false));
-    const [expandedSingle, setExpandedSingle] = React.useState<string | false>(false);
+    // const [expandedSingle, setExpandedSingle] = React.useState<string | false>(false);
 
 
-    const handleAccordionChangeSingle =
-        (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-            setExpandedSingle(isExpanded ? panel : false);
-        };
+    // const handleAccordionChangeSingle =
+    //     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    //         setExpandedSingle(isExpanded ? panel : false);
+    //     };
 
     const handleAccordionChange =
         (panel: string, idx: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {

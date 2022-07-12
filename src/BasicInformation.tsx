@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import './base.css';
 import { ItemList } from './itemslist';
-import myPicture from './assets/about4.jpg';
+import myPicture from './assets/about5.jpg';
 
 
 
