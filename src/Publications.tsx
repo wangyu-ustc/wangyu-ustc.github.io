@@ -15,31 +15,12 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import axios from 'axios';
 
 import ats from './assets/ats.png'
 import deca from './assets/deca.png'
 import lisa from './assets/lisa.png'
 import dicd from './assets/dicd.png'
-
-
-
-interface pubProps {
-    //    publicationProp:
-    //    {
-    idx: number,
-    name: string,
-    url: string,
-    authors: string[],
-    status: string,
-    conference: string,
-    year: number,
-    acceptRate: number,
-    img: string,
-    abstract: string,
-    field: string
-    //    }
-}
-
 
 const StyledDiv = styled.div`
     flex-grow: 1;
@@ -83,74 +64,77 @@ const StyledDiv = styled.div`
 // axios.get('https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ').then(resp => {
 //     console.log(resp.data);
 // });
+axios.get('https://baidu.com').then(resp => {
+    console.log(resp.data);
+});
 
 
-const citationAll = 9;
+const citationAll = 11;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 
 const publicationItemListAll = [
-    {
-        'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
-        'url': '',
-        'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
-        'status': 'Submitted',
-        'conference': 'EMNLP',
-        'year': 2022,
-        'acceptRate': 0,
-        'img': '',
-        'abstract': '',
-        'field': NLP
-    },
+    // {
+    //     'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
+    //     'url': '',
+    //     'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
+    //     'status': 'Submitted',
+    //     'conference': 'EMNLP',
+    //     'year': 2022,
+    //     'acceptRate': 0,
+    //     'img': '',
+    //     'abstract': '',
+    //     'field': NLP
+    // },
     {
         'name': "Differentiable Invariant Causal Discovery.",
         'url': 'https://arxiv.org/abs/2205.15638',
         'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Xiangnan He', 'Tat-Seng Chua'],
         'status': "Submitted",
-        'conference': 'NeurIPS',
+        'conference': '',
         'year': 2022,
         'acceptRate': 0,
         'img': dicd,
         'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
         'field': ML
     },
-    {
-        'name': 'Interpretable Outlier Summarization.',
-        'url': '',
-        'authors': ['Yu Wang', 'Lei Cao', 'Samuel Madden'],
-        'status': 'Submitted',
-        'conference': 'SIGMOD',
-        'year': 2023,
-        'acceptRate': 0,
-        'img': '',
-        'abstract': '',
-        'field': 'Others'
-    },
-    {
-        'name': 'AutoOD: Automatic Outlier Detection.',
-        'url': '',
-        'authors': ['Lei Cao', 'Yizhou Yan', 'Yu Wang', 'Samuel Madden', 'Elke A. Rundensteiner'],
-        'status': "Submitted",
-        'conference': 'SIGMOD',
-        'year': 2023,
-        'acceptRate': 0,
-        'img': '',
-        'abstract': '',
-        'field': 'Others'
-    },
-    {
-        'name': 'Probabilistic and Variational Label Denoising.',
-        'url': '',
-        'authors': ['Xin Xin*', 'Yu Wang*', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
-        'status': 'Submitted',
-        'conference': 'TKDE',
-        'year': 2022,
-        'acceptRate': 0,
-        'img': '',
-        'abstract': '',
-        'field': ML
-    },
+    // {
+    //     'name': 'Interpretable Outlier Summarization.',
+    //     'url': '',
+    //     'authors': ['Yu Wang', 'Lei Cao', 'Samuel Madden'],
+    //     'status': 'Submitted',
+    //     'conference': 'SIGMOD',
+    //     'year': 2023,
+    //     'acceptRate': 0,
+    //     'img': '',
+    //     'abstract': '',
+    //     'field': 'Others'
+    // },
+    // {
+    //     'name': 'AutoOD: Automatic Outlier Detection.',
+    //     'url': '',
+    //     'authors': ['Lei Cao', 'Yizhou Yan', 'Yu Wang', 'Samuel Madden', 'Elke A. Rundensteiner'],
+    //     'status': "Submitted",
+    //     'conference': 'SIGMOD',
+    //     'year': 2023,
+    //     'acceptRate': 0,
+    //     'img': '',
+    //     'abstract': '',
+    //     'field': 'Others'
+    // },
+    // {
+    //     'name': 'Probabilistic and Variational Label Denoising.',
+    //     'url': '',
+    //     'authors': ['Xin Xin*', 'Yu Wang*', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
+    //     'status': 'Submitted',
+    //     'conference': 'TKDE',
+    //     'year': 2022,
+    //     'acceptRate': 0,
+    //     'img': '',
+    //     'abstract': '',
+    //     'field': ML
+    // },
     {
         'name': "Improving Out-of-Distribution Robustness via Selective Augmentation.",
         'url': "https://arxiv.org/abs/2201.00299",
@@ -244,20 +228,6 @@ export function Publications() {
         appendCitation();
 
     }, []);
-
-    // const handleStatusToggle = (value: string) => () => {
-    //     const currentIndex = statusChecked.indexOf(value);
-    //     const newChecked = [...statusChecked];
-
-    //     if (currentIndex === -1) {
-    //         newChecked.push(value);
-    //     } else {
-    //         newChecked.splice(currentIndex, 1);
-    //     }
-
-    //     setStatusChecked(newChecked);
-    // };
-
 
 
     const handleAuthorToggle = (value: string) => () => {
