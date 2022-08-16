@@ -21,6 +21,7 @@ import ats from './assets/ats.png'
 import deca from './assets/deca.png'
 import lisa from './assets/lisa.png'
 import dicd from './assets/dicd.png'
+import autood from './assets/autood.png'
 
 const StyledDiv = styled.div`
     flex-grow: 1;
@@ -69,7 +70,7 @@ axios.get('https://baidu.com').then(resp => {
 });
 
 
-const citationAll = 11;
+const citationAll = 13;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -111,18 +112,18 @@ const publicationItemListAll = [
     //     'abstract': '',
     //     'field': 'Others'
     // },
-    // {
-    //     'name': 'AutoOD: Automatic Outlier Detection.',
-    //     'url': '',
-    //     'authors': ['Lei Cao', 'Yizhou Yan', 'Yu Wang', 'Samuel Madden', 'Elke A. Rundensteiner'],
-    //     'status': "Submitted",
-    //     'conference': 'SIGMOD',
-    //     'year': 2023,
-    //     'acceptRate': 0,
-    //     'img': '',
-    //     'abstract': '',
-    //     'field': 'Others'
-    // },
+    {
+        'name': 'AutoOD: Automatic Outlier Detection.',
+        'url': '',
+        'authors': ['Lei Cao', 'Yizhou Yan', 'Yu Wang', 'Samuel Madden', 'Elke A. Rundensteiner'],
+        'status': "Accepted",
+        'conference': 'SIGMOD',
+        'year': 2023,
+        'acceptRate': 0,
+        'img': autood,
+        'abstract': 'We propose AutoOD which uses the existing unsuperviseddetection techniques to automatically produce high quality outliers without any human tuning. AutoOD’s fundamentally new strategy unifies the merits of unsupervised outlier detection and supervised classification within one integrated solution. On a diverse set of benchmarks, AutoOD consistently outperforms the best unsupervised outlier detector selected from hundreds of detectors. It also outperforms other tuning-free approaches from 12 to 97 points (out of 100) in the F-1 score.',
+        'field': 'Others'
+    },
     // {
     //     'name': 'Probabilistic and Variational Label Denoising.',
     //     'url': '',
