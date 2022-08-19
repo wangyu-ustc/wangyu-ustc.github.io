@@ -269,9 +269,14 @@ export function Publications() {
             label: 'Year 2021',
         },
         {
-            value: 50,
+            value: 33,
             year: 2022,
             label: 'Year 2022',
+        },
+        {
+            value: 66,
+            year: 2023,
+            label: 'Year 2023',
         },
         {
             value: 100,
@@ -424,7 +429,7 @@ export function Publications() {
                                 value={range}
                                 onChange={handleChange}
                                 getAriaValueText={valuetext}
-                                step={50}
+                                step={33}
                                 marks={marks}
                                 color="secondary"
                             // valueLabelDisplay="on"
