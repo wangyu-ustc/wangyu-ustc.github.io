@@ -70,7 +70,7 @@ axios.get('https://baidu.com').then(resp => {
 });
 
 
-const citationAll = 13;
+const citationAll = 15;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -335,10 +335,14 @@ export function Publications() {
                                         }
 
                                         if (endYear === 3000) {
-                                            if (beginYear === 3000) {
-                                                return (publicationItemList[idx].status === 'Submitted')
+                                            if (publicationItemList[idx].status === 'Submitted'){
+                                                return true
                                             }
-                                            return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
+                                            if (beginYear < 3000){
+                                                return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
+                                            }
+                                            return false
+                                            
                                             // && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
                                         } else {
                                             return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
@@ -359,18 +363,22 @@ export function Publications() {
                                                     <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
                                                         <div >
                                                             <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
-                                                                <img
+                                                                {/* <img
                                                                     alt='githubBadge'
                                                                     src={'https://badgen.net/badge/' + ' ' + '/' + publicationItemList[idx].status + '/' + (publicationItemList[idx].status === 'Accepted' ? 'orange' : 'blue')}
-                                                                    height='15px' />
+                                                                    height='15px' /> */}
+                                                                {/* <img
+                                                                    alt='githubBadge'
+                                                                    src={'https://badgen.net/badge/' + ' ' + '/' + publicationItemList[idx].field + '/' + 'orange'}
+                                                                    height='15px' /> */}
                                                                 &nbsp;
                                                                 {publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
                                                                 {publicationItemList[idx].authors.map(
                                                                     (item, index) => {
                                                                         if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                                                                            return <Typography fontSize="10px" display="inline" key={index} style={{ color: 'limegreen' }}><strong>{item + ', '}</strong></Typography>;
+                                                                            return <Typography fontSize="12px" display="inline" key={index} style={{ color: '#1B3A9D' }}><strong>{item + ', '}</strong></Typography>;
                                                                         } else {
-                                                                            return <Typography fontSize="10px" display="inline" key={index}>{item + ', '}</Typography>
+                                                                            return <Typography fontSize="12px" display="inline" key={index}>{item + ', '}</Typography>
                                                                         }
                                                                     }
                                                                 )}
