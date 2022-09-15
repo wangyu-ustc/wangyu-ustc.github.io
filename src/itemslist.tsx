@@ -178,7 +178,6 @@ export function ItemList() {
                     </h3>
                     <slot>
                         <p> Play <a href='./luzhanqi'> Luzhanqi</a>. </p>
-                        <p> <a> Summarize </a> the conversation. </p>
                     </slot>
                 </div>
             </StyledItem>

@@ -279,7 +279,7 @@ export function Publications() {
             label: 'Year 2023',
         },
         {
-            value: 100,
+            value: 99,
             year: 3000,
             label: 'Submitted',
         },
