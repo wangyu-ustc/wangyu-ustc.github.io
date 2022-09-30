@@ -62,15 +62,18 @@ const StyledDiv = styled.div`
 `;
 
 
+axios.get('https://www.google.com/').then(
+    resp => {console.log(resp.data)}
+)
 // axios.get('https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ').then(resp => {
 //     console.log(resp.data);
 // });
-axios.get('https://baidu.com').then(resp => {
-    console.log(resp.data);
-});
+// axios.get('https://baidu.com').then(resp => {
+//     console.log(resp.data);
+// });
 
 
-const citationAll = 15;
+const citationAll = 16;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';

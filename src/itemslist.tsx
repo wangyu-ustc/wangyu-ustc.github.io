@@ -96,7 +96,7 @@ export function ItemList() {
                     </h3>
                     <slot>
                         Phone/WeChat | (+86)18055363965 <br></br>
-                        Email | wy2001@mail.ustc.edu.cn
+                        Email | yuw164@ucsd.edu
                     </slot>
                 </div>
             </StyledItem>
@@ -154,8 +154,9 @@ export function ItemList() {
                     <slot>
                         {/* <a onClick={() => {}}> Publications </a> <br></br>
                         <a> Experiences </a> */}
+                        <a>I have some entrepreneurship projects recently and open for cooperations!</a><br></br>
                         <a>MultiModality and comprehensive understanding on image.</a><br></br>
-                        <a>Fashion Explanation with natural language comments</a><br></br>
+                        <a>Fashion Explanation with natural language comments.</a>
                     </slot>
                 </div>
             </StyledItem>
