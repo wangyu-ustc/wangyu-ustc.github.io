@@ -94,7 +94,7 @@ const publicationItemListAll = [
     {
         'name': "Differentiable Invariant Causal Discovery.",
         'url': 'https://arxiv.org/abs/2205.15638',
-        'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Xiangnan He', 'Tat-Seng Chua'],
+        'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Yancheng Yuan', 'Xiangnan He', 'Tat-Seng Chua'],
         'status': "Submitted",
         'conference': '',
         'year': 2022,
