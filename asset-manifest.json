@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.d916a340.css",
-    "main.js": "/static/js/main.ba5e0aa4.js",
+    "main.js": "/static/js/main.f7e7f268.js",
     "static/js/787.1e2b66a9.chunk.js": "/static/js/787.1e2b66a9.chunk.js",
     "static/media/MIT_badge.png": "/static/media/MIT_badge.6c2e85fdc113961cb212.png",
     "static/media/dicd.png": "/static/media/dicd.ce0e67006db9ebc5f2e6.png",
     "static/media/lisa.png": "/static/media/lisa.b74d05080fec4c7732bd.png",
+    "static/media/debias.png": "/static/media/debias.5f8cd2e187528a82bd4b.png",
     "static/media/deca.png": "/static/media/deca.43882e758b21c76fd901.png",
     "static/media/autood.png": "/static/media/autood.43fb3237d72ccd4262cd.png",
     "static/media/about5.jpg": "/static/media/about5.e171e82dc433f64506fd.jpg",
@@ -16,11 +17,11 @@
     "static/media/nus_badge.png": "/static/media/nus_badge.445c096a21fb45610796.png",
     "index.html": "/index.html",
     "main.d916a340.css.map": "/static/css/main.d916a340.css.map",
-    "main.ba5e0aa4.js.map": "/static/js/main.ba5e0aa4.js.map",
+    "main.f7e7f268.js.map": "/static/js/main.f7e7f268.js.map",
     "787.1e2b66a9.chunk.js.map": "/static/js/787.1e2b66a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d916a340.css",
-    "static/js/main.ba5e0aa4.js"
+    "static/js/main.f7e7f268.js"
   ]
 }
