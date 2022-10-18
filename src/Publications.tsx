@@ -82,7 +82,7 @@ const RS = 'Recommendation System';
 const publicationItemListAll = [
     {
         'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
-        'url': '',
+        'url': 'https://arxiv.org/abs/2210.07455',
         'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
         'status': 'Accepted',
         'conference': 'Findings of EMNLP',
