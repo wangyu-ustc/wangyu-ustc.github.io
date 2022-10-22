@@ -74,7 +74,7 @@ axios.get('https://www.google.com/').then(
 // });
 
 
-const citationAll = 19;
+const citationAll = 23;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -320,7 +320,7 @@ export function Publications() {
                     // backgroundRepeat: 'no-repeat', 
                     // backgroundSize: '100%'
                 }}>
-                    <div style={{ width: '65%'}}>
+                    <div style={{ width: '63%'}}>
                         <div>
                             {
                                 Array.from({ length: publicationItemList.length }, (item, index) => index).filter(

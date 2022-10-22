@@ -170,7 +170,7 @@ export function Experiences() {
                     justifyContent: 'center',
                     display: 'flex'
                 }}>
-                    <div style={{ width: '70%', fontSize: '20px' }}>
+                    <div style={{ width: '64%', fontSize: '20px' }}>
                         <Typography fontSize='20px'>Research Experiences: </Typography>
                         <br></br>
                         {/* <ExpItem {...experienceItemListAll[0]}/> */}

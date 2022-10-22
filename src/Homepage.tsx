@@ -189,7 +189,7 @@ export function Homepage() {
                 fontSize: '0.7cm',
                 height: '50px'
             }}>
-                <div style={{width:'80%', 
+                <div style={{width:'70%', 
                             height:'100%',
                             display: 'flex'}}>
                 <div style={{
