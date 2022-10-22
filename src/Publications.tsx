@@ -22,6 +22,7 @@ import deca from './assets/deca.png'
 import lisa from './assets/lisa.png'
 import dicd from './assets/dicd.png'
 import autood from './assets/autood.png'
+import debias from './assets/debias.png'
 
 const StyledDiv = styled.div`
     flex-grow: 1;
@@ -62,36 +63,39 @@ const StyledDiv = styled.div`
 `;
 
 
+axios.get('https://www.google.com/').then(
+    resp => {console.log(resp.data)}
+)
 // axios.get('https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ').then(resp => {
 //     console.log(resp.data);
 // });
-axios.get('https://google.com').then(resp => {
-    console.log(resp.data);
-});
+// axios.get('https://baidu.com').then(resp => {
+//     console.log(resp.data);
+// });
 
 
-const citationAll = 15;
+const citationAll = 19;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 
 const publicationItemListAll = [
-    // {
-    //     'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
-    //     'url': '',
-    //     'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
-    //     'status': 'Submitted',
-    //     'conference': 'EMNLP',
-    //     'year': 2022,
-    //     'acceptRate': 0,
-    //     'img': '',
-    //     'abstract': '',
-    //     'field': NLP
-    // },
+    {
+        'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
+        'url': 'https://arxiv.org/abs/2210.07455',
+        'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
+        'status': 'Accepted',
+        'conference': 'Findings of EMNLP',
+        'year': 2022,
+        'acceptRate': 0,
+        'img': debias,
+        'abstract': 'In this work, we provide a novel debiasing algorithm by adjusting the predictive model’s belief to (1) ignore the sensitive information if it is not useful for the task; (2) use sensitive informa- tion minimally as necessary for the prediction (while also incurring a penalty). Experimental results on two text classification tasks (influ- enced by gender) and an open-ended genera- tion task (influenced by race) indicate that our model achieves a desirable trade-off between debiasing and task performance along with pro- ducing debiased rationales as evidence.',
+        'field': NLP
+    },
     {
         'name': "Differentiable Invariant Causal Discovery.",
         'url': 'https://arxiv.org/abs/2205.15638',
-        'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Xiangnan He', 'Tat-Seng Chua'],
+        'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Yancheng Yuan', 'Xiangnan He', 'Tat-Seng Chua'],
         'status': "Submitted",
         'conference': '',
         'year': 2022,
@@ -279,7 +283,7 @@ export function Publications() {
             label: 'Year 2023',
         },
         {
-            value: 100,
+            value: 99,
             year: 3000,
             label: 'Submitted',
         },
