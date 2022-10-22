@@ -65,7 +65,7 @@ const StyledDiv = styled.div`
 // axios.get('https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ').then(resp => {
 //     console.log(resp.data);
 // });
-axios.get('https://baidu.com').then(resp => {
+axios.get('https://google.com').then(resp => {
     console.log(resp.data);
 });
 
