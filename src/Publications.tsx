@@ -44,11 +44,19 @@ const StyledDiv = styled.div`
     overflow-y: auto;
     }
 
+    &> .conference {
+        display: none;
+    }
+
     @media only screen and (max-width: 1000px) {
     &> .right {
         display: none;
     }
+    // &> .conference {
+    //     display: none;
+    // }
     }
+
 
     &> .left {
     max-height: 100%;
@@ -62,6 +70,20 @@ const StyledDiv = styled.div`
     }
 `;
 
+
+
+const PaperDiv = styled.div`
+
+    &> .conference {
+        // display: none;
+    }
+
+    @media only screen and (max-width: 1000px) {
+    &> .conference {
+        display: none;
+    }
+    }
+`;
 
 axios.get('https://www.google.com/').then(
     resp => {console.log(resp.data)}
@@ -388,23 +410,29 @@ export function Publications() {
                                                                 )}
                                                             </Typography>
                                                         </div>
-                                                        <Typography style={{ textAlign: 'right', minWidth: '15ch' }} >
-                                                            {publicationItemList[idx].conference} {publicationItemList[idx].year}
-                                                        </Typography>
+                                                        <PaperDiv>
+                                                            <div className='conference'>
+                                                            <Typography style={{ textAlign: 'right', minWidth: '15ch' }} >
+                                                                {publicationItemList[idx].conference} {publicationItemList[idx].year}
+                                                            </Typography>
+                                                            </div>
+                                                        </PaperDiv>
                                                     </div>
                                                 </AccordionSummary>
                                                 <AccordionDetails>
                                                     {publicationItemList[idx].img && <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                                        <div>
-                                                            <img
-                                                                alt=""
-                                                                className="paperImage"
-                                                                src={publicationItemList[idx].img}
-                                                                width="200"
-                                                                height="150"
-                                                            />
-                                                        </div>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <PaperDiv>
+                                                            <div className='conference'>
+                                                                <img
+                                                                    alt=""
+                                                                    className="paperImage"
+                                                                    src={publicationItemList[idx].img}
+                                                                    width="200"
+                                                                    height="150"
+                                                                />
+                                                            </div>
+                                                        </PaperDiv>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;                                                        
                                                         <Typography fontSize='15px'>
                                                             {publicationItemList[idx].abstract}
                                                         </Typography>
