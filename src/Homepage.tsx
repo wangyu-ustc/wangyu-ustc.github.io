@@ -13,6 +13,21 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 
 // import Menu, { MenuProps } from '@mui/material/Menu';
 import Menu from '@mui/material/Menu';
+import styled from 'styled-components';
+
+
+const AdjustToWidthStyle = styled.div`
+    
+    width: 70%;
+    height: '100%';
+    display: 'flex';
+
+
+    @media only screen and (max-width: 1000px) {
+        width: 100%
+        }
+
+`;
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -182,55 +197,58 @@ export function Homepage() {
                 fontSize: '0.7cm',
                 height: '50px'
             }}>
-                <div style={{width:'70%', 
-                            height:'100%',
-                            display: 'flex'}}>
+                <AdjustToWidthStyle>
                 <div style={{
-                    width:'40px',
-                    // backgroundColor: '',
-                    height: '100%'
+                    width: '70%',
+                    height: '100%',
+                    display: 'flex'
                 }}>
-                    <IconButton
-                        aria-label="more"
-                        id="long-button"
-                        aria-controls={open ? 'long-menu' : undefined}
-                        aria-expanded={open ? 'true' : undefined}
-                        aria-haspopup="true"
-                        onClick={handleClick}
-                    >
-                        <DensityMediumIcon/>
-                    </IconButton>
-                    <Menu
-                        id="long-menu"
-                        MenuListProps={{
-                            'aria-labelledby': 'long-button',
-                        }}
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        PaperProps={{
-                            style: {
-                                maxHeight: ITEM_HEIGHT * 4.5,
-                                width: '20ch',
-                            },
-                        }}
-                    >
-                        {options.map((option) => (
-                            <MenuItem key={option} onClick={() => handleClose(option)}>
-                                {option}
-                            </MenuItem>
-                        ))}
-                    </Menu>
+                    <div style={{
+                        width: '40px',
+                        // backgroundColor: '',
+                        height: '100%'
+                    }}>
+                        <IconButton
+                            aria-label="more"
+                            id="long-button"
+                            aria-controls={open ? 'long-menu' : undefined}
+                            aria-expanded={open ? 'true' : undefined}
+                            aria-haspopup="true"
+                            onClick={handleClick}
+                        >
+                            <DensityMediumIcon />
+                        </IconButton>
+                        <Menu
+                            id="long-menu"
+                            MenuListProps={{
+                                'aria-labelledby': 'long-button',
+                            }}
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            PaperProps={{
+                                style: {
+                                    maxHeight: ITEM_HEIGHT * 4.5,
+                                    width: '20ch',
+                                },
+                            }}
+                        >
+                            {options.map((option) => (
+                                <MenuItem key={option} onClick={() => handleClose(option)}>
+                                    {option}
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </div>
+                    <div style={{
+                        display: 'flex',
+                        width: 'calc(100% - 40px)',
+                        justifyContent: 'center',
+                    }}>
+                        Yu Wang
+                    </div>
                 </div>
-                <div style={{
-                    display: 'flex',
-                    width: 'calc(100% - 40px)',
-                    justifyContent: 'center',
-                }}>
-                    Yu Wang
-                </div>
-                </div>
-                {/* Yu Wang */}
+                </AdjustToWidthStyle>
             </div>
             <div style={{
                 flexGrow: 1,
