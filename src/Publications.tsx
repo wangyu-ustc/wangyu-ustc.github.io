@@ -19,6 +19,7 @@ import axios from 'axios';
 
 import ats from './assets/ats.png'
 import deca from './assets/deca.png'
+import deca2 from './assets/deca2.png'
 import lisa from './assets/lisa.png'
 import dicd from './assets/dicd.png'
 import autood from './assets/autood.png'
@@ -95,24 +96,12 @@ axios.get('https://www.google.com/').then(
 // });
 
 
-const citationAll = 23;
+const citationAll = 33;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 
 const publicationItemListAll = [
-    {
-        'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
-        'url': 'https://arxiv.org/abs/2210.07455',
-        'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
-        'status': 'Accepted',
-        'conference': 'Findings of EMNLP',
-        'year': 2022,
-        'acceptRate': 0,
-        'img': debias,
-        'abstract': 'In this work, we provide a novel debiasing algorithm by adjusting the predictive model’s belief to (1) ignore the sensitive information if it is not useful for the task; (2) use sensitive informa- tion minimally as necessary for the prediction (while also incurring a penalty). Experimental results on two text classification tasks (influ- enced by gender) and an open-ended genera- tion task (influenced by race) indicate that our model achieves a desirable trade-off between debiasing and task performance along with pro- ducing debiased rationales as evidence.',
-        'field': NLP
-    },
     {
         'name': "Differentiable Invariant Causal Discovery.",
         'url': 'https://arxiv.org/abs/2205.15638',
@@ -124,6 +113,30 @@ const publicationItemListAll = [
         'img': dicd,
         'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
         'field': ML
+    },
+    {
+        'name': 'Label Denoising through Cross-Model Agreement',
+        'url': '',
+        'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
+        'status': 'Submitted',
+        'conference': 'TORS',
+        'year': 2023,
+        'acceptRate': 0,
+        'img': deca2,
+        'abstract': 'In this work, we propose a novel framework to learn robust machine learning models from noisy labels. Through an empirical study, we find that different models make relatively similar predictions on clean examples, while the predictions on noisy examples vary much more across different models. we further extend the proposed DeCA to the image classification task which corresponds to multi-class label scenarios. Experimental results demonstrate that the proposed methods significantly improve the model performance compared with normal training and other denoising methods on both the recommendation task and multi-class image classification task.',
+        'field': RS
+    },
+    {
+        'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
+        'url': 'https://arxiv.org/abs/2210.07455',
+        'authors': ['Zexue He', 'Yu Wang', 'Julian McAuley', 'Bodhisattwa Prasad Majumder'],
+        'status': 'Accepted',
+        'conference': 'Findings of EMNLP',
+        'year': 2022,
+        'acceptRate': 0,
+        'img': debias,
+        'abstract': 'In this work, we provide a novel debiasing algorithm by adjusting the predictive model’s belief to (1) ignore the sensitive information if it is not useful for the task; (2) use sensitive informa- tion minimally as necessary for the prediction (while also incurring a penalty). Experimental results on two text classification tasks (influ- enced by gender) and an open-ended genera- tion task (influenced by race) indicate that our model achieves a desirable trade-off between debiasing and task performance along with pro- ducing debiased rationales as evidence.',
+        'field': NLP
     },
     // {
     //     'name': 'Interpretable Outlier Summarization.',
@@ -149,18 +162,6 @@ const publicationItemListAll = [
         'abstract': 'We propose AutoOD which uses the existing unsuperviseddetection techniques to automatically produce high quality outliers without any human tuning. AutoOD’s fundamentally new strategy unifies the merits of unsupervised outlier detection and supervised classification within one integrated solution. On a diverse set of benchmarks, AutoOD consistently outperforms the best unsupervised outlier detector selected from hundreds of detectors. It also outperforms other tuning-free approaches from 12 to 97 points (out of 100) in the F-1 score.',
         'field': 'Others'
     },
-    // {
-    //     'name': 'Probabilistic and Variational Label Denoising.',
-    //     'url': '',
-    //     'authors': ['Xin Xin*', 'Yu Wang*', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
-    //     'status': 'Submitted',
-    //     'conference': 'TKDE',
-    //     'year': 2022,
-    //     'acceptRate': 0,
-    //     'img': '',
-    //     'abstract': '',
-    //     'field': ML
-    // },
     {
         'name': "Improving Out-of-Distribution Robustness via Selective Augmentation.",
         'url': "https://arxiv.org/abs/2201.00299",
