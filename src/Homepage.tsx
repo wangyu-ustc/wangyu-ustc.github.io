@@ -241,8 +241,9 @@ export function Homepage() {
                         </Menu>
                     </div>
                     <div style={{
+                        color: 'black',
                         display: 'flex',
-                        width: 'calc(100% - 40px)',
+                        width: 'calc(100% - 20px)',
                         justifyContent: 'center',
                     }}>
                         Yu Wang

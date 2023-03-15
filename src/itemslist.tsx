@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const StyledItem = styled.div`
   margin-top: 2rem;
   display: flex;
+  color: black;
   
   &> .details {
     flex: 1;

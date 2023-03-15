@@ -168,7 +168,8 @@ export function Experiences() {
                     paddingBottom: '200px',
                     paddingTop: '40px',
                     justifyContent: 'center',
-                    display: 'flex'
+                    display: 'flex',
+                    color: 'black'
                 }}>
                     <div style={{ width: '64%', fontSize: '20px' }}>
                         <Typography fontSize='20px'>Research Experiences: </Typography>

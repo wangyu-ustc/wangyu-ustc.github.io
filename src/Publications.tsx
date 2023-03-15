@@ -96,7 +96,7 @@ axios.get('https://www.google.com/').then(
 // });
 
 
-const citationAll = 33;
+const citationAll = 60;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -138,18 +138,18 @@ const publicationItemListAll = [
         'abstract': 'In this work, we provide a novel debiasing algorithm by adjusting the predictive model’s belief to (1) ignore the sensitive information if it is not useful for the task; (2) use sensitive informa- tion minimally as necessary for the prediction (while also incurring a penalty). Experimental results on two text classification tasks (influ- enced by gender) and an open-ended genera- tion task (influenced by race) indicate that our model achieves a desirable trade-off between debiasing and task performance along with pro- ducing debiased rationales as evidence.',
         'field': NLP
     },
-    // {
-    //     'name': 'Interpretable Outlier Summarization.',
-    //     'url': '',
-    //     'authors': ['Yu Wang', 'Lei Cao', 'Samuel Madden'],
-    //     'status': 'Submitted',
-    //     'conference': 'SIGMOD',
-    //     'year': 2023,
-    //     'acceptRate': 0,
-    //     'img': '',
-    //     'abstract': '',
-    //     'field': 'Others'
-    // },
+    {
+        'name': 'Interpretable Outlier Summarization.',
+        'url': 'https://arxiv.org/pdf/2303.06261.pdf',
+        'authors': ['Yu Wang', 'Lei Cao', 'Yizhou Yan', 'Samuel Madden'],
+        'status': 'Submitted',
+        'conference': 'Arxiv',
+        'year': 2023,
+        'acceptRate': 0,
+        'img': '',
+        'abstract': '',
+        'field': 'Others'
+    },
     {
         'name': 'AutoOD: Automatic Outlier Detection.',
         'url': '',
@@ -497,7 +497,7 @@ export function Publications() {
                                                 inputProps={{ 'aria-labelledby': labelId }}
                                             />
                                         </ListItemIcon>
-                                        <ListItemText id={labelId} primary={`${value}`} />
+                                        <ListItemText style={{color: 'black'}} id={labelId} primary={`${value}`} />
                                     </ListItemButton>
                                 </ListItem>
                             );
@@ -528,7 +528,7 @@ export function Publications() {
                                                 inputProps={{ 'aria-labelledby': labelId }}
                                             />
                                         </ListItemIcon>
-                                        <ListItemText id={labelId} primary={`${value}`} />
+                                        <ListItemText style={{color: 'black'}} id={labelId} primary={`${value}`} />
                                     </ListItemButton>
                                 </ListItem>
                             );
@@ -542,7 +542,7 @@ export function Publications() {
                         justifyContent: 'center',
                         width: '70%'
                     }}>
-                        <Typography>Citation {citation}</Typography>
+                        <Typography style={{color: 'black'}}>Citation {citation}</Typography>
                         &nbsp;&nbsp;
                         <CircularProgress size={20} />
                         &nbsp;&nbsp;
@@ -553,7 +553,7 @@ export function Publications() {
                         justifyContent: 'center',
                         width: '70%'
                     }}>
-                        <Typography>Collecting...</Typography>
+                        <Typography style={{color: 'black'}}>Collecting...</Typography>
                     </div>
 
                 </div>
