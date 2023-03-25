@@ -23,7 +23,8 @@ export function WorldMapComponent() {
         'United States',
         'United Arab Emirates',
         'United Kingdom',
-        'Japan'
+        'Japan',
+        'Taiwan'
     ]
 
     type markerType = 
