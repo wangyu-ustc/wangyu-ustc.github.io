@@ -14,6 +14,7 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 // import Menu, { MenuProps } from '@mui/material/Menu';
 import Menu from '@mui/material/Menu';
 import styled from 'styled-components';
+import { WorldMapComponent } from './worldmap';
 
 
 const AdjustToWidthStyle = styled.div`
@@ -38,7 +39,8 @@ interface TabPanelProps {
 const options = [
     'Basic Information',
     'Publications',
-    'Experiences'
+    'Experiences',
+    'Collaborators'
 ];
 
 // const StyledMenu = styled((props: MenuProps) => (
@@ -101,6 +103,7 @@ function TabPanel(props: TabPanelProps) {
             {value === 0 && <BasicInformation />}
             {value === 1 && <Publications />}
             {value === 2 && <Experiences />}
+            {value === 3 && <WorldMapComponent />}
             {/* {value === 3 && <Box sx={{ p: 3 }}>
                                 <Typography>{children}</Typography>
                             </Box>} */}
@@ -149,6 +152,9 @@ export default function VerticalTabs() {
                 Item Two
             </TabPanel>
             <TabPanel value={value} index={2}>
+                Item Three
+            </TabPanel>
+            <TabPanel value={value} index={3}>
                 Item Three
             </TabPanel>
         </Box>
@@ -281,6 +287,9 @@ export function Homepage() {
                     </TabPanel>
                     <TabPanel value={value} index={2}>
                         Item Three
+                    </TabPanel>
+                    <TabPanel value={value} index={3}>
+                        Item Four
                     </TabPanel>
                 </Box>
             </div>
