@@ -58,7 +58,7 @@ export function WorldMapComponent() {
         }}>
             <ComposableMap
                 projectionConfig={{
-                    rotate: [-10, 0, 0],
+                    rotate: [160, 0, 0],
                     scale: 200
                   }}>
             <Sphere id='0' stroke="#E4E5E6" strokeWidth={0.5} fill="#E4E5E6" />
@@ -73,7 +73,7 @@ export function WorldMapComponent() {
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
             geographies.map((geo) => {
-              let color = countries.find(i=>(i===geo.properties.name)) ? 'blue' : 'black'
+              let color = countries.find(i=>(i===geo.properties.name)) ? 'mediumaquamarine' : 'gray'
 
               return (
                 <Geography
