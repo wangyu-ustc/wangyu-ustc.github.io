@@ -96,7 +96,7 @@ axios.get('https://www.google.com/').then(
 // });
 
 
-const citationAll = 60;
+const citationAll = 75;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -152,7 +152,7 @@ const publicationItemListAll = [
     },
     {
         'name': 'AutoOD: Automatic Outlier Detection.',
-        'url': '',
+        'url': 'https://dl.acm.org/doi/10.1145/3588700',
         'authors': ['Lei Cao', 'Yizhou Yan', 'Yu Wang', 'Samuel Madden', 'Elke A. Rundensteiner'],
         'status': "Accepted",
         'conference': 'SIGMOD',
@@ -325,14 +325,6 @@ export function Publications() {
             display: 'flex',
             flexDirection: 'column'
         }}>
-            {/* <div className='up' style={{
-                display: 'flex',
-                justifyContent: 'center',
-                backgroundColor: 'forestgreen',
-                fontSize: '0.7cm'
-            }}>
-                Publications
-            </div> */}
             <StyledDiv>
                 <div className='left' style={{
                     paddingBottom: '200px',
@@ -343,6 +335,12 @@ export function Publications() {
                     // backgroundSize: '100%'
                 }}>
                     <AdjustToWidthStyle>
+                        {/* <div>
+                            <Typography style={{color: 'black'}}>Current Projects and Directions: </Typography>
+                            <Typography style={{color: 'black'}}>
+                            Applications of NLP and CV in medical domain:
+                            </Typography>
+                        </div> */}
                         <div>
                             {
                                 Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
