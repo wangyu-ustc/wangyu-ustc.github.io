@@ -155,9 +155,9 @@ export function ItemList() {
                     <slot>
                         {/* <a onClick={() => {}}> Publications </a> <br></br>
                         <a> Experiences </a> */}
-                        <a>I have some entrepreneurship projects recently and open for cooperations!</a><br></br>
-                        <a>MultiModality and comprehensive understanding on image.</a><br></br>
-                        <a>Fashion Explanation with natural language comments.</a>
+                        <a>Memory Large Language Models capable of Lifelong Learning.</a><br></br>
+                        <a>Video Generation.</a><br></br>
+                        <a>Diffusion Models for Generation and Representation.</a>
                     </slot>
                 </div>
             </StyledItem>

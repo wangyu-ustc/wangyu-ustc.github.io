@@ -9,6 +9,7 @@ import stanfordBadge from './assets/stanford_badge.png'
 import nusBadge from './assets/nus_badge.png'
 import mitBadge from './assets/MIT_badge.png'
 import ucsdBadge from './assets/ucsd_badge.png'
+import amazonLogo from "./assets/Amazon-Logo.png"
 
 
 
@@ -126,34 +127,32 @@ const MyA = styled.a`
 export function Experiences() {
 
 
-    const marks = [
-        {
-            value: 0,
-            year: 2023,
-            label: 'Year 2023',
-        },
-        {
-            value: 33,
-            year: 2022,
-            label: 'Year 2022',
-        },
-        {
-            value: 66,
-            year: 2021,
-            label: 'Year 2021',
-        },
-        {
-            value: 99,
-            year: 2020,
-            label: 'Year 2020',
-        },
-    ];
-
-    const [range, setRange] = React.useState<number[]>([0, 100]);
-
-    const handleChange = (event: Event, newValue: number | number[]) => {
-        setRange(newValue as number[]);
-    };
+    // const marks = [
+    //     {
+    //         value: 0,
+    //         year: 2023,
+    //         label: 'Year 2023',
+    //     },
+    //     {
+    //         value: 33,
+    //         year: 2022,
+    //         label: 'Year 2022',
+    //     },
+    //     {
+    //         value: 66,
+    //         year: 2021,
+    //         label: 'Year 2021',
+    //     },
+    //     {
+    //         value: 99,
+    //         year: 2020,
+    //         label: 'Year 2020',
+    //     },
+    // ];
+    // const [range, setRange] = React.useState<number[]>([0, 100]);
+    // const handleChange = (event: Event, newValue: number | number[]) => {
+    //     setRange(newValue as number[]);
+    // };
 
     return (
         <div style={{
@@ -172,21 +171,42 @@ export function Experiences() {
                     color: 'black'
                 }}>
                     <div style={{ width: '64%', fontSize: '20px' }}>
+                        <Typography fontSize='20px'>Work Experiences: </Typography>
+                        <br/>
+                        <div style={{ width: '100%', display: 'flex', }}>
+                            <img
+                                alt="badge"
+                                className="logo"
+                                src={amazonLogo}
+                                width="80"
+                                height="80"
+                            />
+                            <div>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Applied Scientist Intern @ Amazon</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2023.6 - 2023.9, Mentor: <MyA href={"https://yifan-gao.github.io/"} style={{ color: '#265d75', textDecoration: 'none' }}>Yifan Gao</MyA></Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; About: Large Language Model</Typography>
+                                {/* Advisor: {item.professor}, <br></br> */}
+                            </div>
+                        </div>
+                        <br></br>
+
                         <Typography fontSize='20px'>Research Experiences: </Typography>
                         <br></br>
                         {/* <ExpItem {...experienceItemListAll[0]}/> */}
                         {
-                            experienceItemListAll.filter(
-                                (item) => {
-                                    const endYearItem = marks.find((item) => (item.value === range[0]))
-                                    const endYear = !endYearItem ? 2023 : endYearItem.year
+                            // experienceItemListAll
+                            // .filter(
+                            //     (item) => {
+                            //         const endYearItem = marks.find((item) => (item.value === range[0]))
+                            //         const endYear = !endYearItem ? 2023 : endYearItem.year
 
-                                    const beginYearItem = marks.find((item) => (item.value === range[1]))
-                                    const beginYear = !beginYearItem ? 2020 : beginYearItem.year
+                            //         const beginYearItem = marks.find((item) => (item.value === range[1]))
+                            //         const beginYear = !beginYearItem ? 2020 : beginYearItem.year
 
-                                    return (item.startYear <= endYear && item.startYear >= beginYear)
-                                }
-                            ).map(
+                            //         return (item.startYear <= endYear && item.startYear >= beginYear)
+                            //     }
+                            // )
+                            experienceItemListAll.map(
                                 (item) => {
                                     return <>
                                         <div style={{ width: '100%', display: 'flex', }}>
@@ -252,7 +272,7 @@ export function Experiences() {
                     </div>
 
                 </div>
-                <div className="right">
+                {/* <div className="right">
                     <br></br>
                     <br></br>
                     <div style={{ display: 'flex', justifyContent: 'center', height: 500 }}>
@@ -261,18 +281,16 @@ export function Experiences() {
                                 orientation="vertical"
                                 getAriaLabel={() => 'Year'}
                                 // defaultValue={[0, 100]}
-                                value={range}
-                                onChange={handleChange}
-                                step={33}
-                                marks={marks}
+                                // value={range}
+                                // onChange={handleChange}
+                                // step={33}
+                                // marks={marks}
                                 color="secondary"
                             // valueLabelDisplay="on"
                             />
                         </Box>
                     </div>
-
-
-                </div>
+                </div> */}
 
             </StyledDiv>
         </div>

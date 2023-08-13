@@ -96,12 +96,25 @@ axios.get('https://www.google.com/').then(
 // });
 
 
-const citationAll = 75;
+const citationAll = 96;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
+const CV = 'Computer Vision';
 
 const publicationItemListAll = [
+    {
+        'name': "Learning Concise and Descriptive Attributes for Visual Recognition.",
+        'url': '',
+        'authors': ['An Yan*', 'Yu Wang*', 'Yiwu Zhong*', 'Chengyu Dong', 'Zexue He', 'Yujie Lu', 'William Yang Wang', "Jingbo Shang", "Julian McAuley"],
+        'status': "Accepted",
+        'conference': 'ICCV',
+        'year': 2023,
+        'acceptRate': 0,
+        'img': '',
+        'abstract': '',
+        'field': CV
+    },
     {
         'name': "Differentiable Invariant Causal Discovery.",
         'url': 'https://arxiv.org/abs/2205.15638',
@@ -119,7 +132,7 @@ const publicationItemListAll = [
         'url': '',
         'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
         'status': 'Submitted',
-        'conference': 'TORS',
+        'conference': '',
         'year': 2023,
         'acceptRate': 0,
         'img': deca2,
@@ -215,7 +228,7 @@ export function authorship(value: string[]) {
 export function Publications() {
 
     const [authorChecked, setAuthorChecked] = React.useState(['First', 'Co-First', 'Other']);
-    const [fieldChecked, setFieldChecked] = React.useState([NLP, ML, RS, 'Others'])
+    const [fieldChecked, setFieldChecked] = React.useState([CV, NLP, ML, RS, 'Others'])
     // const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
@@ -503,7 +516,7 @@ export function Publications() {
                     </List>
 
                     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                        {[NLP, ML, RS, 'Others'].map((value) => {
+                        {[CV, NLP, ML, RS, 'Others'].map((value) => {
                             const labelId = `checkbox-list-label-${value}`;
 
                             return (
