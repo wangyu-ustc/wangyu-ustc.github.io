@@ -381,7 +381,7 @@ export function Publications() {
                                         {/* <PublicationItem idx={idx} {...publicationItemList[idx]} /> */}
                                         <div className="display-12 mb-8">
                                             <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                                                <Typography display='inline' sx={{ width: '80%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
+                                                <Typography display='inline' sx={{ width: '100%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
                                                     {publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
                                                     {publicationItemList[idx].authors.map(
                                                         (item, index) => {
