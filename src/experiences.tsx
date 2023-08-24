@@ -170,7 +170,7 @@ export function Experiences() {
                     display: 'flex',
                     color: 'black'
                 }}>
-                    <div style={{ width: '64%', fontSize: '20px' }}>
+                    <div className="responsive-div">
                         <Typography fontSize='20px'>Work Experiences: </Typography>
                         <br/>
                         <div style={{ width: '100%', display: 'flex', }}>
