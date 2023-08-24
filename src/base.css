@@ -89,3 +89,10 @@
     border-bottom: 1px solid #eee; /* A thin light border at the bottom of each item */
     padding-left: 16px;   /* Padding to the left side of the item */
 }
+
+
+@media (max-width: 767px) {
+  .responsive-logo {
+      display: none;
+  }
+}

@@ -174,13 +174,15 @@ export function Experiences() {
                         <Typography fontSize='20px'>Work Experiences: </Typography>
                         <br/>
                         <div style={{ width: '100%', display: 'flex', }}>
+                            <div>
                             <img
                                 alt="badge"
-                                className="logo"
+                                className="logo responsive-logo"
                                 src={amazonLogo}
                                 width="80"
                                 height="80"
                             />
+                            </div>
                             <div>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Applied Scientist Intern @ Amazon</Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2023.6 - 2023.9, Mentor: <MyA href={"https://yifan-gao.github.io/"} style={{ color: '#265d75', textDecoration: 'none' }}>Yifan Gao</MyA></Typography>
@@ -192,27 +194,14 @@ export function Experiences() {
 
                         <Typography fontSize='20px'>Research Experiences: </Typography>
                         <br></br>
-                        {/* <ExpItem {...experienceItemListAll[0]}/> */}
                         {
-                            // experienceItemListAll
-                            // .filter(
-                            //     (item) => {
-                            //         const endYearItem = marks.find((item) => (item.value === range[0]))
-                            //         const endYear = !endYearItem ? 2023 : endYearItem.year
-
-                            //         const beginYearItem = marks.find((item) => (item.value === range[1]))
-                            //         const beginYear = !beginYearItem ? 2020 : beginYearItem.year
-
-                            //         return (item.startYear <= endYear && item.startYear >= beginYear)
-                            //     }
-                            // )
                             experienceItemListAll.map(
                                 (item) => {
                                     return <>
                                         <div style={{ width: '100%', display: 'flex', }}>
                                             <img
                                                 alt="badge"
-                                                className="logo"
+                                                className="logo responsive-logo"
                                                 src={item.badge}
                                                 width="80"
                                                 height="80"
@@ -239,7 +228,7 @@ export function Experiences() {
                         <div style={{ width: '100%', display: 'flex', }}>
                             <img
                                 alt="badge"
-                                className="logo"
+                                className="logo responsive-logo"
                                 src={ustcBadge}
                                 width="80"
                                 height="80"
@@ -255,7 +244,7 @@ export function Experiences() {
                         <div style={{ width: '100%', display: 'flex', }}>
                             <img
                                 alt="badge"
-                                className="logo"
+                                className="logo responsive-logo"
                                 src={ucsdBadge}
                                 width="80"
                                 height="80"
