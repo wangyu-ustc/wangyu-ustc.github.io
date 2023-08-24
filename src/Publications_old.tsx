@@ -88,8 +88,15 @@ const AdjustToWidthStyle = styled.div`
 axios.get('https://www.google.com/').then(
     resp => {console.log(resp.data)}
 )
+// axios.get('https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ').then(resp => {
+//     console.log(resp.data);
+// });
+// axios.get('https://baidu.com').then(resp => {
+//     console.log(resp.data);
+// });
 
-const citationAll = 100;
+
+const citationAll = 96;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -98,7 +105,7 @@ const CV = 'Computer Vision';
 const publicationItemListAll = [
     {
         'name': "Learning Concise and Descriptive Attributes for Visual Recognition.",
-        'url': 'https://arxiv.org/abs/2308.03685',
+        'url': '',
         'authors': ['An Yan*', 'Yu Wang*', 'Yiwu Zhong*', 'Chengyu Dong', 'Zexue He', 'Yujie Lu', 'William Yang Wang', "Jingbo Shang", "Julian McAuley"],
         'status': "Accepted",
         'conference': 'ICCV',
@@ -149,7 +156,7 @@ const publicationItemListAll = [
         'url': 'https://arxiv.org/pdf/2303.06261.pdf',
         'authors': ['Yu Wang', 'Lei Cao', 'Yizhou Yan', 'Samuel Madden'],
         'status': 'Submitted',
-        'conference': '',
+        'conference': 'Arxiv',
         'year': 2023,
         'acceptRate': 0,
         'img': '',
@@ -335,7 +342,10 @@ export function Publications() {
                 <div className='left' style={{
                     paddingBottom: '200px',
                     paddingTop: '40px',
+                    // backgroundColor: 'blue'
                     background: 'url(./assets/background.png)',
+                    // backgroundRepeat: 'no-repeat', 
+                    // backgroundSize: '100%'
                 }}>
                     <AdjustToWidthStyle>
                         {/* <div>
@@ -380,28 +390,67 @@ export function Publications() {
                                     <div key={idx} className='board-row'>
                                         {/* <PublicationItem idx={idx} {...publicationItemList[idx]} /> */}
                                         <div className="display-12 mb-8">
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                                                <Typography display='inline' sx={{ width: '80%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
-                                                    {publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
-                                                    {publicationItemList[idx].authors.map(
-                                                        (item, index) => {
-                                                            if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                                                                return <Typography fontSize="15px" display="inline" key={index} style={{ color: '#1B3A9D' }}><strong>{item + ', '}</strong></Typography>;
-                                                            } else {
-                                                                return <Typography fontSize="15px" display="inline" key={index}>{item + ', '}</Typography>
-                                                            }
-                                                        }
-                                                    )}
-                                                </Typography>
-                                                <PaperDiv>
-                                                    <Typography style={{ textAlign: 'right', minWidth: '15ch', color: 'black'}} >
-                                                        {publicationItemList[idx].conference} {publicationItemList[idx].year}
-                                                    </Typography>
-                                                </PaperDiv>
-                                            </div>
+
+                                            <Accordion expanded={expanded[idx] === publicationItemList[idx].name} onChange={handleAccordionChange(publicationItemList[idx].name, idx)}>
+                                                <AccordionSummary
+                                                    expandIcon={<ExpandMoreIcon />}
+                                                    aria-controls="panel1bh-content"
+                                                    id="panel1bh-header"
+                                                >
+                                                    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                                                        <div >
+                                                            <Typography display='inline' sx={{ width: '80%', flexShrink: 0 }}>
+                                                                {/* <img
+                                                                    alt='githubBadge'
+                                                                    src={'https://badgen.net/badge/' + ' ' + '/' + publicationItemList[idx].status + '/' + (publicationItemList[idx].status === 'Accepted' ? 'orange' : 'blue')}
+                                                                    height='15px' /> */}
+                                                                {/* <img
+                                                                    alt='githubBadge'
+                                                                    src={'https://badgen.net/badge/' + ' ' + '/' + publicationItemList[idx].field + '/' + 'orange'}
+                                                                    height='15px' /> */}
+                                                                &nbsp;
+                                                                {publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
+                                                                {publicationItemList[idx].authors.map(
+                                                                    (item, index) => {
+                                                                        if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                                                            return <Typography fontSize="12px" display="inline" key={index} style={{ color: '#1B3A9D' }}><strong>{item + ', '}</strong></Typography>;
+                                                                        } else {
+                                                                            return <Typography fontSize="12px" display="inline" key={index}>{item + ', '}</Typography>
+                                                                        }
+                                                                    }
+                                                                )}
+                                                            </Typography>
+                                                        </div>
+                                                        <PaperDiv>
+                                                            <Typography style={{ textAlign: 'right', minWidth: '15ch' }} >
+                                                                {publicationItemList[idx].conference} {publicationItemList[idx].year}
+                                                            </Typography>
+                                                        </PaperDiv>
+                                                    </div>
+                                                </AccordionSummary>
+                                                <AccordionDetails>
+                                                    {publicationItemList[idx].img && <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                                        <PaperDiv>
+                                                                <img
+                                                                    alt=""
+                                                                    className="paperImage"
+                                                                    src={publicationItemList[idx].img}
+                                                                    width="200"
+                                                                    height="150"
+                                                                />
+                                                        </PaperDiv>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;                                                        
+                                                        <Typography fontSize='15px'>
+                                                            {publicationItemList[idx].abstract}
+                                                        </Typography>
+                                                    </div>}
+                                                </AccordionDetails>
+                                            </Accordion>
+                                            <br></br>
                                         </div>
                                     </div>))
                             }
+
                         </div>
                         <Box sx={{ width: "60%" }}>
                             <Skeleton width={'80%'} />

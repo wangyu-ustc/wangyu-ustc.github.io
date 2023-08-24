@@ -82,3 +82,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+
+.board-row {
+    margin-bottom: 16px;  /* Space between each item */
+    padding-bottom: 16px; /* Space between the content of the item and its bottom edge */
+    border-bottom: 1px solid #eee; /* A thin light border at the bottom of each item */
+}
