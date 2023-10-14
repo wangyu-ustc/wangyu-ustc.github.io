@@ -89,13 +89,37 @@ axios.get('https://www.google.com/').then(
     resp => {console.log(resp.data)}
 )
 
-const citationAll = 100;
+const citationAll = 116;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 const CV = 'Computer Vision';
 
 const publicationItemListAll = [
+    {
+        'name': "Robust and Interpretable Medical Image Classifiers via Concept Bottleneck Models.",
+        'url': 'https://arxiv.org/abs/2308.03685',
+        'authors': ['An Yan', 'Yu Wang', 'Petros Karypis', 'Zexue He', 'Chengyu Dong', 'Zihan Wang', 'Yiwu Zhong', "Jingbo Shang", "Amilcare Gentili", "Chun-Nan Hsu", "Julian McAuley"],
+        'status': "Submitted",
+        'conference': '',
+        'year': 2023,
+        'acceptRate': 0,
+        'img': '',
+        'abstract': '',
+        'field': CV
+    },
+    {
+        'name': "M4: A Multi-Level, Multi-Task, and Multi-Domain Medical Benchmark for Language Model Evaluation.",
+        'url': '',
+        'authors': ['Zexue He', 'Yu Wang', 'An Yan', 'Yao Liu', 'Eric Y Chang', 'Amilcare Gentili', 'Julian McAuley', 'Chun-Nan Hsu'],
+        'status': "Accepted",
+        'conference': 'EMNLP',
+        'year': 2023,
+        'acceptRate': 0,
+        'img': '',
+        'abstract': '',
+        'field': CV
+    },
     {
         'name': "Learning Concise and Descriptive Attributes for Visual Recognition.",
         'url': 'https://arxiv.org/abs/2308.03685',
