@@ -89,7 +89,7 @@ axios.get('https://www.google.com/').then(
     resp => {console.log(resp.data)}
 )
 
-const citationAll = 116;
+const citationAll = 127;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -109,8 +109,8 @@ const publicationItemListAll = [
         'field': CV
     },
     {
-        'name': "M4: A Multi-Level, Multi-Task, and Multi-Domain Medical Benchmark for Language Model Evaluation.",
-        'url': '',
+        'name': "MedEval: A Multi-Level, Multi-Task, and Multi-Domain Medical Benchmark for Language Model Evaluation.",
+        'url': 'https://arxiv.org/pdf/2310.14088.pdf',
         'authors': ['Zexue He', 'Yu Wang', 'An Yan', 'Yao Liu', 'Eric Y Chang', 'Amilcare Gentili', 'Julian McAuley', 'Chun-Nan Hsu'],
         'status': "Accepted",
         'conference': 'EMNLP',
@@ -118,7 +118,7 @@ const publicationItemListAll = [
         'acceptRate': 0,
         'img': '',
         'abstract': '',
-        'field': CV
+        'field': NLP
     },
     {
         'name': "Learning Concise and Descriptive Attributes for Visual Recognition.",
@@ -146,7 +146,7 @@ const publicationItemListAll = [
     },
     {
         'name': 'Label Denoising through Cross-Model Agreement',
-        'url': '',
+        'url': 'https://arxiv.org/pdf/2308.13976.pdf',
         'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
         'status': 'Submitted',
         'conference': '',
