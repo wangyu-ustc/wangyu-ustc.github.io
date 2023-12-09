@@ -89,13 +89,25 @@ axios.get('https://www.google.com/').then(
     resp => {console.log(resp.data)}
 )
 
-const citationAll = 127;
+const citationAll = 152;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 const CV = 'Computer Vision';
 
 const publicationItemListAll = [
+    {
+        'name': "Deciphering Compatibility Relationships with Textual Descriptions via Extraction and Explanation",
+        'url': '',
+        'authors': ['Yu Wang', "Zexue He", "Zhankui He", "Hao Xu", "Julian McAuley"],
+        'status': "Accepted",
+        'conference': 'AAAI',
+        'year': 2024,
+        'acceptRate': 0,
+        'img': '',
+        'abstract': '',
+        'field': RS
+    },
     {
         'name': "Robust and Interpretable Medical Image Classifiers via Concept Bottleneck Models.",
         'url': 'https://arxiv.org/abs/2308.03685',
@@ -136,8 +148,8 @@ const publicationItemListAll = [
         'name': "Differentiable Invariant Causal Discovery.",
         'url': 'https://arxiv.org/abs/2205.15638',
         'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Yancheng Yuan', 'Xiangnan He', 'Tat-Seng Chua'],
-        'status': "Submitted",
-        'conference': '',
+        'status': "Accepted",
+        'conference': 'Arxiv',
         'year': 2022,
         'acceptRate': 0,
         'img': dicd,
@@ -148,8 +160,8 @@ const publicationItemListAll = [
         'name': 'Label Denoising through Cross-Model Agreement',
         'url': 'https://arxiv.org/pdf/2308.13976.pdf',
         'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
-        'status': 'Submitted',
-        'conference': '',
+        'status': 'Accepted',
+        'conference': 'Arxiv',
         'year': 2023,
         'acceptRate': 0,
         'img': deca2,
@@ -172,8 +184,8 @@ const publicationItemListAll = [
         'name': 'Interpretable Outlier Summarization.',
         'url': 'https://arxiv.org/pdf/2303.06261.pdf',
         'authors': ['Yu Wang', 'Lei Cao', 'Yizhou Yan', 'Samuel Madden'],
-        'status': 'Submitted',
-        'conference': '',
+        'status': 'Accepted',
+        'conference': 'Arxiv',
         'year': 2023,
         'acceptRate': 0,
         'img': '',
@@ -325,14 +337,19 @@ export function Publications() {
             label: 'Year 2021',
         },
         {
-            value: 33,
+            value: 25,
             year: 2022,
             label: 'Year 2022',
         },
         {
-            value: 66,
+            value: 50,
             year: 2023,
             label: 'Year 2023',
+        },
+        {
+            value: 75,
+            year: 2024,
+            label: 'Year 2024',
         },
         {
             value: 99,
@@ -372,12 +389,13 @@ export function Publications() {
                             {
                                 Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
                                     (idx) => {
+                                        
                                         const endYearItem = marks.find((item) => (item.value === range[1]))
                                         const endYear = !endYearItem ? 3000 : endYearItem.year
 
                                         const beginYearItem = marks.find((item) => (item.value === range[0]))
-                                        const beginYear = !beginYearItem ? 2021 : beginYearItem.year
-                                        
+                                        const beginYear = !beginYearItem ? 3000 : beginYearItem.year
+
                                         if (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) === -1){
                                             return false
                                         }
@@ -392,7 +410,6 @@ export function Publications() {
                                             if (beginYear < 3000){
                                                 return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
                                             }
-                                            return false
                                             
                                             // && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
                                         } else {
@@ -451,7 +468,7 @@ export function Publications() {
                                 value={range}
                                 onChange={handleChange}
                                 getAriaValueText={valuetext}
-                                step={33}
+                                step={25}
                                 marks={marks}
                                 color="secondary"
                             // valueLabelDisplay="on"
