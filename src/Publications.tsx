@@ -89,7 +89,7 @@ axios.get('https://www.google.com/').then(
     resp => {console.log(resp.data)}
 )
 
-const citationAll = 152;
+const citationAll = 157;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -98,7 +98,7 @@ const CV = 'Computer Vision';
 const publicationItemListAll = [
     {
         'name': "Deciphering Compatibility Relationships with Textual Descriptions via Extraction and Explanation",
-        'url': '',
+        'url': 'https://arxiv.org/abs/2312.11554',
         'authors': ['Yu Wang', "Zexue He", "Zhankui He", "Hao Xu", "Julian McAuley"],
         'status': "Accepted",
         'conference': 'AAAI',
@@ -159,7 +159,7 @@ const publicationItemListAll = [
     {
         'name': 'Label Denoising through Cross-Model Agreement',
         'url': 'https://arxiv.org/pdf/2308.13976.pdf',
-        'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Xiangnan He', 'Joemon Jose', 'Fuli Feng'],
+        'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Joemon Jose', 'Fuli Feng'],
         'status': 'Accepted',
         'conference': 'Arxiv',
         'year': 2023,
