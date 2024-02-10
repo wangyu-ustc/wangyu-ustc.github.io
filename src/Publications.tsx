@@ -89,13 +89,25 @@ axios.get('https://www.google.com/').then(
     resp => {console.log(resp.data)}
 )
 
-const citationAll = 157;
+const citationAll = 180;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 const CV = 'Computer Vision';
 
 const publicationItemListAll = [
+    {
+        'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
+        'url': 'https://arxiv.org/pdf/2402.04624.pdf',
+        'authors': ["Yu Wang", "Xiusi Chen", "Jingbo Shang", "Julian McAuley"],
+        'status': "",
+        'conference': '',
+        'year': 2024,
+        'acceptRate': 0,
+        'img': '',
+        'abstract': '',
+        'field': NLP
+    },
     {
         'name': "Deciphering Compatibility Relationships with Textual Descriptions via Extraction and Explanation",
         'url': 'https://arxiv.org/abs/2312.11554',
