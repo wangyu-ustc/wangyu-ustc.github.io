@@ -100,7 +100,7 @@ const publicationItemListAll = [
         'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
         'url': 'https://arxiv.org/pdf/2402.04624.pdf',
         'authors': ["Yu Wang", "Xiusi Chen", "Jingbo Shang", "Julian McAuley"],
-        'status': "",
+        'status': "Submitted",
         'conference': '',
         'year': 2024,
         'acceptRate': 0,
