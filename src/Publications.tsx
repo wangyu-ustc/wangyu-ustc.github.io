@@ -97,6 +97,18 @@ const CV = 'Computer Vision';
 
 const publicationItemListAll = [
     {
+        'name': "LVChat: Facilitating Long Video Comprehension",
+        'url': 'https://arxiv.org/abs/2402.12079',
+        'authors': ["Yu Wang*", "Zeyuan Zhang*", "Julian McAuley", "Zexue He"],
+        'status': "Submitted",
+        'conference': '',
+        'year': 2024,
+        'acceptRate': 0,
+        'img': '',
+        'abstract': '',
+        'field': NLP
+    },
+    {
         'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
         'url': 'https://arxiv.org/pdf/2402.04624.pdf',
         'authors': ["Yu Wang", "Xiusi Chen", "Jingbo Shang", "Julian McAuley"],
