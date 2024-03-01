@@ -1,57 +1,18 @@
+import "./Publications.css"
+
+
 import * as React from 'react';
 import styled from 'styled-components';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 
-import ustcBadge from './assets/ustc_badge.png'
-import stanfordBadge from './assets/stanford_badge.png'
-import nusBadge from './assets/nus_badge.png'
-import mitBadge from './assets/MIT_badge.png'
-import ucsdBadge from './assets/ucsd_badge.png'
-import amazonLogo from "./assets/Amazon-Logo.png"
-
-
-
-
-const StyledDiv = styled.div`
-    flex-grow: 1;
-    overflow-y: auto;    
-    display: flex;
-    max-height: 100%;
-
-    &> .up {
-        width: 100%;
-        height: 200px;
-        position: sticky;
-    }
-
-    &> .right {
-    width: 200px;
-    min-width: 200px;
-    max-height: 100%;
-    height: 100%;
-    overflow-y: auto;
-    }
-
-    @media only screen and (max-width: 1000px) {
-    &> .right {
-        display: none;
-    }
-    }
-
-    &> .left {
-    max-height: 100%;
-    height: 100%;
-    padding-bottom: 100px;
-    padding-top: 30px;
-    flex-grow: 1;
-    overflow-y: auto;
-    display: flex;
-    justify-content: center
-    }
-`;
-
+import ustcBadge from '../assets/ustc_badge.png'
+import stanfordBadge from '../assets/stanford_badge.png'
+import nusBadge from '../assets/nus_badge.png'
+import mitBadge from '../assets/MIT_badge.png'
+import ucsdBadge from '../assets/ucsd_badge.png'
+import amazonLogo from "../assets/Amazon-Logo.png"
 
 const experienceItemListAll = [
     {
@@ -126,51 +87,18 @@ const MyA = styled.a`
 
 export function Experiences() {
 
-
-    // const marks = [
-    //     {
-    //         value: 0,
-    //         year: 2023,
-    //         label: 'Year 2023',
-    //     },
-    //     {
-    //         value: 33,
-    //         year: 2022,
-    //         label: 'Year 2022',
-    //     },
-    //     {
-    //         value: 66,
-    //         year: 2021,
-    //         label: 'Year 2021',
-    //     },
-    //     {
-    //         value: 99,
-    //         year: 2020,
-    //         label: 'Year 2020',
-    //     },
-    // ];
-    // const [range, setRange] = React.useState<number[]>([0, 100]);
-    // const handleChange = (event: Event, newValue: number | number[]) => {
-    //     setRange(newValue as number[]);
-    // };
-
     return (
         <div style={{
             width: '100%',
             height: '100%',
             maxHeight: '100%',
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            justifyContent: 'center',
         }}>
-            <StyledDiv>
-                <div className='left' style={{
-                    paddingBottom: '200px',
-                    paddingTop: '40px',
-                    justifyContent: 'center',
-                    display: 'flex',
-                    color: 'black'
-                }}>
-                    <div className="responsive-div">
+            <div className='styledDiv'>
+                <div className='expleft'>
+                    <div style={{"width": '70%'}}>
                         <Typography fontSize='20px'>Work Experiences: </Typography>
                         <br/>
                         <div style={{ width: '100%', display: 'flex', }}>
@@ -257,31 +185,9 @@ export function Experiences() {
                             </div>
                         </div>
                         <br></br>
-
                     </div>
-
                 </div>
-                {/* <div className="right">
-                    <br></br>
-                    <br></br>
-                    <div style={{ display: 'flex', justifyContent: 'center', height: 500 }}>
-                        <Box sx={{ width: '90%', height: '80%' }}>
-                            <Slider
-                                orientation="vertical"
-                                getAriaLabel={() => 'Year'}
-                                // defaultValue={[0, 100]}
-                                // value={range}
-                                // onChange={handleChange}
-                                // step={33}
-                                // marks={marks}
-                                color="secondary"
-                            // valueLabelDisplay="on"
-                            />
-                        </Box>
-                    </div>
-                </div> */}
-
-            </StyledDiv>
+            </div>
         </div>
     )
 }
