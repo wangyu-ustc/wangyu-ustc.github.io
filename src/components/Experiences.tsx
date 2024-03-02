@@ -1,11 +1,7 @@
 import "./Publications.css"
-
-
 import * as React from 'react';
 import styled from 'styled-components';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Slider from '@mui/material/Slider';
 
 import ustcBadge from '../assets/ustc_badge.png'
 import stanfordBadge from '../assets/stanford_badge.png'
@@ -16,40 +12,16 @@ import amazonLogo from "../assets/Amazon-Logo.png"
 
 const experienceItemListAll = [
     {
-        'lab': 'LDS',
-        'univ': 'University of Science and Technology of China',
-        'badge': ustcBadge,
-        'professor': 'Prof. Xiangnan He',
-        'profUrl': 'http://staff.ustc.edu.cn/~hexn/',
-        'startYear': 2020,
-        'startMonth': 8,
-        'endYear': 2021,
-        'endMonth': 4,
-        'project': 'Debias(or denoise) in recommendation systems'
-    },
-    {
-        'lab': 'SAIL',
-        'univ': 'Stanford University',
-        'badge': stanfordBadge,
-        'professor': 'Dr. Huaxiu Yao',
-        'profUrl': 'https://huaxiuyao.mystrikingly.com/',
-        'startYear': 2021,
-        'startMonth': 3,
-        'endYear': 2021,
-        'endMonth': 10,
-        'project': 'Meta-Learning, Domain Shifts'
-    },
-    {
-        'lab': 'NExT++',
-        'univ': 'National University of Singapore',
-        'badge': nusBadge,
-        'professor': 'Prof. Tat-Seng Chua',
-        'profUrl': 'https://www.chuatatseng.com/',
-        'startYear': 2021,
-        'startMonth': 8,
-        'endYear': 2021,
-        'endMonth': 11,
-        'project': 'Causal Discovery'
+        'lab': 'Lab',
+        'univ': 'University of California, San Diego',
+        'badge': ucsdBadge,
+        'professor': 'Prof. Julian McAuley',
+        'profUrl': 'https://cseweb.ucsd.edu/~jmcauley/',
+        'startYear': 2022,
+        'startMonth': 4,
+        'endYear': 'Present',
+        'endMonth': '',
+        'project': 'Natural Language Processing & Data Mining'
     },
     {
         'lab': 'CSAIL',
@@ -64,17 +36,41 @@ const experienceItemListAll = [
         'project': 'Outlier Detection'
     },
     {
-        'lab': 'Lab',
-        'univ': 'University of California, San Diego',
-        'badge': ucsdBadge,
-        'professor': 'Prof. Julian McAuley',
-        'profUrl': 'https://cseweb.ucsd.edu/~jmcauley/',
-        'startYear': 2022,
-        'startMonth': 4,
-        'endYear': 'Present',
-        'endMonth': '',
-        'project': 'Natural Language Processing & Data Mining'
-    }
+        'lab': 'NExT++',
+        'univ': 'National University of Singapore',
+        'badge': nusBadge,
+        'professor': 'Prof. Tat-Seng Chua',
+        'profUrl': 'https://www.chuatatseng.com/',
+        'startYear': 2021,
+        'startMonth': 8,
+        'endYear': 2021,
+        'endMonth': 11,
+        'project': 'Causal Discovery'
+    },
+    {
+        'lab': 'SAIL',
+        'univ': 'Stanford University',
+        'badge': stanfordBadge,
+        'professor': 'Dr. Huaxiu Yao',
+        'profUrl': 'https://huaxiuyao.mystrikingly.com/',
+        'startYear': 2021,
+        'startMonth': 3,
+        'endYear': 2021,
+        'endMonth': 10,
+        'project': 'Meta-Learning, Domain Shifts'
+    },
+    {
+        'lab': 'LDS',
+        'univ': 'University of Science and Technology of China',
+        'badge': ustcBadge,
+        'professor': 'Prof. Xiangnan He',
+        'profUrl': 'http://staff.ustc.edu.cn/~hexn/',
+        'startYear': 2020,
+        'startMonth': 8,
+        'endYear': 2021,
+        'endMonth': 4,
+        'project': 'Debias(or denoise) in recommendation systems'
+    },
 ]
 
 
@@ -113,7 +109,7 @@ export function Experiences() {
                             </div>
                             <div>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Applied Scientist Intern @ Amazon</Typography>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2023.6 - 2023.9, Mentor: <MyA href={"https://yifan-gao.github.io/"} style={{ color: '#265d75', textDecoration: 'none' }}>Yifan Gao</MyA></Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2023.6 - 2023.12, Mentor: <MyA href={"https://yifan-gao.github.io/"} style={{ color: '#265d75', textDecoration: 'none' }}>Yifan Gao</MyA></Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; About: Large Language Model</Typography>
                                 {/* Advisor: {item.professor}, <br></br> */}
                             </div>
@@ -157,22 +153,6 @@ export function Experiences() {
                             <img
                                 alt="badge"
                                 className="logo responsive-logo"
-                                src={ustcBadge}
-                                width="80"
-                                height="80"
-                            />
-                            <div>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; University of Science and Technology of China</Typography>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2018.9 - 2022.7</Typography>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; B.S. in Data Science and Big Data Technology</Typography>
-                                {/* Advisor: {item.professor}, <br></br> */}
-                            </div>
-                        </div>
-                        <br></br>
-                        <div style={{ width: '100%', display: 'flex', }}>
-                            <img
-                                alt="badge"
-                                className="logo responsive-logo"
                                 src={ucsdBadge}
                                 width="80"
                                 height="80"
@@ -181,6 +161,22 @@ export function Experiences() {
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; University of California, San Diego</Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2022.7 - Unknown</Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; P.h.D in Computer Science Engineering</Typography>
+                                {/* Advisor: {item.professor}, <br></br> */}
+                            </div>
+                        </div>
+                        <br></br>
+                        <div style={{ width: '100%', display: 'flex', }}>
+                            <img
+                                alt="badge"
+                                className="logo responsive-logo"
+                                src={ustcBadge}
+                                width="80"
+                                height="80"
+                            />
+                            <div>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; University of Science and Technology of China</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2018.9 - 2022.7</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; B.S. in Data Science and Big Data Technology</Typography>
                                 {/* Advisor: {item.professor}, <br></br> */}
                             </div>
                         </div>

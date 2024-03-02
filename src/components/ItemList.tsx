@@ -20,7 +20,7 @@ export function ItemList() {
                         </slot>
                     </h3>
                     <slot>
-                        Phone/WeChat | (+86)18055363965 <br></br>
+                        {/* Phone/WeChat | (+86)18055363965 <br></br> */}
                         Email | yuw164@ucsd.edu
                     </slot>
                 </div>

@@ -16,7 +16,7 @@ import "./Publications.css";
 //     resp => {console.log(resp.data)}
 // )
 
-const citationAll = 180;
+const citationAll = 197;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -24,15 +24,35 @@ const CV = 'Computer Vision';
 
 const publicationItemListAll = [
     {
+        'name': "Generating, Reconstructing, and Representing Discrete and Continuous Data: Generalized Diffusion with Learnable Encoding-Decoding",
+        'url': "https://arxiv.org/abs/2402.19009",
+        'authors': ['Guangyi Liu*', 'Yu Wang*', 'Zeyu Feng*', "Qiyu Wu", 'Liping Tang', 'Yuan Gao', 'Zhen Li', "Shuguang Cui", 
+        'Julian McAuley', 'Eric P. Xing', "Zichao Yang", "Zhiting Hu"],
+        'status': "Submitted",
+        'conference': '',
+        'year': 2024,
+        'abstract': "",
+        'field': [CV, NLP]
+    },
+    {
+        'name': "Outlier Summarization via Human Interpretable Rules",
+        'url': "",
+        'authors': ['Yuhao Deng', "Yu Wang", "Lei Cao", "Lianpeng Qiao", "Yu-Ping Wang", "Yizhou Yan", "Sammual Maddden"],
+        'status': "Accepted",
+        "conference": "VLDB",
+        'year': 2024,
+        'abstract': '',
+        'field': ['Others']
+    },
+    {
         'name': "LVChat: Facilitating Long Video Comprehension",
         'url': 'https://arxiv.org/abs/2402.12079',
         'authors': ["Yu Wang*", "Zeyuan Zhang*", "Julian McAuley", "Zexue He"],
         'status': "Submitted",
         'conference': '',
         'year': 2024,
-        'acceptRate': 0,
         'abstract': '',
-        'field': NLP
+        'field': [CV, NLP]
     },
     {
         'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
@@ -41,9 +61,8 @@ const publicationItemListAll = [
         'status': "Submitted",
         'conference': '',
         'year': 2024,
-        'acceptRate': 0,
         'abstract': '',
-        'field': NLP
+        'field': [NLP]
     },
     {
         'name': "Deciphering Compatibility Relationships with Textual Descriptions via Extraction and Explanation",
@@ -52,20 +71,18 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': 'AAAI',
         'year': 2024,
-        'acceptRate': 0,
         'abstract': '',
-        'field': RS
+        'field': [RS]
     },
     {
         'name': "Robust and Interpretable Medical Image Classifiers via Concept Bottleneck Models.",
         'url': 'https://arxiv.org/abs/2308.03685',
         'authors': ['An Yan', 'Yu Wang', 'Petros Karypis', 'Zexue He', 'Chengyu Dong', 'Zihan Wang', 'Yiwu Zhong', "Jingbo Shang", "Amilcare Gentili", "Chun-Nan Hsu", "Julian McAuley"],
-        'status': "Submitted",
-        'conference': '',
+        'status': "Accepted",
+        'conference': 'Arxiv',
         'year': 2023,
-        'acceptRate': 0,
         'abstract': '',
-        'field': CV
+        'field': [CV]
     },
     {
         'name': "MedEval: A Multi-Level, Multi-Task, and Multi-Domain Medical Benchmark for Language Model Evaluation.",
@@ -74,9 +91,8 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': 'EMNLP',
         'year': 2023,
-        'acceptRate': 0,
         'abstract': '',
-        'field': NLP
+        'field': [NLP]
     },
     {
         'name': "Learning Concise and Descriptive Attributes for Visual Recognition.",
@@ -85,9 +101,8 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': 'ICCV',
         'year': 2023,
-        'acceptRate': 0,
         'abstract': '',
-        'field': CV
+        'field': [CV]
     },
     {
         'name': "Differentiable Invariant Causal Discovery.",
@@ -96,9 +111,8 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': 'Arxiv',
         'year': 2022,
-        'acceptRate': 0,
         'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
-        'field': ML
+        'field': [ML]
     },
     {
         'name': 'Label Denoising through Cross-Model Agreement',
@@ -107,9 +121,8 @@ const publicationItemListAll = [
         'status': 'Accepted',
         'conference': 'Arxiv',
         'year': 2023,
-        'acceptRate': 0,
         'abstract': 'In this work, we propose a novel framework to learn robust machine learning models from noisy labels. Through an empirical study, we find that different models make relatively similar predictions on clean examples, while the predictions on noisy examples vary much more across different models. we further extend the proposed DeCA to the image classification task which corresponds to multi-class label scenarios. Experimental results demonstrate that the proposed methods significantly improve the model performance compared with normal training and other denoising methods on both the recommendation task and multi-class image classification task.',
-        'field': RS
+        'field': [RS]
     },
     {
         'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
@@ -118,9 +131,8 @@ const publicationItemListAll = [
         'status': 'Accepted',
         'conference': 'Findings of EMNLP',
         'year': 2022,
-        'acceptRate': 0,
         'abstract': 'In this work, we provide a novel debiasing algorithm by adjusting the predictive model’s belief to (1) ignore the sensitive information if it is not useful for the task; (2) use sensitive informa- tion minimally as necessary for the prediction (while also incurring a penalty). Experimental results on two text classification tasks (influ- enced by gender) and an open-ended genera- tion task (influenced by race) indicate that our model achieves a desirable trade-off between debiasing and task performance along with pro- ducing debiased rationales as evidence.',
-        'field': NLP
+        'field': [NLP]
     },
     {
         'name': 'Interpretable Outlier Summarization.',
@@ -129,9 +141,8 @@ const publicationItemListAll = [
         'status': 'Accepted',
         'conference': 'Arxiv',
         'year': 2023,
-        'acceptRate': 0,
         'abstract': '',
-        'field': 'Others'
+        'field': ['Others']
     },
     {
         'name': 'AutoOD: Automatic Outlier Detection.',
@@ -140,9 +151,8 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': 'SIGMOD',
         'year': 2023,
-        'acceptRate': 0,
         'abstract': 'We propose AutoOD which uses the existing unsuperviseddetection techniques to automatically produce high quality outliers without any human tuning. AutoOD’s fundamentally new strategy unifies the merits of unsupervised outlier detection and supervised classification within one integrated solution. On a diverse set of benchmarks, AutoOD consistently outperforms the best unsupervised outlier detector selected from hundreds of detectors. It also outperforms other tuning-free approaches from 12 to 97 points (out of 100) in the F-1 score.',
-        'field': 'Others'
+        'field': ['Others']
     },
     {
         'name': "Improving Out-of-Distribution Robustness via Selective Augmentation.",
@@ -151,9 +161,8 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': 'ICML',
         'year': 2022,
-        'acceptRate': 21.9,
         'abstract': "We specifically consider the problems of subpopulation shifts (e.g., imbalanced data) and domain shifts. We propose LISA, which selectively interpolates samples either with the same labels but different domains or with the same domain but different labels. Empirically, we study the effectiveness of LISA on nine benchmarks ranging from subpopulation shifts to domain shifts. We further analyze a linear setting and theoretically show how LISA leads to a smaller worst-group error.",
-        'field': ML
+        'field': [ML]
     },
     {
         'name': "Learning Robust Recommenders through Cross-Model Agreement.",
@@ -162,9 +171,8 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': 'WWW',
         'year': 2022,
-        'acceptRate': 17.7,
         'abstract': 'We propose a novel framework to learn robust recommenders from implicit feedback. Through an empirical study, we find that different models make more similar predictions on clean examples than noisy examples. Motivated by this observation, we propose DeCA which aims to minimize the KL-divergence between the real user preference distributions parameterized by two recommendation models while maximizing the likelihood of data observation. We employ the proposed DeCA on four state-of-the-art recommendation models and conduct experiments on four datasets.',
-        'field': RS
+        'field': [RS]
     },
     {
         'name': "Meta-Learning with an Adaptive Scheduler.",
@@ -173,9 +181,8 @@ const publicationItemListAll = [
         'status': "Accepted",
         'conference': "NeurIPS",
         'year': 2021,
-        'acceptRate': 26,
         'abstract': 'We propose an adaptive task scheduler (ATS) for the meta-training process with a neural scheduler to decide which meta-training tasks to use next and train the scheduler to optimize the generalization capacity of the meta-model to unseen tasks. We identify two meta-model-related factors as the input of the neural scheduler, which characterize the difficulty of a candidate task to the meta-model. Theoretically, we show that a scheduler taking the two factors into account improves the meta-training loss and also the optimization landscape.',
-        'field': ML
+        'field': [ML]
     },
 ]
 
@@ -226,6 +233,7 @@ export function Publications() {
             // if (publicationItemList.length === publicationItemListAll.length) return;
             if (cit === citationAll) return;
             cit++;
+            console.log("cit", cit, "citation", citation)
             setCitation(citation => citation + 1);
             setTimeout(appendCitation, 100);
         };
@@ -290,7 +298,7 @@ export function Publications() {
         {
             value: 99,
             year: 3000,
-            label: 'Submitted',
+            label: 'Preprint',
         },
     ];
 
@@ -329,9 +337,13 @@ export function Publications() {
                                         if (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) === -1){
                                             return false
                                         }
-                                        if (fieldChecked.indexOf(publicationItemList[idx].field) === -1){
+
+                                        // if (fieldChecked.indexOf(publicationItemList[idx].field) === -1){
+                                        //     return false
+                                        // }
+                                        if (!publicationItemList[idx].field.some(field => fieldChecked.includes(field))) {
                                             return false
-                                        }
+                                        } 
 
                                         if (endYear === 3000) {
                                             if (publicationItemList[idx].status === 'Submitted'){
@@ -353,7 +365,7 @@ export function Publications() {
                                         <div className="display-12">
                                             <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
                                                 <Typography display='inline' sx={{ width: '100%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
-                                                    {publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
+                                                    {"[" + (idx + 1) + "] " + publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
                                                     {publicationItemList[idx].authors.map(
                                                         (item, index) => {
                                                             if (item === 'Yu Wang' || item === 'Yu Wang*') {
