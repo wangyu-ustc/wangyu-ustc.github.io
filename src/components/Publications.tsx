@@ -16,7 +16,8 @@ import "./Publications.css";
 //     resp => {console.log(resp.data)}
 // )
 
-const citationAll = 197;
+// const citationAll = 197;
+const citationAll = 1000;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -35,7 +36,7 @@ const publicationItemListAll = [
         'field': [CV, NLP]
     },
     {
-        'name': "Outlier Summarization via Human Interpretable Rules",
+        'name': "Outlier Summarization via Human Interpretable Rules (Recycled from Interpretable Outlier Summarization)",
         'url': "",
         'authors': ['Yuhao Deng', "Yu Wang", "Lei Cao", "Lianpeng Qiao", "Yu-Ping Wang", "Yizhou Yan", "Sammual Maddden"],
         'status': "Accepted",
@@ -233,7 +234,6 @@ export function Publications() {
             // if (publicationItemList.length === publicationItemListAll.length) return;
             if (cit === citationAll) return;
             cit++;
-            console.log("cit", cit, "citation", citation)
             setCitation(citation => citation + 1);
             setTimeout(appendCitation, 100);
         };
@@ -359,13 +359,13 @@ export function Publications() {
                                                 && (publicationItemList[idx].status === 'Accepted')
                                         }
                                     }
-                                ).map((idx) => (
+                                ).map((idx, mapIndex) => (
                                     <div key={idx}>
                                         {/* <PublicationItem idx={idx} {...publicationItemList[idx]} /> */}
                                         <div className="display-12">
                                             <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
                                                 <Typography display='inline' sx={{ width: '100%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
-                                                    {"[" + (idx + 1) + "] " + publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
+                                                    {"[" + (mapIndex + 1) + "] " + publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
                                                     {publicationItemList[idx].authors.map(
                                                         (item, index) => {
                                                             if (item === 'Yu Wang' || item === 'Yu Wang*') {
@@ -477,11 +477,11 @@ export function Publications() {
                         justifyContent: 'center',
                         width: '70%'
                     }}>
-                        <Typography style={{color: 'black'}}>Citation {citation}</Typography>
+                        {/* F-Citation means "Fake Citation", this number is fake*/}
+                        <Typography style={{color: 'black'}}>F-Citation {citation}</Typography>
                         &nbsp;&nbsp;
                         <CircularProgress size={20} />
                         &nbsp;&nbsp;
-                        {/* <Typography>Collecting...</Typography> */}
                     </div>
                     <div style={{
                         display: 'flex',
