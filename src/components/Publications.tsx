@@ -17,7 +17,7 @@ import "./Publications.css";
 // )
 
 // const citationAll = 197;
-const citationAll = 1000;
+const citationAll = 198;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -190,18 +190,15 @@ const publicationItemListAll = [
 
 
 export function authorship(value: string[]) {
-    if (value[0] === 'Yu Wang') {
-        return 'First';
-    }
-    if (value[0] === 'Yu Wang*' || value[1] === 'Yu Wang*') {
-        return 'Co-First';
+    if ((value[0] === 'Yu Wang')  || (value[0] === 'Yu Wang*' || value[1] === 'Yu Wang*')){
+        return '(Co-)First';
     }
     return 'Other';
 }
 
 export function Publications() {
 
-    const [authorChecked, setAuthorChecked] = React.useState(['First', 'Co-First', 'Other']);
+    const [authorChecked, setAuthorChecked] = React.useState(['(Co-)First', 'Other']);
     const [fieldChecked, setFieldChecked] = React.useState([CV, NLP, ML, RS, 'Others'])
     // const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
@@ -419,7 +416,7 @@ export function Publications() {
                     </div>
 
                     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                        {['First', 'Co-First', 'Other'].map((value) => {
+                        {['(Co-)First', 'Other'].map((value) => {
                             const labelId = `checkbox-list-label-${value}`;
 
                             return (
@@ -478,7 +475,7 @@ export function Publications() {
                         width: '70%'
                     }}>
                         {/* F-Citation means "Fake Citation", this number is fake*/}
-                        <Typography style={{color: 'black'}}>F-Citation {citation}</Typography>
+                        <Typography style={{color: 'black'}}>Citation {citation}</Typography>
                         &nbsp;&nbsp;
                         <CircularProgress size={20} />
                         &nbsp;&nbsp;
