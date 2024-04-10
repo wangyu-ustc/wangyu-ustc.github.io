@@ -1,0 +1,72 @@
+.styledDiv {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    max-height: 100%;
+  }
+  
+  .styledDiv > .up {
+    width: 100%;
+    height: 200px;
+    position: sticky;
+  }
+  
+  .styledDiv > .right {
+    width: 250px;
+    min-width: 250px;
+    max-height: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .styledDiv > .right {
+      display: none;
+    }
+  }
+  
+  .styledDiv > .left {
+    max-height: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 30px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    color: black
+  }
+
+  .styledDiv > .expleft {
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 30px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    color: black
+  }
+
+  
+
+
+@media only screen and (max-width: 1000px) {
+.paperDiv {
+    display: none;
+}
+}
+
+
+.adjustToWidthStyle {
+    width: 63%;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .adjustToWidthStyle {
+      width: 100%;
+    }
+  }
+  
