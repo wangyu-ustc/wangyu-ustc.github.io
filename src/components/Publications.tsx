@@ -25,6 +25,16 @@ const CV = 'Computer Vision';
 
 const publicationItemListAll = [
     {
+        'name': "A Fashion Item Recommendation Model in Hyperbolic Space",
+        'url': "",
+        'authors': ["Ryotaro Shimizu", "Yu Wang", "Masanari Kimura", "Yuki Hirakawa", "Takashi Wada", "Yuki Saito", "Julian McAuley"],
+        'status': "Accepted",
+        'conference': 'CVPR WorkShop',
+        'year': 2024,
+        'abstract': "",
+        'field': [CV, RS]
+    },
+    {
         'name': "Generating, Reconstructing, and Representing Discrete and Continuous Data: Generalized Diffusion with Learnable Encoding-Decoding",
         'url': "https://arxiv.org/abs/2402.19009",
         'authors': ['Guangyi Liu*', 'Yu Wang*', 'Zeyu Feng*', "Qiyu Wu", 'Liping Tang', 'Yuan Gao', 'Zhen Li', "Shuguang Cui", 
