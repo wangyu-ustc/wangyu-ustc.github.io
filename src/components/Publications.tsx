@@ -17,7 +17,7 @@ import "./Publications.css";
 // )
 
 // const citationAll = 197;
-const citationAll = 198;
+const citationAll = 240;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -39,8 +39,8 @@ const publicationItemListAll = [
         'url': "https://arxiv.org/abs/2402.19009",
         'authors': ['Guangyi Liu*', 'Yu Wang*', 'Zeyu Feng*', "Qiyu Wu", 'Liping Tang', 'Yuan Gao', 'Zhen Li', "Shuguang Cui", 
         'Julian McAuley', 'Eric P. Xing', "Zichao Yang", "Zhiting Hu"],
-        'status': "Submitted",
-        'conference': '',
+        'status': "Accepted",
+        'conference': 'ICML',
         'year': 2024,
         'abstract': "",
         'field': [CV, NLP]
@@ -69,8 +69,8 @@ const publicationItemListAll = [
         'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
         'url': 'https://arxiv.org/abs/2402.04624',
         'authors': ["Yu Wang", "Xiusi Chen", "Jingbo Shang", "Julian McAuley"],
-        'status': "Submitted",
-        'conference': '',
+        'status': "Accepted",
+        'conference': 'ICML',
         'year': 2024,
         'abstract': '',
         'field': [NLP]
