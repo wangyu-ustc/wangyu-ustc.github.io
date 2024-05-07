@@ -17,7 +17,7 @@ import "./Publications.css";
 // )
 
 // const citationAll = 197;
-const citationAll = 240;
+const citationAll = 246;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -46,7 +46,7 @@ const publicationItemListAll = [
         'field': [CV, NLP]
     },
     {
-        'name': "Outlier Summarization via Human Interpretable Rules (Recycled from Interpretable Outlier Summarization)",
+        'name': "Outlier Summarization via Human Interpretable Rules",
         'url': "",
         'authors': ['Yuhao Deng', "Yu Wang", "Lei Cao", "Lianpeng Qiao", "Yu-Ping Wang", "Yizhou Yan", "Sammual Maddden"],
         'status': "Accepted",
@@ -115,26 +115,26 @@ const publicationItemListAll = [
         'abstract': '',
         'field': [CV]
     },
-    {
-        'name': "Differentiable Invariant Causal Discovery.",
-        'url': 'https://arxiv.org/abs/2205.15638',
-        'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Yancheng Yuan', 'Xiangnan He', 'Tat-Seng Chua'],
-        'status': "Accepted",
-        'conference': 'Arxiv',
-        'year': 2022,
-        'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
-        'field': [ML]
-    },
-    {
-        'name': 'Label Denoising through Cross-Model Agreement',
-        'url': 'https://arxiv.org/pdf/2308.13976.pdf',
-        'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Joemon Jose', 'Fuli Feng'],
-        'status': 'Accepted',
-        'conference': 'Arxiv',
-        'year': 2023,
-        'abstract': 'In this work, we propose a novel framework to learn robust machine learning models from noisy labels. Through an empirical study, we find that different models make relatively similar predictions on clean examples, while the predictions on noisy examples vary much more across different models. we further extend the proposed DeCA to the image classification task which corresponds to multi-class label scenarios. Experimental results demonstrate that the proposed methods significantly improve the model performance compared with normal training and other denoising methods on both the recommendation task and multi-class image classification task.',
-        'field': [RS]
-    },
+    // {
+    //     'name': "Differentiable Invariant Causal Discovery.",
+    //     'url': 'https://arxiv.org/abs/2205.15638',
+    //     'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Yancheng Yuan', 'Xiangnan He', 'Tat-Seng Chua'],
+    //     'status': "Accepted",
+    //     'conference': 'Arxiv',
+    //     'year': 2022,
+    //     'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
+    //     'field': [ML]
+    // },
+    // {
+    //     'name': 'Label Denoising through Cross-Model Agreement',
+    //     'url': 'https://arxiv.org/pdf/2308.13976.pdf',
+    //     'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Joemon Jose', 'Fuli Feng'],
+    //     'status': 'Accepted',
+    //     'conference': 'Arxiv',
+    //     'year': 2023,
+    //     'abstract': 'In this work, we propose a novel framework to learn robust machine learning models from noisy labels. Through an empirical study, we find that different models make relatively similar predictions on clean examples, while the predictions on noisy examples vary much more across different models. we further extend the proposed DeCA to the image classification task which corresponds to multi-class label scenarios. Experimental results demonstrate that the proposed methods significantly improve the model performance compared with normal training and other denoising methods on both the recommendation task and multi-class image classification task.',
+    //     'field': [RS]
+    // },
     {
         'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
         'url': 'https://arxiv.org/abs/2210.07455',
@@ -145,16 +145,16 @@ const publicationItemListAll = [
         'abstract': 'In this work, we provide a novel debiasing algorithm by adjusting the predictive model’s belief to (1) ignore the sensitive information if it is not useful for the task; (2) use sensitive informa- tion minimally as necessary for the prediction (while also incurring a penalty). Experimental results on two text classification tasks (influ- enced by gender) and an open-ended genera- tion task (influenced by race) indicate that our model achieves a desirable trade-off between debiasing and task performance along with pro- ducing debiased rationales as evidence.',
         'field': [NLP]
     },
-    {
-        'name': 'Interpretable Outlier Summarization.',
-        'url': 'https://arxiv.org/pdf/2303.06261.pdf',
-        'authors': ['Yu Wang', 'Lei Cao', 'Yizhou Yan', 'Samuel Madden'],
-        'status': 'Accepted',
-        'conference': 'Arxiv',
-        'year': 2023,
-        'abstract': '',
-        'field': ['Others']
-    },
+    // {
+    //     'name': 'Interpretable Outlier Summarization.',
+    //     'url': 'https://arxiv.org/pdf/2303.06261.pdf',
+    //     'authors': ['Yu Wang', 'Lei Cao', 'Yizhou Yan', 'Samuel Madden'],
+    //     'status': 'Accepted',
+    //     'conference': 'Arxiv',
+    //     'year': 2023,
+    //     'abstract': '',
+    //     'field': ['Others']
+    // },
     {
         'name': 'AutoOD: Automatic Outlier Detection.',
         'url': 'https://dl.acm.org/doi/10.1145/3588700',
