@@ -17,13 +17,23 @@ import "./Publications.css";
 // )
 
 // const citationAll = 197;
-const citationAll = 246;
+const citationAll = 270;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 const CV = 'Computer Vision';
 
 const publicationItemListAll = [
+    {
+        'name': "Large Scale Knowledge Washing",
+        "url": "https://arxiv.org/abs/2405.16720",
+        'authors': ["Yu Wang", "Ruihan Wu", "Zexue He", "Xiusi Chen", "Julian McAuley"],
+        'status': "Submitted",
+        'conference': "",
+        'year': 2024,
+        'abstract': "",
+        'field': [NLP]
+    },
     {
         'name': "A Fashion Item Recommendation Model in Hyperbolic Space",
         'url': "",

@@ -11,6 +11,7 @@ const nodeDefaults = {
 const labels2urls: {[key: string]: string} = {
   "LVChat": "https://arxiv.org/abs/2402.12079",
   "MemoryLLM": "https://arxiv.org/abs/2402.04624",
+  "KnowledgeWashing": "https://arxiv.org/abs/2405.16720"
 };
 
 // Define a custom node component
@@ -89,8 +90,11 @@ function LVChat({ data }:{data: any}) {
 // Define a custom node component
 function KUNode({ data }:{data: any}) {
   return (
-    <div className="ongoing-node">
-      <div>{data.label}</div>
+    <div className="existing-node">
+      {/* <div>{data.label}</div> */}
+      <a href={"https://arxiv.org/abs/2405.16720"} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        {data.label}
+      </a>
       <Handle type="target" position={Position.Top} id="topHandle" />
     </div>
   );
@@ -149,10 +153,10 @@ export const initialNodes = [
     type: 'memoryllm3',
   },
   { 
-    id: "knowledgeUnlearning", 
+    id: "KnowledgeWashing", 
     position: { x: 0, y: 150 }, 
-    data: { label: "Disentangle Knowledge and Reasoning in LLMs (Ongoing)" },
-    type: 'knowledgeUnlearning',
+    data: { label: "Disentangle Knowledge and Reasoning in LLMs" },
+    type: 'KnowledgeWashing',
   },
   {
     id: 'multimodal',
@@ -174,7 +178,7 @@ export const nodeTypes = {
   memoryllm: MemoryLLM,
   memoryllm2: MemoryLLM2,
   memoryllm3: MemoryLLM3,
-  knowledgeUnlearning: KUNode,
+  KnowledgeWashing: KUNode,
   future: FutureNode,
   knowledgeInjection: KINode,
   multimodal: MultiModal,
