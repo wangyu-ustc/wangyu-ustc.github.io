@@ -153,10 +153,10 @@ export const initialNodes = [
     type: 'memoryllm3',
   },
   { 
-    id: "KnowledgeWashing", 
+    id: "knowledgeWashing", 
     position: { x: 0, y: 150 }, 
     data: { label: "Disentangle Knowledge and Reasoning in LLMs" },
-    type: 'KnowledgeWashing',
+    type: 'knowledgeWashing',
   },
   {
     id: 'multimodal',
@@ -178,7 +178,7 @@ export const nodeTypes = {
   memoryllm: MemoryLLM,
   memoryllm2: MemoryLLM2,
   memoryllm3: MemoryLLM3,
-  KnowledgeWashing: KUNode,
+  knowledgeWashing: KUNode,
   future: FutureNode,
   knowledgeInjection: KINode,
   multimodal: MultiModal,

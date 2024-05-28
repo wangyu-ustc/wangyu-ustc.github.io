@@ -32,7 +32,7 @@ export const initialEdges = [
     id: "memoryllm-disentangle", 
     source: "memoryllm3", 
     animated: true, 
-    target: "knowledgeUnlearning",
+    target: "knowledgeWashing",
     sourceHandle: 'leftHandle'
   },
   {
