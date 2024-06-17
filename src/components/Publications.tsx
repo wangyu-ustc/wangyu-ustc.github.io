@@ -17,11 +17,46 @@ import "./Publications.css";
 // )
 
 // const citationAll = 197;
-const citationAll = 270;
+const citationAll = 280;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 const CV = 'Computer Vision';
+
+
+const selectedPublicationItemListAll = [
+    {
+        'name': "Large Scale Knowledge Washing",
+        "url": "https://arxiv.org/abs/2405.16720",
+        'authors': ["Yu Wang", "Ruihan Wu", "Zexue He", "Xiusi Chen", "Julian McAuley"],
+        'status': "Submitted",
+        'conference': "",
+        'year': 2024,
+        'abstract': "",
+        'field': [NLP]
+    },
+    {
+        'name': "LVChat: Facilitating Long Video Comprehension",
+        'url': 'https://arxiv.org/abs/2402.12079',
+        'authors': ["Yu Wang*", "Zeyuan Zhang*", "Julian McAuley", "Zexue He"],
+        'status': "Submitted",
+        'conference': '',
+        'year': 2024,
+        'abstract': '',
+        'field': [CV, NLP]
+    },
+    {
+        'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
+        'url': 'https://arxiv.org/abs/2402.04624',
+        'authors': ["Yu Wang", "Yifan Gao", "Xiusi Chen", "Haoming Jiang", "Shiyang Li", "Jingfeng Yang", "Qingyu Yin", "Zheng Li", "Xian Li", "Bing Yin", "Jingbo Shang", "Julian McAuley"],
+        'status': "Accepted",
+        'conference': 'ICML',
+        'year': 2024,
+        'abstract': '',
+        'field': [NLP]
+    },
+]
+
 
 const publicationItemListAll = [
     {
@@ -223,6 +258,7 @@ export function Publications() {
     // const [statusChecked, setStatusChecked] = React.useState(['Accepted', 'Submitted']);
     const [citation, setCitation] = React.useState(0);
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
+    const [selectedPublicationItemList, setSelectedPublicationItemList] = React.useState(selectedPublicationItemListAll);
     // const [expanded, setExpanded] = React.useState<(string | boolean)[]>(Array.from({ length: publicationItemListAll.length }, () => false));
     // const handleAccordionChange =
     //     (panel: string, idx: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -340,6 +376,73 @@ export function Publications() {
                     background: 'url(./assets/background.png)',
                 }}>
                     <div className='adjustToWidthStyle'>
+                    <div>
+                         <h1 style={{ fontSize: '24px' }}>Selected Publications</h1>
+                            {
+                                Array.from({ length: selectedPublicationItemList.length }, (item, index) => index).filter(
+                                    (idx) => {
+                                        
+                                        const endYearItem = marks.find((item) => (item.value === range[1]))
+                                        const endYear = !endYearItem ? 3000 : endYearItem.year
+
+                                        const beginYearItem = marks.find((item) => (item.value === range[0]))
+                                        const beginYear = !beginYearItem ? 3000 : beginYearItem.year
+
+                                        if (authorChecked.indexOf(authorship(selectedPublicationItemList[idx].authors)) === -1){
+                                            return false
+                                        }
+
+                                        // if (fieldChecked.indexOf(selectedPublicationItemList[idx].field) === -1){
+                                        //     return false
+                                        // }
+                                        if (!selectedPublicationItemList[idx].field.some(field => fieldChecked.includes(field))) {
+                                            return false
+                                        } 
+
+                                        if (endYear === 3000) {
+                                            if (selectedPublicationItemList[idx].status === 'Submitted'){
+                                                return true
+                                            }
+                                            if (beginYear < 3000){
+                                                return (selectedPublicationItemList[idx].year <= endYear && selectedPublicationItemList[idx].year >= beginYear)
+                                            }
+                                            
+                                            // && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
+                                        } else {
+                                            return (selectedPublicationItemList[idx].year <= endYear && selectedPublicationItemList[idx].year >= beginYear)
+                                                && (selectedPublicationItemList[idx].status === 'Accepted')
+                                        }
+                                    }
+                                ).map((idx, mapIndex) => (
+                                    <div key={idx}>
+                                        {/* <PublicationItem idx={idx} {...selectedPublicationItemList[idx]} /> */}
+                                        <div className="display-12">
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                                                <Typography display='inline' sx={{ width: '100%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
+                                                    {"[" + (mapIndex + 1) + "] " + selectedPublicationItemList[idx].name} {selectedPublicationItemList[idx].url !== '' ? <a href={selectedPublicationItemList[idx].url}>PDF</a> : <></>} <br></br>
+                                                    {selectedPublicationItemList[idx].authors.map(
+                                                        (item, index) => {
+                                                            if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                                                return <Typography fontSize="15px" display="inline" key={index} style={{ color: '#1B3A9D' }}><strong>{item + ', '}</strong></Typography>;
+                                                            } else {
+                                                                return <Typography fontSize="15px" display="inline" key={index}>{item + ', '}</Typography>
+                                                            }
+                                                        }
+                                                    )}
+                                                </Typography>
+                                                <div className='paperDiv'>
+                                                    <Typography style={{ textAlign: 'right', minWidth: '15ch', color: 'black'}} >
+                                                        {selectedPublicationItemList[idx].conference} {selectedPublicationItemList[idx].year}
+                                                    </Typography>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        {/* <hr style={{border: "1px solid #000"}}></hr> */}
+                                    </div>))
+                            }
+                        </div>
+                        <h1 style={{ fontSize: '24px' }}>All Publications</h1>
                         <div>
                             {
                                 Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
