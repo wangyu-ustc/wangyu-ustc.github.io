@@ -70,3 +70,9 @@
     }
   }
   
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  
+  /* Apply the font family globally or to specific classes
+  body {
+      font-family: 'Roboto', sans-serif;
+  } */

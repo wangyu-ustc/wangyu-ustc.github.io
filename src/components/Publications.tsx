@@ -17,12 +17,22 @@ import "./Publications.css";
 // )
 
 // const citationAll = 197;
-const citationAll = 280;
+const citationAll = 309;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
 const CV = 'Computer Vision';
 
+interface PublicationItem {
+    name: string;
+    url: string;
+    authors: string[];
+    status: string;
+    conference: string;
+    year: number;
+    abstract: string;
+    field: string[];  // Assuming 'NLP' and other fields are strings
+}
 
 const selectedPublicationItemListAll = [
     {
@@ -57,6 +67,48 @@ const selectedPublicationItemListAll = [
     },
 ]
 
+const trashPublicationItemListAll = [
+    {
+        'name': "Robust and Interpretable Medical Image Classifiers via Concept Bottleneck Models.",
+        'url': 'https://arxiv.org/abs/2308.03685',
+        'authors': ['An Yan', 'Yu Wang', 'Petros Karypis', 'Zexue He', 'Chengyu Dong', 'Zihan Wang', 'Yiwu Zhong', "Jingbo Shang", "Amilcare Gentili", "Chun-Nan Hsu", "Julian McAuley"],
+        'status': "Accepted",
+        'conference': '',
+        'year': 2023,
+        'abstract': '',
+        'field': [CV]
+    },
+    {
+        'name': "Differentiable Invariant Causal Discovery.",
+        'url': 'https://arxiv.org/abs/2205.15638',
+        'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Yancheng Yuan', 'Xiangnan He', 'Tat-Seng Chua'],
+        'status': "Accepted",
+        'conference': '',
+        'year': 2022,
+        'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
+        'field': [ML]
+    },
+    {
+        'name': 'Label Denoising through Cross-Model Agreement',
+        'url': 'https://arxiv.org/pdf/2308.13976.pdf',
+        'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Joemon Jose', 'Fuli Feng'],
+        'status': 'Accepted',
+        'conference': '',
+        'year': 2023,
+        'abstract': 'In this work, we propose a novel framework to learn robust machine learning models from noisy labels. Through an empirical study, we find that different models make relatively similar predictions on clean examples, while the predictions on noisy examples vary much more across different models. we further extend the proposed DeCA to the image classification task which corresponds to multi-class label scenarios. Experimental results demonstrate that the proposed methods significantly improve the model performance compared with normal training and other denoising methods on both the recommendation task and multi-class image classification task.',
+        'field': [RS]
+    },
+    {
+        'name': 'Interpretable Outlier Summarization.',
+        'url': 'https://arxiv.org/pdf/2303.06261.pdf',
+        'authors': ['Yu Wang', 'Lei Cao', 'Yizhou Yan', 'Samuel Madden'],
+        'status': 'Accepted',
+        'conference': '',
+        'year': 2023,
+        'abstract': '',
+        'field': ['Others']
+    },
+]
 
 const publicationItemListAll = [
     {
@@ -131,16 +183,6 @@ const publicationItemListAll = [
         'field': [RS]
     },
     {
-        'name': "Robust and Interpretable Medical Image Classifiers via Concept Bottleneck Models.",
-        'url': 'https://arxiv.org/abs/2308.03685',
-        'authors': ['An Yan', 'Yu Wang', 'Petros Karypis', 'Zexue He', 'Chengyu Dong', 'Zihan Wang', 'Yiwu Zhong', "Jingbo Shang", "Amilcare Gentili", "Chun-Nan Hsu", "Julian McAuley"],
-        'status': "Accepted",
-        'conference': 'Arxiv',
-        'year': 2023,
-        'abstract': '',
-        'field': [CV]
-    },
-    {
         'name': "MedEval: A Multi-Level, Multi-Task, and Multi-Domain Medical Benchmark for Language Model Evaluation.",
         'url': 'https://arxiv.org/pdf/2310.14088.pdf',
         'authors': ['Zexue He', 'Yu Wang', 'An Yan', 'Yao Liu', 'Eric Y Chang', 'Amilcare Gentili', 'Julian McAuley', 'Chun-Nan Hsu'],
@@ -160,26 +202,6 @@ const publicationItemListAll = [
         'abstract': '',
         'field': [CV]
     },
-    // {
-    //     'name': "Differentiable Invariant Causal Discovery.",
-    //     'url': 'https://arxiv.org/abs/2205.15638',
-    //     'authors': ['Yu Wang', 'An Zhang', 'Xiang Wang', 'Yancheng Yuan', 'Xiangnan He', 'Tat-Seng Chua'],
-    //     'status': "Accepted",
-    //     'conference': 'Arxiv',
-    //     'year': 2022,
-    //     'abstract': 'We proposes Differentiable Invariant Causal Discovery (DICD), utilizing the multi-environment information based on a differentiable framework to avoid learning spurious edges and wrong causal directions. Theoretical guarantees for the identifiability of proposed DICD are provided under mild conditions with enough environments. Extensive experiments on synthetic and real-world datasets verify that DICD outperforms state-of-the-art causal discovery methods up to 36% in SHD. ',
-    //     'field': [ML]
-    // },
-    // {
-    //     'name': 'Label Denoising through Cross-Model Agreement',
-    //     'url': 'https://arxiv.org/pdf/2308.13976.pdf',
-    //     'authors': ['Yu Wang', 'Xin Xin', 'Zaiqiao Meng', 'Joemon Jose', 'Fuli Feng'],
-    //     'status': 'Accepted',
-    //     'conference': 'Arxiv',
-    //     'year': 2023,
-    //     'abstract': 'In this work, we propose a novel framework to learn robust machine learning models from noisy labels. Through an empirical study, we find that different models make relatively similar predictions on clean examples, while the predictions on noisy examples vary much more across different models. we further extend the proposed DeCA to the image classification task which corresponds to multi-class label scenarios. Experimental results demonstrate that the proposed methods significantly improve the model performance compared with normal training and other denoising methods on both the recommendation task and multi-class image classification task.',
-    //     'field': [RS]
-    // },
     {
         'name': 'Controlling Bias Exposure for Fair Interpretable Predictions',
         'url': 'https://arxiv.org/abs/2210.07455',
@@ -190,16 +212,6 @@ const publicationItemListAll = [
         'abstract': 'In this work, we provide a novel debiasing algorithm by adjusting the predictive model’s belief to (1) ignore the sensitive information if it is not useful for the task; (2) use sensitive informa- tion minimally as necessary for the prediction (while also incurring a penalty). Experimental results on two text classification tasks (influ- enced by gender) and an open-ended genera- tion task (influenced by race) indicate that our model achieves a desirable trade-off between debiasing and task performance along with pro- ducing debiased rationales as evidence.',
         'field': [NLP]
     },
-    // {
-    //     'name': 'Interpretable Outlier Summarization.',
-    //     'url': 'https://arxiv.org/pdf/2303.06261.pdf',
-    //     'authors': ['Yu Wang', 'Lei Cao', 'Yizhou Yan', 'Samuel Madden'],
-    //     'status': 'Accepted',
-    //     'conference': 'Arxiv',
-    //     'year': 2023,
-    //     'abstract': '',
-    //     'field': ['Others']
-    // },
     {
         'name': 'AutoOD: Automatic Outlier Detection.',
         'url': 'https://dl.acm.org/doi/10.1145/3588700',
@@ -243,7 +255,6 @@ const publicationItemListAll = [
 ]
 
 
-
 export function authorship(value: string[]) {
     if ((value[0] === 'Yu Wang')  || (value[0] === 'Yu Wang*' || value[1] === 'Yu Wang*')){
         return '(Co-)First';
@@ -259,6 +270,7 @@ export function Publications() {
     const [citation, setCitation] = React.useState(0);
     const [publicationItemList, setPublicationItemList] = React.useState(publicationItemListAll.slice(0, 0));
     const [selectedPublicationItemList, setSelectedPublicationItemList] = React.useState(selectedPublicationItemListAll);
+    const [trashPublicationItemList, setTrashPublicationItemList] = React.useState(trashPublicationItemListAll);
     // const [expanded, setExpanded] = React.useState<(string | boolean)[]>(Array.from({ length: publicationItemListAll.length }, () => false));
     // const handleAccordionChange =
     //     (panel: string, idx: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -327,6 +339,100 @@ export function Publications() {
         return `${value}°C`;
     }
 
+    function staticPublicationList(publicationItemList: PublicationItem[], title: string) {
+        return <div>
+                            {
+                                (() => {
+                                    const tmpArray = Array.from({ length: publicationItemList.length }, (item, index) => index).filter(
+                                        (idx) => {
+                                            
+                                            const endYearItem = marks.find((item) => (item.value === range[1]))
+                                            const endYear = !endYearItem ? 3000 : endYearItem.year
+    
+                                            const beginYearItem = marks.find((item) => (item.value === range[0]))
+                                            const beginYear = !beginYearItem ? 3000 : beginYearItem.year
+    
+                                            if (authorChecked.indexOf(authorship(publicationItemList[idx].authors)) === -1){
+                                                return false
+                                            }
+    
+                                            // if (fieldChecked.indexOf(publicationItemList[idx].field) === -1){
+                                            //     return false
+                                            // }
+                                            if (!publicationItemList[idx].field.some(field => fieldChecked.includes(field))) {
+                                                return false
+                                            } 
+    
+                                            if (endYear === 3000) {
+                                                if (publicationItemList[idx].status === 'Submitted'){
+                                                    return true
+                                                }
+                                                if (beginYear < 3000){
+                                                    return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
+                                                }
+                                                
+                                                // && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
+                                            } else {
+                                                return (publicationItemList[idx].year <= endYear && publicationItemList[idx].year >= beginYear)
+                                                    && (publicationItemList[idx].status === 'Accepted')
+                                            }
+                                        }
+                                    );
+                                    if (!tmpArray.length) {
+                                        return <></>;
+                                    } else {
+                                        return (
+                                            <>
+                                            <h1 style={{ fontSize: '24px' }}>{title}</h1>
+                                            {
+                                                tmpArray.map((idx, mapIndex) => (
+                                                    <div key={idx}>
+                                                        {/* <PublicationItem idx={idx} {...publicationItemList[idx]} /> */}
+                                                        <div className="display-12">
+                                                            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                                                                <Typography display='inline' sx={{ width: '100%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
+                                                                    {"[" + (mapIndex + 1) + "] " + publicationItemList[idx].name} {publicationItemList[idx].url !== '' ? <a href={publicationItemList[idx].url}>PDF</a> : <></>} <br></br>
+                                                                    {publicationItemList[idx].authors.map(
+                                                                        (item, index) => {
+                                                                            // if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                                                            //     return <Typography fontSize="15px" display="inline" key={index} style={{ color: '#1B3A9D' }}><strong>{item + ', '}</strong></Typography>;
+                                                                            // } else {
+                                                                            //     return <Typography fontSize="15px" display="inline" key={index}>{item + ', '}</Typography>
+                                                                            // }
+                                                                            if (item === 'Yu Wang' || item === 'Yu Wang*') {
+                                                                                return (
+                                                                                    <Typography fontSize="14px" display="inline" key={index} style={{ color: '#1B3A9D', fontFamily: 'Rockwell' }}>
+                                                                                        <strong>{item + ', '}</strong>
+                                                                                    </Typography>
+                                                                                );
+                                                                            } else {
+                                                                                return (
+                                                                                    <Typography fontSize="14px" display="inline" key={index} style={{color: "gray", fontFamily: 'Rockwell' }}>
+                                                                                        {item + ', '}
+                                                                                    </Typography>
+                                                                                );
+                                                                            }
+                                                                        }
+                                                                    )}
+                                                                </Typography>
+                                                                <div className='paperDiv'>
+                                                                    <Typography style={{ textAlign: 'right', minWidth: '15ch', color: 'black'}} >
+                                                                        {publicationItemList[idx].conference} {publicationItemList[idx].year}
+                                                                    </Typography>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br/>
+                                                        {/* <hr style={{border: "1px solid #000"}}></hr> */}
+                                                    </div>))
+                                            }</>
+                                        )
+                                    }
+                                })()
+                            }
+                        </div>
+    }
+
     const marks = [
         {
             value: 0,
@@ -376,72 +482,7 @@ export function Publications() {
                     background: 'url(./assets/background.png)',
                 }}>
                     <div className='adjustToWidthStyle'>
-                    <div>
-                         <h1 style={{ fontSize: '24px' }}>Selected Publications</h1>
-                            {
-                                Array.from({ length: selectedPublicationItemList.length }, (item, index) => index).filter(
-                                    (idx) => {
-                                        
-                                        const endYearItem = marks.find((item) => (item.value === range[1]))
-                                        const endYear = !endYearItem ? 3000 : endYearItem.year
-
-                                        const beginYearItem = marks.find((item) => (item.value === range[0]))
-                                        const beginYear = !beginYearItem ? 3000 : beginYearItem.year
-
-                                        if (authorChecked.indexOf(authorship(selectedPublicationItemList[idx].authors)) === -1){
-                                            return false
-                                        }
-
-                                        // if (fieldChecked.indexOf(selectedPublicationItemList[idx].field) === -1){
-                                        //     return false
-                                        // }
-                                        if (!selectedPublicationItemList[idx].field.some(field => fieldChecked.includes(field))) {
-                                            return false
-                                        } 
-
-                                        if (endYear === 3000) {
-                                            if (selectedPublicationItemList[idx].status === 'Submitted'){
-                                                return true
-                                            }
-                                            if (beginYear < 3000){
-                                                return (selectedPublicationItemList[idx].year <= endYear && selectedPublicationItemList[idx].year >= beginYear)
-                                            }
-                                            
-                                            // && (statusChecked.indexOf(publicationItemList[idx].status) !== -1)
-                                        } else {
-                                            return (selectedPublicationItemList[idx].year <= endYear && selectedPublicationItemList[idx].year >= beginYear)
-                                                && (selectedPublicationItemList[idx].status === 'Accepted')
-                                        }
-                                    }
-                                ).map((idx, mapIndex) => (
-                                    <div key={idx}>
-                                        {/* <PublicationItem idx={idx} {...selectedPublicationItemList[idx]} /> */}
-                                        <div className="display-12">
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                                                <Typography display='inline' sx={{ width: '100%', flexShrink: 0, color: 'black', fontSize: '18px'}}>
-                                                    {"[" + (mapIndex + 1) + "] " + selectedPublicationItemList[idx].name} {selectedPublicationItemList[idx].url !== '' ? <a href={selectedPublicationItemList[idx].url}>PDF</a> : <></>} <br></br>
-                                                    {selectedPublicationItemList[idx].authors.map(
-                                                        (item, index) => {
-                                                            if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                                                                return <Typography fontSize="15px" display="inline" key={index} style={{ color: '#1B3A9D' }}><strong>{item + ', '}</strong></Typography>;
-                                                            } else {
-                                                                return <Typography fontSize="15px" display="inline" key={index}>{item + ', '}</Typography>
-                                                            }
-                                                        }
-                                                    )}
-                                                </Typography>
-                                                <div className='paperDiv'>
-                                                    <Typography style={{ textAlign: 'right', minWidth: '15ch', color: 'black'}} >
-                                                        {selectedPublicationItemList[idx].conference} {selectedPublicationItemList[idx].year}
-                                                    </Typography>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <br/>
-                                        {/* <hr style={{border: "1px solid #000"}}></hr> */}
-                                    </div>))
-                            }
-                        </div>
+                        {staticPublicationList(selectedPublicationItemList, "Selected Publications")}
                         <h1 style={{ fontSize: '24px' }}>All Publications</h1>
                         <div>
                             {
@@ -489,9 +530,17 @@ export function Publications() {
                                                     {publicationItemList[idx].authors.map(
                                                         (item, index) => {
                                                             if (item === 'Yu Wang' || item === 'Yu Wang*') {
-                                                                return <Typography fontSize="15px" display="inline" key={index} style={{ color: '#1B3A9D' }}><strong>{item + ', '}</strong></Typography>;
+                                                                return (
+                                                                    <Typography fontSize="14px" display="inline" key={index} style={{ color: '#1B3A9D', fontFamily: 'Rockwell' }}>
+                                                                        <strong>{item + ', '}</strong>
+                                                                    </Typography>
+                                                                );
                                                             } else {
-                                                                return <Typography fontSize="15px" display="inline" key={index}>{item + ', '}</Typography>
+                                                                return (
+                                                                    <Typography fontSize="14px" display="inline" key={index} style={{color: "gray", fontFamily: 'Rockwell' }}>
+                                                                        {item + ', '}
+                                                                    </Typography>
+                                                                );
                                                             }
                                                         }
                                                     )}
@@ -513,7 +562,7 @@ export function Publications() {
                             <Skeleton width={'100%'} />
                         </Box>
                         <br/>
-                        <br/>
+                        {staticPublicationList(trashPublicationItemList, "Publications Not Accepted (and Not Getting a Second Chance)")}
                     </div>
 
 
