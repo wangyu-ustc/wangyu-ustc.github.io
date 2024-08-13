@@ -36,16 +36,6 @@ interface PublicationItem {
 
 const selectedPublicationItemListAll = [
     {
-        'name': "CoMMIT: Coordinated Instruction Tuning for Multimodal Large Language Models",
-        "url": "https://arxiv.org/abs/2407.20454",
-        "authors": ["Junda Wu", "Xintong Li", "Tong Yu", "Yu Wang", "Xiang Chen", "Jiuxiang Gu", "Lina Yao", "Jingbo Shang", "Julian McAuley"],
-        "status": "Submitted",
-        "conference": "",
-        "year": 2024,
-        "abstract": "",
-        'field': [NLP]
-    },
-    {
         'name': "Large Scale Knowledge Washing",
         "url": "https://arxiv.org/abs/2405.16720",
         'authors': ["Yu Wang", "Ruihan Wu", "Zexue He", "Xiusi Chen", "Julian McAuley"],
@@ -121,6 +111,16 @@ const trashPublicationItemListAll = [
 ]
 
 const publicationItemListAll = [
+    {
+        'name': "CoMMIT: Coordinated Instruction Tuning for Multimodal Large Language Models",
+        "url": "https://arxiv.org/abs/2407.20454",
+        "authors": ["Junda Wu", "Xintong Li", "Tong Yu", "Yu Wang", "Xiang Chen", "Jiuxiang Gu", "Lina Yao", "Jingbo Shang", "Julian McAuley"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2024,
+        "abstract": "",
+        'field': [NLP]
+    },
     {
         'name': "Large Scale Knowledge Washing",
         "url": "https://arxiv.org/abs/2405.16720",
