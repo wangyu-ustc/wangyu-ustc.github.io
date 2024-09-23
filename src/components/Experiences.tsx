@@ -109,7 +109,7 @@ export function Experiences() {
                             />
                             </div>
                             <div>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Applied Scientist Intern @ MIT-IBM Wasten Lab</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Research Scientist Intern @ MIT-IBM Wasten Lab</Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2024.6 - 2024.9, Mentor: <MyA href={"https://zexuehe.github.io/"} style={{ color: '#265d75', textDecoration: 'none' }}>Zexue He</MyA></Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Topic: Large Language Model</Typography>
                                 {/* Advisor: {item.professor}, <br></br> */}
