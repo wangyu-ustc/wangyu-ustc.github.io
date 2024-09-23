@@ -38,7 +38,7 @@ const selectedPublicationItemListAll = [
     {
         'name': "Towards LifeSpan Cognitive Systems",
         "url": "https://arxiv.org/abs/2409.13265",
-        "authors": ["Yu Wang", "Chi Han", "Tongtong Wu", "Xiaoxin He", "Wangchunshu Zhou", 
+        "authors": ["Yu Wang*", "Chi Han*", "Tongtong Wu*", "Xiaoxin He*", "Wangchunshu Zhou", 
             "Nafis Sadeq", "Xiusi Chen", "Zexue He", "Wei Wang", "Gholamreza Haffari", "Heng Ji", "Julian McAuley"],
         "status": "Submitted",
         "conference": "",
