@@ -11,14 +11,17 @@ const nodeDefaults = {
 const labels2urls: {[key: string]: string} = {
   "LVChat": "https://arxiv.org/abs/2402.12079",
   "MemoryLLM": "https://arxiv.org/abs/2402.04624",
-  "KnowledgeWashing": "https://arxiv.org/abs/2405.16720"
+  "KnowledgeWashing": "https://arxiv.org/abs/2405.16720",
 };
 
 // Define a custom node component
 function BaseNode({ data }:{data: any}) {
   return (
-    <div className="base-node">
-      <div>{data.label}</div>
+    <div className="existing-node">
+      {/* <div>{data.label}</div> */}
+      <a href={"https://arxiv.org/abs/2409.13265"} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        {data.label}
+      </a>
       <Handle type="source" position={Position.Right} id="rightHandle" />
       <Handle type="source" position={Position.Bottom} id="bottomHandle" />
     </div>
