@@ -117,8 +117,11 @@ function FutureNode({ data }:{data: any}) {
 // Define a custom node component
 function KINode({ data }:{data: any}) {
   return (
-    <div className="ongoing-node">
-      <div>{data.label}</div>
+    <div className="existing-node">
+      {/* <div>{data.label}</div> */}
+      <a href={"https://arxiv.org/abs/2410.00487"} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        {data.label}
+      </a>
       <Handle type="target" position={Position.Top} id="topHandle" />
     </div>
   );

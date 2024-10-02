@@ -36,6 +36,16 @@ interface PublicationItem {
 
 const selectedPublicationItemListAll = [
     {
+        'name': "Self-Updatable Large Language Models with Parameter Integration",
+        "url": "https://arxiv.org/abs/2410.00487",
+        "authors": ["Yu Wang*", "Xinshuang Liu*", "Xiusi Chen", "Sean O'Brien", "Junda Wu", "Julian McAuley"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2024,
+        "abstract": "",
+        'field': [NLP]
+    },
+    {
         'name': "Towards LifeSpan Cognitive Systems",
         "url": "https://arxiv.org/abs/2409.13265",
         "authors": ["Yu Wang*", "Chi Han*", "Tongtong Wu*", "Xiaoxin He*", "Wangchunshu Zhou", 
@@ -122,6 +132,16 @@ const trashPublicationItemListAll = [
 ]
 
 const publicationItemListAll = [
+    {
+        'name': "Self-Updatable Large Language Models with Parameter Integration",
+        "url": "https://arxiv.org/abs/2410.00487",
+        "authors": ["Yu Wang*", "Xinshuang Liu*", "Xiusi Chen", "Sean O'Brien", "Junda Wu", "Julian McAuley"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2024,
+        "abstract": "",
+        'field': [NLP]
+    },
     {
         'name': "Towards LifeSpan Cognitive Systems",
         "url": "https://arxiv.org/abs/2409.13265",
