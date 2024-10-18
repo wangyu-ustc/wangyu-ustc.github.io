@@ -28,7 +28,7 @@ export function BasicInformation() {
                                 <div className="greetings">
                                     <h1 className="green"> Yu Wang </h1>
                                     <h4>
-                                        <a href='https://yuwang.org/home/CV.pdf'>CV</a>
+                                        <a href='https://yuwang.us/home/CV.pdf'>CV</a>
                                         &nbsp;|&nbsp;
                                         <a href='https://scholar.google.com/citations?hl=en&user=n1pDIggAAAAJ'>Google Scholar</a>
                                     </h4>

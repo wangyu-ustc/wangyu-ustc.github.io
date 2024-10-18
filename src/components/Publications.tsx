@@ -133,6 +133,35 @@ const trashPublicationItemListAll = [
 
 const publicationItemListAll = [
     {
+        'name': "Genomic epidemiology reveals 2022 mpox epidemic in New York City governed by heavy-tailed sexual contact networks",
+        "url": "https://www.medrxiv.org/content/medrxiv/early/2024/08/01/2024.07.30.24311083.full.pdf",
+        "authors": [
+            "Jonathan E. Pekar", 
+            "Yu Wang", 
+            "Jade C. Wang", 
+            "Yucai Shao", 
+            "Faten Taki", 
+            "Lisa A. Forgione", 
+            "Helly Amin", 
+            "Tyler Clabby", 
+            "Kimberly Johnson", 
+            "Lucia V. Torian", 
+            "Sarah L. Braunstein", 
+            "Preeti Pathela", 
+            "Enoma Omoregie", 
+            "Scott Hughes", 
+            "Marc A. Suchard", 
+            "Tetyana I. Vasylyeva", 
+            "Philippe Lemey", 
+            "Joel O. Wertheim"
+        ],
+        'status': "Submitted",
+        "conference": "",
+        "year": 2024,
+        "abstract": "",
+        'field': ["Others"]
+    },
+    {
         'name': "Self-Updatable Large Language Models with Parameter Integration",
         "url": "https://arxiv.org/abs/2410.00487",
         "authors": ["Yu Wang*", "Xinshuang Liu*", "Xiusi Chen", "Sean O'Brien", "Junda Wu", "Julian McAuley"],
