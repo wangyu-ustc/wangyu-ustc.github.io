@@ -17,7 +17,7 @@ import "./Publications.css";
 // )
 
 // const citationAll = 197;
-const citationAll = 332;
+const citationAll = 465;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -50,9 +50,9 @@ const selectedPublicationItemListAll = [
         "url": "https://arxiv.org/abs/2409.13265",
         "authors": ["Yu Wang*", "Chi Han*", "Tongtong Wu*", "Xiaoxin He*", "Wangchunshu Zhou", 
             "Nafis Sadeq", "Xiusi Chen", "Zexue He", "Wei Wang", "Gholamreza Haffari", "Heng Ji", "Julian McAuley"],
-        "status": "Submitted",
-        "conference": "",
-        "year": 2024,
+        "status": "Accepted",
+        "conference": "TMLR",
+        "year": 2025,
         "abstract": "",
         'field': [NLP]
     },
@@ -67,16 +67,6 @@ const selectedPublicationItemListAll = [
         'field': [NLP]
     },
     {
-        'name': "LVChat: Facilitating Long Video Comprehension",
-        'url': 'https://arxiv.org/abs/2402.12079',
-        'authors': ["Yu Wang*", "Zeyuan Zhang*", "Julian McAuley", "Zexue He"],
-        'status': "Submitted",
-        'conference': '',
-        'year': 2024,
-        'abstract': '',
-        'field': [CV, NLP]
-    },
-    {
         'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
         'url': 'https://arxiv.org/abs/2402.04624',
         'authors': ["Yu Wang", "Yifan Gao", "Xiusi Chen", "Haoming Jiang", "Shiyang Li", "Jingfeng Yang", "Qingyu Yin", "Zheng Li", "Xian Li", "Bing Yin", "Jingbo Shang", "Julian McAuley"],
@@ -89,6 +79,16 @@ const selectedPublicationItemListAll = [
 ]
 
 const trashPublicationItemListAll = [
+    {
+        'name': "LVChat: Facilitating Long Video Comprehension",
+        'url': 'https://arxiv.org/abs/2402.12079',
+        'authors': ["Yu Wang*", "Zeyuan Zhang*", "Julian McAuley", "Zexue He"],
+        'status': "Submitted",
+        'conference': '',
+        'year': 2024,
+        'abstract': '',
+        'field': [CV, NLP]
+    },
     {
         'name': "Robust and Interpretable Medical Image Classifiers via Concept Bottleneck Models.",
         'url': 'https://arxiv.org/abs/2308.03685',
@@ -176,9 +176,9 @@ const publicationItemListAll = [
         "url": "https://arxiv.org/abs/2409.13265",
         "authors": ["Yu Wang", "Chi Han", "Tongtong Wu", "Xiaoxin He", "Wangchunshu Zhou", 
             "Nafis Sadeq", "Xiusi Chen", "Zexue He", "Wei Wang", "Gholamreza Haffari", "Heng Ji", "Julian McAuley"],
-        "status": "Submitted",
-        "conference": "",
-        "year": 2024,
+        "status": "Accepted",
+        "conference": "TMLR",
+        "year": 2025,
         "abstract": "",
         'field': [NLP]
     },
@@ -232,16 +232,6 @@ const publicationItemListAll = [
         'year': 2024,
         'abstract': '',
         'field': ['Others']
-    },
-    {
-        'name': "LVChat: Facilitating Long Video Comprehension",
-        'url': 'https://arxiv.org/abs/2402.12079',
-        'authors': ["Yu Wang*", "Zeyuan Zhang*", "Julian McAuley", "Zexue He"],
-        'status': "Submitted",
-        'conference': '',
-        'year': 2024,
-        'abstract': '',
-        'field': [CV, NLP]
     },
     {
         'name': "MemoryLLM: Towards Self-Updatable Large Language Models",
@@ -521,19 +511,24 @@ export function Publications() {
             label: 'Year 2021',
         },
         {
-            value: 25,
+            value: 20,
             year: 2022,
             label: 'Year 2022',
         },
         {
-            value: 50,
+            value: 40,
             year: 2023,
             label: 'Year 2023',
         },
         {
-            value: 75,
+            value: 60,
             year: 2024,
             label: 'Year 2024',
+        },
+        {
+            value: 80,
+            year: 2025,
+            label: 'Year 2025',
         },
         {
             value: 99,
@@ -660,7 +655,7 @@ export function Publications() {
                                 value={range}
                                 onChange={handleChange}
                                 getAriaValueText={valuetext}
-                                step={25}
+                                step={20}
                                 marks={marks}
                                 color="secondary"
                             // valueLabelDisplay="on"
