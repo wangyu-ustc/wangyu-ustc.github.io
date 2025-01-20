@@ -133,6 +133,16 @@ const trashPublicationItemListAll = [
 
 const publicationItemListAll = [
     {
+        'name': "Disentangling Likes and Dislikes in Personalized Generative Explainable Recommendation",
+        "url": "https://arxiv.org/abs/2410.13248",
+        "authors": ['Ryotaro Shimizu', 'Takashi Wada', 'Yu Wang', 'Johannes Kruse', "Sean O'Brien", 'Sai HtaungKham', 'Linxin Song', 'Yuya Yoshikawa', 'Yuki Saito', 'Fugee Tsung', 'Masayuki Goto', 'Julian McAuley'],
+        "status": "Accepted",
+        "conference": "WWW",
+        "year": 2025,
+        "abstract": "",
+        "field": [RS]
+    },
+    {
         'name': "Genomic epidemiology reveals 2022 mpox epidemic in New York City governed by heavy-tailed sexual contact networks",
         "url": "https://www.medrxiv.org/content/medrxiv/early/2024/08/01/2024.07.30.24311083.full.pdf",
         "authors": [
