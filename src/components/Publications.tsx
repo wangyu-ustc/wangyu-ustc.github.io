@@ -46,6 +46,16 @@ const selectedPublicationItemListAll = [
         'field': [NLP]
     },
     {
+        'name': "Large Scale Knowledge Washing",
+        "url": "https://arxiv.org/abs/2405.16720",
+        'authors': ["Yu Wang", "Ruihan Wu", "Zexue He", "Xiusi Chen", "Julian McAuley"],
+        'status': "Accepted",
+        'conference': "ICLR",
+        'year': 2025,
+        'abstract': "",
+        'field': [NLP]
+    },
+    {
         'name': "Towards LifeSpan Cognitive Systems",
         "url": "https://arxiv.org/abs/2409.13265",
         "authors": ["Yu Wang*", "Chi Han*", "Tongtong Wu*", "Xiaoxin He*", "Wangchunshu Zhou", 
@@ -54,16 +64,6 @@ const selectedPublicationItemListAll = [
         "conference": "TMLR",
         "year": 2025,
         "abstract": "",
-        'field': [NLP]
-    },
-    {
-        'name': "Large Scale Knowledge Washing",
-        "url": "https://arxiv.org/abs/2405.16720",
-        'authors': ["Yu Wang", "Ruihan Wu", "Zexue He", "Xiusi Chen", "Julian McAuley"],
-        'status': "Accepted",
-        'conference': "ICLR",
-        'year': 2025,
-        'abstract': "",
         'field': [NLP]
     },
     {
@@ -133,14 +133,24 @@ const trashPublicationItemListAll = [
 
 const publicationItemListAll = [
     {
-        'name': "Disentangling Likes and Dislikes in Personalized Generative Explainable Recommendation",
-        "url": "https://arxiv.org/abs/2410.13248",
-        "authors": ['Ryotaro Shimizu', 'Takashi Wada', 'Yu Wang', 'Johannes Kruse', "Sean O'Brien", 'Sai HtaungKham', 'Linxin Song', 'Yuya Yoshikawa', 'Yuki Saito', 'Fugee Tsung', 'Masayuki Goto', 'Julian McAuley'],
+        'name': "Self-Updatable Large Language Models with Parameter Integration",
+        "url": "https://arxiv.org/abs/2410.00487",
+        "authors": ["Yu Wang*", "Xinshuang Liu*", "Xiusi Chen", "Sean O'Brien", "Junda Wu", "Julian McAuley"],
         "status": "Accepted",
-        "conference": "WWW",
+        "conference": "ICLR",
         "year": 2025,
         "abstract": "",
-        "field": [RS]
+        'field': [NLP]
+    },
+    {
+        'name': "Large Scale Knowledge Washing",
+        "url": "https://arxiv.org/abs/2405.16720",
+        'authors': ["Yu Wang", "Ruihan Wu", "Zexue He", "Xiusi Chen", "Julian McAuley"],
+        'status': "Accepted",
+        'conference': "ICLR",
+        'year': 2025,
+        'abstract': "",
+        'field': [NLP]
     },
     {
         'name': "Genomic epidemiology reveals 2022 mpox epidemic in New York City governed by heavy-tailed sexual contact networks",
@@ -172,14 +182,14 @@ const publicationItemListAll = [
         'field': ["Others"]
     },
     {
-        'name': "Self-Updatable Large Language Models with Parameter Integration",
-        "url": "https://arxiv.org/abs/2410.00487",
-        "authors": ["Yu Wang*", "Xinshuang Liu*", "Xiusi Chen", "Sean O'Brien", "Junda Wu", "Julian McAuley"],
+        'name': "Disentangling Likes and Dislikes in Personalized Generative Explainable Recommendation",
+        "url": "https://arxiv.org/abs/2410.13248",
+        "authors": ['Ryotaro Shimizu', 'Takashi Wada', 'Yu Wang', 'Johannes Kruse', "Sean O'Brien", 'Sai HtaungKham', 'Linxin Song', 'Yuya Yoshikawa', 'Yuki Saito', 'Fugee Tsung', 'Masayuki Goto', 'Julian McAuley'],
         "status": "Accepted",
-        "conference": "ICLR",
+        "conference": "WWW",
         "year": 2025,
         "abstract": "",
-        'field': [NLP]
+        "field": [RS]
     },
     {
         'name': "Towards LifeSpan Cognitive Systems",
@@ -200,16 +210,6 @@ const publicationItemListAll = [
         "conference": "",
         "year": 2024,
         "abstract": "",
-        'field': [NLP]
-    },
-    {
-        'name': "Large Scale Knowledge Washing",
-        "url": "https://arxiv.org/abs/2405.16720",
-        'authors': ["Yu Wang", "Ruihan Wu", "Zexue He", "Xiusi Chen", "Julian McAuley"],
-        'status': "Accepted",
-        'conference': "ICLR",
-        'year': 2025,
-        'abstract': "",
         'field': [NLP]
     },
     {
