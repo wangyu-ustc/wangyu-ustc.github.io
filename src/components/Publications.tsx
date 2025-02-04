@@ -36,6 +36,16 @@ interface PublicationItem {
 
 const selectedPublicationItemListAll = [
     {
+        'name': "M+: Extending MemoryLLM with Scalable Long-Term Memory",
+        "url": "https://arxiv.org/abs/2502.00592",
+        "authors": ["Yu Wang", 'Dmitry Krot', "Yuanzhe Hu", "Yifan Gao", "Wangchunshu Zhou", "Julian McAuley", "Dan Gutfreund", "Rogerio Feris", "Zexue He"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2025,
+        "abstract": "",
+        'field': [NLP]
+    },
+    {
         'name': "Self-Updatable Large Language Models with Parameter Integration",
         "url": "https://arxiv.org/abs/2410.00487",
         "authors": ["Yu Wang*", "Xinshuang Liu*", "Xiusi Chen", "Sean O'Brien", "Junda Wu", "Julian McAuley"],
@@ -133,6 +143,16 @@ const trashPublicationItemListAll = [
 
 const publicationItemListAll = [
     {
+        'name': "M+: Extending MemoryLLM with Scalable Long-Term Memory",
+        "url": "https://arxiv.org/abs/2502.00592",
+        "authors": ["Yu Wang", 'Dmitry Krot', "Yuanzhe Hu", "Yifan Gao", "Wangchunshu Zhou", "Julian McAuley", "Dan Gutfreund", "Rogerio Feris", "Zexue He"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2025,
+        "abstract": "",
+        'field': [NLP]
+    },
+    {
         'name': "Self-Updatable Large Language Models with Parameter Integration",
         "url": "https://arxiv.org/abs/2410.00487",
         "authors": ["Yu Wang*", "Xinshuang Liu*", "Xiusi Chen", "Sean O'Brien", "Junda Wu", "Julian McAuley"],
@@ -175,7 +195,7 @@ const publicationItemListAll = [
             "Philippe Lemey", 
             "Joel O. Wertheim"
         ],
-        'status': "Submitted",
+        'status': "Accepted",
         "conference": "Nature Medicine",
         "year": 2025,
         "abstract": "",
@@ -235,7 +255,7 @@ const publicationItemListAll = [
     },
     {
         'name': "Outlier Summarization via Human Interpretable Rules",
-        'url': "",
+        'url': "https://www.vldb.org/pvldb/vol17/p1591-deng.pdf",
         'authors': ['Yuhao Deng', "Yu Wang", "Lei Cao", "Lianpeng Qiao", "Yu-Ping Wang", "Yizhou Yan", "Sammual Maddden"],
         'status': "Accepted",
         "conference": "VLDB",
