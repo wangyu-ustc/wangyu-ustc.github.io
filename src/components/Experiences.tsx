@@ -10,6 +10,7 @@ import mitBadge from '../assets/MIT_badge.png'
 import ucsdBadge from '../assets/ucsd_badge.png'
 import amazonLogo from "../assets/Amazon-Logo.png"
 import ibmLogo from "../assets/ibm_logo.png"
+import lettaLogo from "../assets/letta_logo.png"
 
 const experienceItemListAll = [
     {
@@ -103,6 +104,24 @@ export function Experiences() {
                             <img
                                 alt="badge"
                                 className="logo responsive-logo"
+                                src={lettaLogo}
+                                width="80"
+                                height="80"
+                            />
+                            </div>
+                            <div>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Research Scientist Intern @ Letta</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2025.1 - 2025.6 </Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Topic: Memory Agents</Typography>
+                                {/* Advisor: {item.professor}, <br></br> */}
+                            </div>
+                        </div>
+                        <br/>
+                        <div style={{ width: '100%', display: 'flex', }}>
+                            <div>
+                            <img
+                                alt="badge"
+                                className="logo responsive-logo"
                                 src={ibmLogo}
                                 width="80"
                                 height="80"
@@ -111,11 +130,11 @@ export function Experiences() {
                             <div>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Research Scientist Intern @ MIT-IBM Wasten Lab</Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2024.6 - 2024.9, Mentor: <MyA href={"https://zexuehe.github.io/"} style={{ color: '#265d75', textDecoration: 'none' }}>Zexue He</MyA></Typography>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Topic: Large Language Model</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Topic: Memory Large Language Model</Typography>
                                 {/* Advisor: {item.professor}, <br></br> */}
                             </div>
                         </div>
-                        <br></br>
+                        <br/>
                         <div style={{ width: '100%', display: 'flex', }}>
                             <div>
                             <img
@@ -129,7 +148,7 @@ export function Experiences() {
                             <div>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Applied Scientist Intern @ Amazon</Typography>
                                 <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; 2023.6 - 2023.12, Mentor: <MyA href={"https://yifan-gao.github.io/"} style={{ color: '#265d75', textDecoration: 'none' }}>Yifan Gao</MyA></Typography>
-                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Topic: Large Language Model</Typography>
+                                <Typography fontSize='15px'>&nbsp;&nbsp;&nbsp;&nbsp; Topic: Memory Large Language Model</Typography>
                                 {/* Advisor: {item.professor}, <br></br> */}
                             </div>
                         </div>
