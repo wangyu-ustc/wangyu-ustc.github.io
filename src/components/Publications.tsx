@@ -143,6 +143,26 @@ const trashPublicationItemListAll = [
 
 const publicationItemListAll = [
     {
+        'name': "LaViC: Adapting Large Vision-Language Models to Visually-Aware Conversational Recommendation",
+        "url": "https://arxiv.org/abs/2503.23312",
+        "authors": ["Hyunsik Jeon", "Satoshi Koide", "Yu Wang", "Zhankui He", "Julian McAuley"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2025,
+        "abstract": "",
+        'field': [CV, RS]
+    },
+    {
+        'name': "Mitigating Visual Knowledge Forgetting in MLLM Instruction-tuning via Modality-decoupled Gradient Descent",
+        "url": "https://arxiv.org/abs/2502.11740",
+        "authors": ["Junda Wu", "Yuxin Xiong", "Xintong Li", "Yu Xia", "Ruoyu Wang", "Yu Wang", "Tong Yu", "Sungchul Kim", "Ryan A. Rossi", "Lina Yao", "Jingbo Shang", "Julian McAuley"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2025,
+        "abstract": "",
+        'field': [CV, NLP]
+    },
+    {
         'name': "M+: Extending MemoryLLM with Scalable Long-Term Memory",
         "url": "https://arxiv.org/abs/2502.00592",
         "authors": ["Yu Wang", 'Dmitry Krot', "Yuanzhe Hu", "Yifan Gao", "Wangchunshu Zhou", "Julian McAuley", "Dan Gutfreund", "Rogerio Feris", "Zexue He"],
@@ -173,8 +193,8 @@ const publicationItemListAll = [
         'field': [NLP]
     },
     {
-        'name': "Genomic epidemiology reveals 2022 mpox epidemic in New York City governed by heavy-tailed sexual contact networks",
-        "url": "https://www.medrxiv.org/content/medrxiv/early/2024/08/01/2024.07.30.24311083.full.pdf",
+        'name': "Transmission dynamics of the 2022 mpox epidemic in New York City",
+        "url": "https://www.nature.com/articles/s41591-025-03526-9",
         "authors": [
             "Jonathan E. Pekar", 
             "Yu Wang", 
