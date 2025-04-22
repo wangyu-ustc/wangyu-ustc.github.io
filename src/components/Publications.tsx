@@ -143,6 +143,16 @@ const trashPublicationItemListAll = [
 
 const publicationItemListAll = [
     {
+        'name': "Sleep-time Compute: Beyond Inference Scaling at Test-time",
+        "url": "https://arxiv.org/abs/2504.13171",
+        "authors": ["Kevin Lin", "Charlie Snell", "Yu Wang", "Charles Packer",  "Sarah Wooders", "Ion Stoica", "Joseph E. Gonzalez"],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2025,
+        "abstract": "",
+        'field': [NLP]
+    },
+    {
         'name': "LaViC: Adapting Large Vision-Language Models to Visually-Aware Conversational Recommendation",
         "url": "https://arxiv.org/abs/2503.23312",
         "authors": ["Hyunsik Jeon", "Satoshi Koide", "Yu Wang", "Zhankui He", "Julian McAuley"],
