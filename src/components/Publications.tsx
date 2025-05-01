@@ -39,8 +39,8 @@ const selectedPublicationItemListAll = [
         'name': "M+: Extending MemoryLLM with Scalable Long-Term Memory",
         "url": "https://arxiv.org/abs/2502.00592",
         "authors": ["Yu Wang", 'Dmitry Krot', "Yuanzhe Hu", "Yifan Gao", "Wangchunshu Zhou", "Julian McAuley", "Dan Gutfreund", "Rogerio Feris", "Zexue He"],
-        "status": "Submitted",
-        "conference": "",
+        "status": "Accepted",
+        "conference": "ICML",
         "year": 2025,
         "abstract": "",
         'field': [NLP]
@@ -176,8 +176,8 @@ const publicationItemListAll = [
         'name': "M+: Extending MemoryLLM with Scalable Long-Term Memory",
         "url": "https://arxiv.org/abs/2502.00592",
         "authors": ["Yu Wang", 'Dmitry Krot', "Yuanzhe Hu", "Yifan Gao", "Wangchunshu Zhou", "Julian McAuley", "Dan Gutfreund", "Rogerio Feris", "Zexue He"],
-        "status": "Submitted",
-        "conference": "",
+        "status": "Accepted",
+        "conference": "ICML",
         "year": 2025,
         "abstract": "",
         'field': [NLP]
