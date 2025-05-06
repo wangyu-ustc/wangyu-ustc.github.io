@@ -16,8 +16,7 @@ import "./Publications.css";
 //     resp => {console.log(resp.data)}
 // )
 
-// const citationAll = 197;
-const citationAll = 465;
+const citationAll = 570;
 const NLP = 'Natural Language Processing';
 const ML = 'Machine Learning';
 const RS = 'Recommendation System';
@@ -142,6 +141,16 @@ const trashPublicationItemListAll = [
 ]
 
 const publicationItemListAll = [
+    {
+        'name': "RM-R1: Reward Modeling as Reasoning",
+        "url": "https://arxiv.org/abs/2505.02387",
+        "authors": ['Xiusi Chen', 'Gaotang Li', 'Ziqi Wang', 'Bowen Jin', 'Cheng Qian', 'Yu Wang', 'Hongru Wang', 'Yu Zhang', 'Denghui Zhang', 'Tong Zhang', 'Hanghang Tong', 'Heng Ji'],
+        "status": "Submitted",
+        "conference": "",
+        "year": 2025,
+        "abstract": "",
+        'field': [NLP]
+    },
     {
         'name': "Sleep-time Compute: Beyond Inference Scaling at Test-time",
         "url": "https://arxiv.org/abs/2504.13171",
