@@ -142,6 +142,16 @@ const trashPublicationItemListAll = [
 
 const publicationItemListAll = [
     {
+        "name": "The recency and geographical origins of the bat viruses ancestral to SARS-CoV and SARS-CoV-2",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0092867425003538",
+        "authors": ['Jonathan E. Pekar', 'Spyros Lytras', 'Mahan Ghafari', 'Andrew F. Magee', 'Edyth Parker', 'Yu Wang', 'Xiang Ji', 'Jennifer L. Havens', 'Aris Katzourakis', 'Tetyana I. Vasylyeva', 'Marc A. Suchard', 'Alice C. Hughes', 'Joseph Hughes', 'Andrew Rambaut', 'David L. Robertson', 'Simon Dellicour', 'Michael Worobey', 'Joel O. Wertheim', 'Philippe Lemey'],
+        "status": "Accepted",
+        "conference": "Cell",
+        "year": 2025,
+        "abstract": "",
+        'field': ["Others"]
+    },
+    {
         'name': "RM-R1: Reward Modeling as Reasoning",
         "url": "https://arxiv.org/abs/2505.02387",
         "authors": ['Xiusi Chen', 'Gaotang Li', 'Ziqi Wang', 'Bowen Jin', 'Cheng Qian', 'Yu Wang', 'Hongru Wang', 'Yu Zhang', 'Denghui Zhang', 'Tong Zhang', 'Hanghang Tong', 'Heng Ji'],
