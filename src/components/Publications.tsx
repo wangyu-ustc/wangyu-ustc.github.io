@@ -175,8 +175,8 @@ const publicationItemListAll = [
         'name': "LaViC: Adapting Large Vision-Language Models to Visually-Aware Conversational Recommendation",
         "url": "https://arxiv.org/abs/2503.23312",
         "authors": ["Hyunsik Jeon", "Satoshi Koide", "Yu Wang", "Zhankui He", "Julian McAuley"],
-        "status": "Submitted",
-        "conference": "",
+        "status": "Accepted",
+        "conference": "KDD",
         "year": 2025,
         "abstract": "",
         'field': [CV, RS]
