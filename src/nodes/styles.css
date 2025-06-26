@@ -1,0 +1,55 @@
+.base-node {
+  background-color: rgb(186, 215, 221);
+  border: 1px solid black;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  width: 150px; /* Adjust based on your preference */
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.existing-node {
+  background-color: rgb(161, 216, 143);
+  border: 1px solid black;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  width: 150px; /* Adjust based on your preference */
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.ongoing-node {
+  background-color: rgb(240, 220, 223);
+  border: 1px solid black;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  width: 150px; /* Adjust based on your preference */
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.future-node {
+  background-color: rgb(238, 251, 199);
+  border: 1px solid black;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  width: 150px; /* Adjust based on your preference */
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.handle {
+  width: 10px;
+  height: 10px;
+  background-color: #555;
+  border: 2px solid #ddd;
+}
+  
