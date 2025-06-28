@@ -158,7 +158,7 @@ const PersonalWebsite: React.FC = () => {
       link: "https://arxiv.org/abs/2502.00592"
     },
     {
-      title: "Self-Updatable Large Language Models with Parameter Integration",
+      title: "Self-Updatable Large Language Models by Integrating Context into Model Parameters",
       authors: "Yu Wang*, Xinshuang Liu*, Xiusi Chen, Sean O'Brien, Junda Wu, Julian McAuley",
       venue: "ICLR",
       year: 2025,
@@ -238,7 +238,7 @@ const PersonalWebsite: React.FC = () => {
       link: "https://arxiv.org/abs/2502.00592"
     },
     {
-      title: "Self-Updatable Large Language Models with Parameter Integration",
+      title: "Self-Updatable Large Language Models by Integrating Context into Model Parameters",
       authors: "Yu Wang*, Xinshuang Liu*, Xiusi Chen, Sean O'Brien, Junda Wu, Julian McAuley",
       venue: "ICLR",
       year: 2025,
