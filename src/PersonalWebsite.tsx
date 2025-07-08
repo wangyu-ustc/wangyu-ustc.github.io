@@ -151,8 +151,15 @@ const PersonalWebsite: React.FC = () => {
 
   const publications: Publication[] = [
     {
+      title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
+      authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
+      venue: "Submitted",
+      year: 2025,
+      link: "https://arxiv.org/abs/2507.05257"
+    },
+    {
       title: "M+: Extending MemoryLLM with Scalable Long-Term Memory",
-      authors: "Yu Wang, Dmitry Krot, Yuanzhe Hu, Yifan Gao, Wangchunshu Zhou, Julian McAuley, Dan Gutfreund, Rogerio Feris, Zexue He",
+      authors: "Yu Wang, Dmitry Krotov, Yuanzhe Hu, Yifan Gao, Wangchunshu Zhou, Julian McAuley, Dan Gutfreund, Rogerio Feris, Zexue He",
       venue: "ICML",
       year: 2025,
       link: "https://arxiv.org/abs/2502.00592"
@@ -188,6 +195,13 @@ const PersonalWebsite: React.FC = () => {
   ];
 
   const allPublications: Publication[] = [
+    {
+      title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
+      authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
+      venue: "Submitted",
+      year: 2025,
+      link: "https://arxiv.org/abs/2507.05257"
+    },
     {
       title: "A comprehensive survey in llm (-agent) full stack safety: Data, training and deployment",
       authors: "Kun Wang, Guibin Zhang, Zhenhong Zhou, Jiahao Wu, Miao Yu, Shiqian Zhao, Chenlong Yin, Jinhu Fu, Yibo Yan, Hanjun Luo, Liang Lin, Zhihao Xu, Haolang Lu, Xinye Cao, Xinyun Zhou, Weifei Jin, Fanci Meng, Junyuan Mao, Yu Wang, Hao Wu, Minghe Wang, Fan Zhang, Junfeng Fang, Wenjie Qu, Yue Liu, Chengwei Liu, Yifan Zhang, Qiankun Li, Chongye Guo, Yalan Qin, Zhaoxin Fan, Yi Ding, Donghai Hong, Jiaming Ji, Yingxin Lai, Zitong Yu, Xinfeng Li, Yifan Jiang, Yanhui Li, Xinyu Deng, Junlin Wu, Dongxia Wang, Yihao Huang, Yufei Guo, Jen-tse Huang, Qiufeng Wang, Wenxuan Wang, Dongrui Liu, Yanwei Yue, Wenke Huang, Guancheng Wan, Heng Chang, Tianlin Li, Yi Yu, Chenghao Li, Jiawei Li, Lei Bai, Jie Zhang, Qing Guo, Jingyi Wang, Tianlong Chen, Joey Tianyi Zhou, Xiaojun Jia, Weisong Sun, Cong Wu, Jing Chen, Xuming Hu, Yiming Li, Xiao Wang, Ningyu Zhang, Luu Anh Tuan, Guowen Xu, Jiaheng Zhang, Tianwei Zhang, Xingjun Ma, Jindong Gu, Xiang Wang, Bo An, Jun Sun, Mohit Bansal, Shirui Pan, Lingjuan Lyu, Yuval Elovici, Bhavya Kailkhura, Yaodong Yang, Hongwei Li, Wenyuan Xu, Yizhou Sun, Wei Wang, Qing Li, Ke Tang, Yu-Gang Jiang, Felix Juefei-Xu, Hui Xiong, Xiaofeng Wang, Dacheng Tao, Philip S Yu, Qingsong Wen, Yang Liu",
@@ -432,7 +446,7 @@ const PersonalWebsite: React.FC = () => {
                   <p>
                     I am a third-year PhD student in Computer Science at UC San Diego (UCSD), fortunate to be advised by Prof. <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank" rel="noopener noreferrer">Julian McAuley</a>. 
                     I obtained my B.S. from School of Gifted Young in University of Science and Technology of China (USTC), fortunately advised by Prof. <a href="https://hexiangnan.github.io/" target="_blank" rel="noopener noreferrer">Xiangnan He</a>.
-                    My research focuses on building memory for LLMs (<a href="https://arxiv.org/abs/2402.04624" target="_blank" rel="noopener noreferrer">MemoryLLM</a>, <a href="https://arxiv.org/abs/2410.00487" target="_blank" rel="noopener noreferrer">SELF-PARAM</a>, <a href="https://arxiv.org/abs/2405.16720" target="_blank" rel="noopener noreferrer">LaW</a>, <a href="https://arxiv.org/abs/2502.00592" target="_blank" rel="noopener noreferrer">M+</a>) and LLM-based Agents (<a href="https://arxiv.org/abs/2409.13265" target="_blank" rel="noopener noreferrer">LSCS</a>, <a href="https://arxiv.org/abs/2504.13171" target="_blank" rel="noopener noreferrer">Sleep-Time Compute</a>). I have interned at Amazon, MIT-IBM Watson AI Lab, Letta and Anuttacon. 
+                    My research focuses on building memory for LLMs (<a href="https://arxiv.org/abs/2402.04624" target="_blank" rel="noopener noreferrer">MemoryLLM</a>, <a href="https://arxiv.org/abs/2410.00487" target="_blank" rel="noopener noreferrer">SELF-PARAM</a>, <a href="https://arxiv.org/abs/2405.16720" target="_blank" rel="noopener noreferrer">LaW</a>, <a href="https://arxiv.org/abs/2502.00592" target="_blank" rel="noopener noreferrer">M+</a>) and LLM-based Agents (<a href="https://arxiv.org/abs/2409.13265" target="_blank" rel="noopener noreferrer">LSCS</a>, <a href="https://arxiv.org/abs/2504.13171" target="_blank" rel="noopener noreferrer">Sleep-Time Compute</a>, <a href="https://arxiv.org/abs/2507.05257" target="_blank" rel="noopener noreferrer">MemoryAgentBench</a>). I have interned at Amazon, MIT-IBM Watson AI Lab, Letta and Anuttacon. 
                   </p>
               </div>
             </div>
