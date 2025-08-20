@@ -240,7 +240,7 @@ const PersonalWebsite: React.FC = () => {
     {
       title: "Mitigating Visual Knowledge Forgetting in MLLM Instruction-tuning via Modality-decoupled Gradient Descent",
       authors: "Junda Wu, Yuxin Xiong, Xintong Li, Yu Xia, Ruoyu Wang, Yu Wang, Tong Yu, Sungchul Kim, Ryan A. Rossi, Lina Yao, Jingbo Shang, Julian McAuley",
-      venue: "Submitted",
+      venue: "EMNLP Findings",
       year: 2025,
       link: "https://arxiv.org/abs/2502.11740"
     },
@@ -289,8 +289,8 @@ const PersonalWebsite: React.FC = () => {
     {
       title: "CoMMIT: Coordinated Instruction Tuning for Multimodal Large Language Models",
       authors: "Junda Wu, Xintong Li, Tong Yu, Yu Wang, Xiang Chen, Jiuxiang Gu, Lina Yao, Jingbo Shang, Julian McAuley",
-      venue: "Submitted",
-      year: 2024,
+      venue: "EMNLP",
+      year: 2025,
       link: "https://arxiv.org/abs/2407.20454"
     },
     {
