@@ -10,6 +10,7 @@ import ucsdBadge from './assets/ucsd_badge.png';
 import amazonLogo from './assets/Amazon-Logo.png';
 import ibmLogo from './assets/ibm_logo.png';
 import lettaLogo from './assets/letta_logo.png';
+import anuttaconLogo from './assets/anuttacon_logo.svg';
 
 // Personal assets
 import myPicture from './assets/about5.jpg';
@@ -21,6 +22,8 @@ interface Publication {
   year: number;
   link?: string;
   abstract?: string;
+  github?: string;
+  stars?: string;
 }
 
 interface WorkExperience {
@@ -59,6 +62,15 @@ const PersonalWebsite: React.FC = () => {
   };
 
   const workExperiences: WorkExperience[] = [
+    {
+      company: 'Anuttacon',
+      role: 'Research Scientist Intern',
+      duration: '2025.6 - 2025.10',
+      mentor: 'Xiaojian Wu',
+      mentorUrl: 'https://scholar.google.com/citations?user=LEEoZ0oAAAAJ&hl=en',
+      topic: 'Reinforcement Learning for Memory Agents',
+      logo: anuttaconLogo
+    },
     {
       company: 'Letta',
       role: 'Research Scientist Intern',
@@ -151,6 +163,15 @@ const PersonalWebsite: React.FC = () => {
 
   const publications: Publication[] = [
     {
+      title: "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
+      authors: "Yu Wang, Xi Chen",
+      venue: "Arxiv Preprint",
+      year: 2025,
+      link: "https://arxiv.org/abs/2507.07957",
+      github: "https://github.com/Mirix-AI/MIRIX",
+      stars: "1.3k+"
+    },
+    {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
       authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
       venue: "Submitted",
@@ -195,6 +216,15 @@ const PersonalWebsite: React.FC = () => {
   ];
 
   const allPublications: Publication[] = [
+    {
+      title: "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
+      authors: "Yu Wang, Xi Chen",
+      venue: "Arxiv Preprint",
+      year: 2025,
+      link: "https://arxiv.org/abs/2507.07957",
+      github: "https://github.com/Mirix-AI/MIRIX",
+      stars: "1.3k+"
+    },
     {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
       authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
@@ -446,7 +476,7 @@ const PersonalWebsite: React.FC = () => {
                   <p>
                     I am a third-year PhD student in Computer Science at UC San Diego (UCSD), fortunate to be advised by Prof. <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank" rel="noopener noreferrer">Julian McAuley</a>. 
                     I obtained my B.S. from School of Gifted Young in University of Science and Technology of China (USTC), fortunately advised by Prof. <a href="https://hexiangnan.github.io/" target="_blank" rel="noopener noreferrer">Xiangnan He</a>.
-                    My research focuses on building memory for LLMs (<a href="https://arxiv.org/abs/2402.04624" target="_blank" rel="noopener noreferrer">MemoryLLM</a>, <a href="https://arxiv.org/abs/2410.00487" target="_blank" rel="noopener noreferrer">SELF-PARAM</a>, <a href="https://arxiv.org/abs/2405.16720" target="_blank" rel="noopener noreferrer">LaW</a>, <a href="https://arxiv.org/abs/2502.00592" target="_blank" rel="noopener noreferrer">M+</a>) and LLM-based Agents (<a href="https://arxiv.org/abs/2409.13265" target="_blank" rel="noopener noreferrer">LSCS</a>, <a href="https://arxiv.org/abs/2504.13171" target="_blank" rel="noopener noreferrer">Sleep-Time Compute</a>, <a href="https://arxiv.org/abs/2507.05257" target="_blank" rel="noopener noreferrer">MemoryAgentBench</a>). I have interned at Amazon, MIT-IBM Watson AI Lab, Letta and Anuttacon. 
+                    My research focuses on building memory for LLMs (<a href="https://arxiv.org/abs/2402.04624" target="_blank" rel="noopener noreferrer">MemoryLLM</a>, <a href="https://arxiv.org/abs/2410.00487" target="_blank" rel="noopener noreferrer">SELF-PARAM</a>, <a href="https://arxiv.org/abs/2405.16720" target="_blank" rel="noopener noreferrer">LaW</a>, <a href="https://arxiv.org/abs/2502.00592" target="_blank" rel="noopener noreferrer">M+</a>) and LLM-based Agents (<a href="https://arxiv.org/abs/2409.13265" target="_blank" rel="noopener noreferrer">LSCS</a>, <a href="https://arxiv.org/abs/2504.13171" target="_blank" rel="noopener noreferrer">Sleep-Time Compute</a>, <a href="https://arxiv.org/abs/2507.05257" target="_blank" rel="noopener noreferrer">MemoryAgentBench</a>, <a href="https://arxiv.org/abs/2507.07957" target="_blank" rel="noopener noreferrer">MIRIX</a>). I have interned at Amazon, MIT-IBM Watson AI Lab, Letta and Anuttacon. 
                   </p>
               </div>
             </div>
@@ -470,6 +500,14 @@ const PersonalWebsite: React.FC = () => {
                       </a>
                     ) : (
                       pub.title
+                    )}
+                    {pub.github && (
+                      <>
+                        {' '}
+                        <a href={pub.github} target="_blank" rel="noopener noreferrer" className="github-link" style={{display: 'inline'}}>
+                          [<img src="/github.png" alt="GitHub" style={{width: '16px', height: '16px', verticalAlign: 'middle', display: 'inline'}} /> (<span style={{color: '#ff6b35'}}>{pub.stars}</span> ⭐)]
+                        </a>
+                      </>
                     )}
                   </span>
                   {/* {pub.link && <a href={pub.link} target="_blank" rel="noopener noreferrer" className="pdf-link">PDF</a>} */}
@@ -599,6 +637,14 @@ const PersonalWebsite: React.FC = () => {
                       </a>
                     ) : (
                       pub.title
+                    )}
+                    {pub.github && (
+                      <>
+                        {' '}
+                        <a href={pub.github} target="_blank" rel="noopener noreferrer" className="github-link" style={{display: 'inline'}}>
+                          [<img src="/github.png" alt="GitHub" style={{width: '16px', height: '16px', verticalAlign: 'middle', display: 'inline'}} /> (<span style={{color: '#ff6b35'}}>{pub.stars}</span> ⭐)]
+                        </a>
+                      </>
                     )}
                   </span>
                   {/* {pub.link && <a href={pub.link} target="_blank" rel="noopener noreferrer" className="pdf-link">PDF</a>} */}
