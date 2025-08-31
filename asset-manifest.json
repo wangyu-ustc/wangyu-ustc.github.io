@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b2412cc.css",
-    "main.js": "/static/js/main.1c8cce51.js",
+    "main.css": "/static/css/main.e7e571d3.css",
+    "main.js": "/static/js/main.9823f1af.js",
     "static/js/453.812eefdd.chunk.js": "/static/js/453.812eefdd.chunk.js",
     "static/media/MIT_badge.png": "/static/media/MIT_badge.6c2e85fdc113961cb212.png",
     "static/media/ibm_logo.png": "/static/media/ibm_logo.422e99a914f6861a101a.png",
     "static/media/about5.jpg": "/static/media/about5.e171e82dc433f64506fd.jpg",
+    "static/media/anuttacon_logo.svg": "/static/media/anuttacon_logo.48e9d627970e838e165d622168d988b2.svg",
     "static/media/ustc_badge.png": "/static/media/ustc_badge.959e0e38c5f7b12ef66f.png",
     "static/media/Amazon-Logo.png": "/static/media/Amazon-Logo.e659dd69df4ef4089297.png",
     "static/media/letta_logo.png": "/static/media/letta_logo.a0c084a0f765d07c9894.png",
@@ -13,12 +14,12 @@
     "static/media/stanford_badge.png": "/static/media/stanford_badge.f2243e942c3347f656dc.png",
     "static/media/nus_badge.png": "/static/media/nus_badge.445c096a21fb45610796.png",
     "index.html": "/index.html",
-    "main.3b2412cc.css.map": "/static/css/main.3b2412cc.css.map",
-    "main.1c8cce51.js.map": "/static/js/main.1c8cce51.js.map",
+    "main.e7e571d3.css.map": "/static/css/main.e7e571d3.css.map",
+    "main.9823f1af.js.map": "/static/js/main.9823f1af.js.map",
     "453.812eefdd.chunk.js.map": "/static/js/453.812eefdd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b2412cc.css",
-    "static/js/main.1c8cce51.js"
+    "static/css/main.e7e571d3.css",
+    "static/js/main.9823f1af.js"
   ]
 }
