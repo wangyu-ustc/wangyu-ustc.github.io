@@ -176,7 +176,7 @@ const PersonalWebsite: React.FC = () => {
       year: 2025,
       link: "https://arxiv.org/abs/2507.07957",
       github: "https://github.com/Mirix-AI/MIRIX",
-      stars: "1.3k+"
+      stars: "1.5k+"
     },
     {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
