@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e7e571d3.css",
-    "main.js": "/static/js/main.1fa0f0ce.js",
+    "main.js": "/static/js/main.d6dc1146.js",
     "static/js/453.812eefdd.chunk.js": "/static/js/453.812eefdd.chunk.js",
     "static/media/MIT_badge.png": "/static/media/MIT_badge.6c2e85fdc113961cb212.png",
     "static/media/ibm_logo.png": "/static/media/ibm_logo.422e99a914f6861a101a.png",
@@ -15,11 +15,11 @@
     "static/media/nus_badge.png": "/static/media/nus_badge.445c096a21fb45610796.png",
     "index.html": "/index.html",
     "main.e7e571d3.css.map": "/static/css/main.e7e571d3.css.map",
-    "main.1fa0f0ce.js.map": "/static/js/main.1fa0f0ce.js.map",
+    "main.d6dc1146.js.map": "/static/js/main.d6dc1146.js.map",
     "453.812eefdd.chunk.js.map": "/static/js/453.812eefdd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7e571d3.css",
-    "static/js/main.1fa0f0ce.js"
+    "static/js/main.d6dc1146.js"
   ]
 }
