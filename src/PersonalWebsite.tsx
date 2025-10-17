@@ -24,6 +24,10 @@ interface Publication {
   abstract?: string;
   github?: string;
   stars?: string;
+  huggingface?: string;
+  huggingfaceDatasetId?: string;
+  huggingfaceModel?: string;
+  huggingfaceDownloads?: string;
 }
 
 interface WorkExperience {
@@ -167,7 +171,9 @@ const PersonalWebsite: React.FC = () => {
       authors: "Yu Wang, Ryuichi Takanobu, Zhiqi Liang, Yuzhen Mao, Yuanzhe Hu, Julian McAuley, Xiaojian Wu",
       venue: "Arxiv Preprint",
       year: 2025,
-      link: "https://arxiv.org/abs/2509.25911"
+      link: "https://arxiv.org/abs/2509.25911",
+      github: "https://github.com/wangyu-ustc/Mem-alpha",
+      stars: "https://img.shields.io/github/stars/wangyu-ustc/Mem-alpha.svg"
     },
     {
       title: "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
@@ -176,21 +182,30 @@ const PersonalWebsite: React.FC = () => {
       year: 2025,
       link: "https://arxiv.org/abs/2507.07957",
       github: "https://github.com/Mirix-AI/MIRIX",
-      stars: "1.5k+"
+      stars: "https://img.shields.io/github/stars/Mirix-AI/MIRIX.svg"
     },
     {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
       authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
       venue: "Submitted",
       year: 2025,
-      link: "https://arxiv.org/abs/2507.05257"
+      link: "https://arxiv.org/abs/2507.05257",
+      github: "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
+      stars: "https://img.shields.io/github/stars/HUST-AI-HYZ/MemoryAgentBench.svg",
+      huggingface: "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench",
+      huggingfaceDatasetId: "ai-hyz/MemoryAgentBench",
+      huggingfaceDownloads: "2.1k"
     },
     {
       title: "M+: Extending MemoryLLM with Scalable Long-Term Memory",
       authors: "Yu Wang, Dmitry Krotov, Yuanzhe Hu, Yifan Gao, Wangchunshu Zhou, Julian McAuley, Dan Gutfreund, Rogerio Feris, Zexue He",
       venue: "ICML",
       year: 2025,
-      link: "https://arxiv.org/abs/2502.00592"
+      link: "https://arxiv.org/abs/2502.00592",
+      github: "https://github.com/wangyu-ustc/MemoryLLM",
+      stars: "https://img.shields.io/github/stars/wangyu-ustc/MemoryLLM.svg",
+      huggingfaceModel: "https://huggingface.co/YuWangX/mplus-8b",
+      huggingfaceDownloads: "1.6k/month"
     },
     {
       title: "Self-Updatable Large Language Models by Integrating Context into Model Parameters",
@@ -228,13 +243,16 @@ const PersonalWebsite: React.FC = () => {
       authors: "Yu Wang, Ryuichi Takanobu, Zhiqi Liang, Yuzhen Mao, Yuanzhe Hu, Julian McAuley, Xiaojian Wu",
       venue: "Arxiv Preprint",
       year: 2025,
-      link: "https://arxiv.org/abs/2509.25911"
+      link: "https://arxiv.org/abs/2509.25911",
+      github: "https://github.com/wangyu-ustc/Mem-alpha",
+      stars: "https://img.shields.io/github/stars/wangyu-ustc/Mem-alpha.svg"
     },
     {
       title: "Reliable and Responsible Foundation Models",
       authors: "Xinyu Yang, Junlin Han, Rishi Bommasani, Jinqi Luo, Wenjie Qu, Wangchunshu Zhou, Adel Bibi, Xiyao Wang, Jaehong Yoon, Elias Stengel-Eskin, Shengbang Tong, Lingfeng Shen, Rafael Rafailov, Runjia Li, Zhaoyang Wang, Yiyang Zhou, Chenhang Cui, Yu Wang, Wenhao Zheng, Huichi Zhou, Jindong Gu, Zhaorun Chen, Peng Xia, Tony Lee, Thomas P Zollo, Vikash Sehwag, Jixuan Leng, Jiuhai Chen, Yuxin Wen, Huan Zhang, Zhun Deng, Linjun Zhang, Pavel Izmailov, Pang Wei Koh, Yulia Tsvetkov, Andrew Gordon Wilson, Jiaheng Zhang, James Zou, Cihang Xie, Hao Wang, Philip Torr, Julian McAuley, David Alvarez-Melis, Florian Tramèr, Kaidi Xu, Suman Jana, Chris Callison-Burch, Rene Vidal, Filippos Kokkinos, Mohit Bansal, Beidi Chen, Huaxiu Yao",
       venue: "TMLR",
-      year: 2025
+      year: 2025,
+      link: "https://openreview.net/pdf?id=nLJZh4M6S5"
     },
     {
       title: "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
@@ -243,14 +261,19 @@ const PersonalWebsite: React.FC = () => {
       year: 2025,
       link: "https://arxiv.org/abs/2507.07957",
       github: "https://github.com/Mirix-AI/MIRIX",
-      stars: "1.5k+"
+      stars: "https://img.shields.io/github/stars/Mirix-AI/MIRIX.svg"
     },
     {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
       authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
       venue: "Submitted",
       year: 2025,
-      link: "https://arxiv.org/abs/2507.05257"
+      link: "https://arxiv.org/abs/2507.05257",
+      github: "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
+      stars: "https://img.shields.io/github/stars/HUST-AI-HYZ/MemoryAgentBench.svg",
+      huggingface: "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench",
+      huggingfaceDatasetId: "ai-hyz/MemoryAgentBench",
+      huggingfaceDownloads: "2.1k"
     },
     {
       title: "A comprehensive survey in llm (-agent) full stack safety: Data, training and deployment",
@@ -271,7 +294,9 @@ const PersonalWebsite: React.FC = () => {
       authors: "Xiusi Chen, Gaotang Li, Ziqi Wang, Bowen Jin, Cheng Qian, Yu Wang, Hongru Wang, Yu Zhang, Denghui Zhang, Tong Zhang, Hanghang Tong, Heng Ji",
       venue: "Submitted",
       year: 2025,
-      link: "https://arxiv.org/abs/2505.02387"
+      link: "https://arxiv.org/abs/2505.02387",
+      github: "https://github.com/RM-R1-UIUC/RM-R1",
+      stars: "https://img.shields.io/github/stars/RM-R1-UIUC/RM-R1.svg"
     },
     {
       title: "Sleep-time Compute: Beyond Inference Scaling at Test-time",
@@ -299,7 +324,11 @@ const PersonalWebsite: React.FC = () => {
       authors: "Yu Wang, Dmitry Krot, Yuanzhe Hu, Yifan Gao, Wangchunshu Zhou, Julian McAuley, Dan Gutfreund, Rogerio Feris, Zexue He",
       venue: "ICML",
       year: 2025,
-      link: "https://arxiv.org/abs/2502.00592"
+      link: "https://arxiv.org/abs/2502.00592",
+      github: "https://github.com/wangyu-ustc/MemoryLLM",
+      stars: "https://img.shields.io/github/stars/wangyu-ustc/MemoryLLM.svg",
+      huggingfaceModel: "https://huggingface.co/YuWangX/mplus-8b",
+      huggingfaceDownloads: "1.6k/month"
     },
     {
       title: "Self-Updatable Large Language Models by Integrating Context into Model Parameters",
@@ -369,7 +398,9 @@ const PersonalWebsite: React.FC = () => {
       authors: "Yu Wang, Yifan Gao, Xiusi Chen, Haoming Jiang, Shiyang Li, Jingfeng Yang, Qingyu Yin, Zheng Li, Xian Li, Bing Yin, Jingbo Shang, Julian McAuley",
       venue: "ICML",
       year: 2024,
-      link: "https://arxiv.org/abs/2402.04624"
+      link: "https://arxiv.org/abs/2402.04624",
+      github: "https://github.com/wangyu-ustc/MemoryLLM",
+      stars: "https://img.shields.io/github/stars/wangyu-ustc/MemoryLLM.svg"
     },
     {
       title: "Deciphering Compatibility Relationships with Textual Descriptions via Extraction and Explanation",
@@ -493,11 +524,14 @@ const PersonalWebsite: React.FC = () => {
             </div>
             <div className="profile-right">
               <div className="info-card">
-                  <p>
-                    I am a third-year PhD student in Computer Science at UC San Diego (UCSD), fortunate to be advised by Prof. <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank" rel="noopener noreferrer">Julian McAuley</a>. 
-                    I obtained my B.S. from School of Gifted Young in University of Science and Technology of China (USTC), fortunately advised by Prof. <a href="https://hexiangnan.github.io/" target="_blank" rel="noopener noreferrer">Xiangnan He</a>.
-                    My research focuses on building memory for LLMs (<a href="https://arxiv.org/abs/2402.04624" target="_blank" rel="noopener noreferrer">MemoryLLM</a>, <a href="https://arxiv.org/abs/2410.00487" target="_blank" rel="noopener noreferrer">SELF-PARAM</a>, <a href="https://arxiv.org/abs/2405.16720" target="_blank" rel="noopener noreferrer">LaW</a>, <a href="https://arxiv.org/abs/2502.00592" target="_blank" rel="noopener noreferrer">M+</a>) and LLM-based Agents (<a href="https://arxiv.org/abs/2409.13265" target="_blank" rel="noopener noreferrer">LSCS</a>, <a href="https://arxiv.org/abs/2504.13171" target="_blank" rel="noopener noreferrer">Sleep-Time Compute</a>, <a href="https://arxiv.org/abs/2507.05257" target="_blank" rel="noopener noreferrer">MemoryAgentBench</a>, <a href="https://arxiv.org/abs/2507.07957" target="_blank" rel="noopener noreferrer">MIRIX</a>, <a href="https://arxiv.org/abs/2509.25911" target="_blank" rel="noopener noreferrer">Mem-α</a>). I have interned at Amazon, MIT-IBM Watson AI Lab, Letta and Anuttacon. 
-                  </p>
+                <p>
+                  I am working at <a href="https://x.ai/" target="_blank" rel="noopener noreferrer">xAI</a>, building the memory system for Grok models.
+                </p>
+                <p>
+                  I recently completed my PhD in Computer Science at UC San Diego (UCSD), fortunate to be advised by Prof. <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank" rel="noopener noreferrer">Julian McAuley</a>. 
+                  I obtained my B.S. from School of Gifted Young in University of Science and Technology of China (USTC), fortunately advised by Prof. <a href="https://hexiangnan.github.io/" target="_blank" rel="noopener noreferrer">Xiangnan He</a>.
+                  My research focuses on building memory for LLMs (<a href="https://arxiv.org/abs/2402.04624" target="_blank" rel="noopener noreferrer">MemoryLLM</a>, <a href="https://arxiv.org/abs/2410.00487" target="_blank" rel="noopener noreferrer">SELF-PARAM</a>, <a href="https://arxiv.org/abs/2405.16720" target="_blank" rel="noopener noreferrer">LaW</a>, <a href="https://arxiv.org/abs/2502.00592" target="_blank" rel="noopener noreferrer">M+</a>) and LLM-based Agents (<a href="https://arxiv.org/abs/2409.13265" target="_blank" rel="noopener noreferrer">LSCS</a>, <a href="https://arxiv.org/abs/2504.13171" target="_blank" rel="noopener noreferrer">Sleep-Time Compute</a>, <a href="https://arxiv.org/abs/2507.05257" target="_blank" rel="noopener noreferrer">MemoryAgentBench</a>, <a href="https://arxiv.org/abs/2507.07957" target="_blank" rel="noopener noreferrer">MIRIX</a>, <a href="https://arxiv.org/abs/2509.25911" target="_blank" rel="noopener noreferrer">Mem-α</a>). I have interned at Amazon, MIT-IBM Watson AI Lab, Letta and Anuttacon.
+                </p>
               </div>
             </div>
           </div>
@@ -525,7 +559,27 @@ const PersonalWebsite: React.FC = () => {
                       <>
                         {' '}
                         <a href={pub.github} target="_blank" rel="noopener noreferrer" className="github-link" style={{display: 'inline'}}>
-                          [<img src="/github.png" alt="GitHub" style={{width: '16px', height: '16px', verticalAlign: 'middle', display: 'inline'}} /> (<span style={{color: '#ff6b35'}}>{pub.stars}</span> ⭐)]
+                          {pub.stars?.startsWith('http') ? (
+                            <img src={pub.stars} alt="GitHub Stars" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />
+                          ) : (
+                            <span><img src="/github.png" alt="GitHub" style={{width: '20px', height: '20px', verticalAlign: 'middle', display: 'inline'}} /> (<span style={{color: '#ff6b35'}}>{pub.stars}</span> ⭐)</span>
+                          )}
+                        </a>
+                      </>
+                    )}
+                    {pub.huggingfaceDatasetId && (
+                      <>
+                        {' '}
+                        <a href={pub.huggingface} target="_blank" rel="noopener noreferrer" className="huggingface-link" style={{display: 'inline'}}>
+                          <img src={`https://img.shields.io/badge/🤗-Dataset-yellow`} alt="HuggingFace Dataset" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads} downloads)</span>}
+                        </a>
+                      </>
+                    )}
+                    {pub.huggingfaceModel && (
+                      <>
+                        {' '}
+                        <a href={pub.huggingfaceModel} target="_blank" rel="noopener noreferrer" className="huggingface-link" style={{display: 'inline'}}>
+                          <img src={`https://img.shields.io/badge/🤗-Model-orange`} alt="HuggingFace Model" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads})</span>}
                         </a>
                       </>
                     )}
@@ -662,7 +716,27 @@ const PersonalWebsite: React.FC = () => {
                       <>
                         {' '}
                         <a href={pub.github} target="_blank" rel="noopener noreferrer" className="github-link" style={{display: 'inline'}}>
-                          [<img src="/github.png" alt="GitHub" style={{width: '16px', height: '16px', verticalAlign: 'middle', display: 'inline'}} /> (<span style={{color: '#ff6b35'}}>{pub.stars}</span> ⭐)]
+                          {pub.stars?.startsWith('http') ? (
+                            <img src={pub.stars} alt="GitHub Stars" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />
+                          ) : (
+                            <span><img src="/github.png" alt="GitHub" style={{width: '20px', height: '20px', verticalAlign: 'middle', display: 'inline'}} /> (<span style={{color: '#ff6b35'}}>{pub.stars}</span> ⭐)</span>
+                          )}
+                        </a>
+                      </>
+                    )}
+                    {pub.huggingfaceDatasetId && (
+                      <>
+                        {' '}
+                        <a href={pub.huggingface} target="_blank" rel="noopener noreferrer" className="huggingface-link" style={{display: 'inline'}}>
+                          <img src={`https://img.shields.io/badge/🤗-Dataset-yellow`} alt="HuggingFace Dataset" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads} downloads)</span>}
+                        </a>
+                      </>
+                    )}
+                    {pub.huggingfaceModel && (
+                      <>
+                        {' '}
+                        <a href={pub.huggingfaceModel} target="_blank" rel="noopener noreferrer" className="huggingface-link" style={{display: 'inline'}}>
+                          <img src={`https://img.shields.io/badge/🤗-Model-orange`} alt="HuggingFace Model" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads})</span>}
                         </a>
                       </>
                     )}
