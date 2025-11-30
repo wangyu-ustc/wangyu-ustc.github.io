@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e7e571d3.css",
-    "main.js": "/static/js/main.6dc70812.js",
+    "main.js": "/static/js/main.8346840f.js",
     "static/js/453.812eefdd.chunk.js": "/static/js/453.812eefdd.chunk.js",
     "static/media/MIT_badge.png": "/static/media/MIT_badge.6c2e85fdc113961cb212.png",
     "static/media/ibm_logo.png": "/static/media/ibm_logo.422e99a914f6861a101a.png",
@@ -12,14 +12,15 @@
     "static/media/letta_logo.png": "/static/media/letta_logo.a0c084a0f765d07c9894.png",
     "static/media/ucsd_badge.png": "/static/media/ucsd_badge.214cfb083e26ac71a80a.png",
     "static/media/stanford_badge.png": "/static/media/stanford_badge.f2243e942c3347f656dc.png",
+    "static/media/XAI_Logo.svg.png": "/static/media/XAI_Logo.svg.dcf9af551d45f9bcedb0.png",
     "static/media/nus_badge.png": "/static/media/nus_badge.445c096a21fb45610796.png",
     "index.html": "/index.html",
     "main.e7e571d3.css.map": "/static/css/main.e7e571d3.css.map",
-    "main.6dc70812.js.map": "/static/js/main.6dc70812.js.map",
+    "main.8346840f.js.map": "/static/js/main.8346840f.js.map",
     "453.812eefdd.chunk.js.map": "/static/js/453.812eefdd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7e571d3.css",
-    "static/js/main.6dc70812.js"
+    "static/js/main.8346840f.js"
   ]
 }
