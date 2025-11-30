@@ -11,6 +11,7 @@ import amazonLogo from './assets/Amazon-Logo.png';
 import ibmLogo from './assets/ibm_logo.png';
 import lettaLogo from './assets/letta_logo.png';
 import anuttaconLogo from './assets/anuttacon_logo.svg';
+import xaiLogo from './assets/XAI_Logo.svg.png';
 
 // Personal assets
 import myPicture from './assets/about5.jpg';
@@ -66,6 +67,13 @@ const PersonalWebsite: React.FC = () => {
   };
 
   const workExperiences: WorkExperience[] = [
+    {
+      company: 'xAI',
+      role: 'Member of Technical Staff',
+      duration: '2025.11 - Present',
+      topic: 'Memory System for Grok models',
+      logo: xaiLogo
+    },
     {
       company: 'Anuttacon',
       role: 'Research Scientist Intern',
@@ -187,14 +195,14 @@ const PersonalWebsite: React.FC = () => {
     {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
       authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
-      venue: "Submitted",
+      venue: "Arxiv Preprint",
       year: 2025,
       link: "https://arxiv.org/abs/2507.05257",
       github: "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
       stars: "https://img.shields.io/github/stars/HUST-AI-HYZ/MemoryAgentBench.svg",
       huggingface: "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench",
       huggingfaceDatasetId: "ai-hyz/MemoryAgentBench",
-      huggingfaceDownloads: "2.1k"
+      huggingfaceDownloads: "4.7k/month"
     },
     {
       title: "M+: Extending MemoryLLM with Scalable Long-Term Memory",
@@ -233,7 +241,9 @@ const PersonalWebsite: React.FC = () => {
       authors: "Yu Wang, Yifan Gao, Xiusi Chen, Haoming Jiang, Shiyang Li, Jingfeng Yang, Qingyu Yin, Zheng Li, Xian Li, Bing Yin, Jingbo Shang, Julian McAuley",
       venue: "ICML",
       year: 2024,
-      link: "https://arxiv.org/abs/2402.04624"
+      link: "https://arxiv.org/abs/2402.04624",
+      github: "https://github.com/wangyu-ustc/MemoryLLM",
+      stars: "https://img.shields.io/github/stars/wangyu-ustc/MemoryLLM.svg"
     }
   ];
 
@@ -273,7 +283,7 @@ const PersonalWebsite: React.FC = () => {
       stars: "https://img.shields.io/github/stars/HUST-AI-HYZ/MemoryAgentBench.svg",
       huggingface: "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench",
       huggingfaceDatasetId: "ai-hyz/MemoryAgentBench",
-      huggingfaceDownloads: "2.1k"
+      huggingfaceDownloads: "4.7k/month"
     },
     {
       title: "A comprehensive survey in llm (-agent) full stack safety: Data, training and deployment",
@@ -571,7 +581,7 @@ const PersonalWebsite: React.FC = () => {
                       <>
                         {' '}
                         <a href={pub.huggingface} target="_blank" rel="noopener noreferrer" className="huggingface-link" style={{display: 'inline'}}>
-                          <img src={`https://img.shields.io/badge/🤗-Dataset-yellow`} alt="HuggingFace Dataset" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads} downloads)</span>}
+                          <img src={`https://img.shields.io/badge/🤗-Dataset-yellow`} alt="HuggingFace Dataset" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads})</span>}
                         </a>
                       </>
                     )}
@@ -728,7 +738,7 @@ const PersonalWebsite: React.FC = () => {
                       <>
                         {' '}
                         <a href={pub.huggingface} target="_blank" rel="noopener noreferrer" className="huggingface-link" style={{display: 'inline'}}>
-                          <img src={`https://img.shields.io/badge/🤗-Dataset-yellow`} alt="HuggingFace Dataset" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads} downloads)</span>}
+                          <img src={`https://img.shields.io/badge/🤗-Dataset-yellow`} alt="HuggingFace Dataset" style={{verticalAlign: 'middle', display: 'inline', height: '20px'}} />{pub.huggingfaceDownloads && <span style={{color: '#888', fontSize: '0.9em'}}> ({pub.huggingfaceDownloads})</span>}
                         </a>
                       </>
                     )}
@@ -773,3 +783,4 @@ const PersonalWebsite: React.FC = () => {
 };
 
 export default PersonalWebsite; 
+
