@@ -253,7 +253,7 @@ const PersonalWebsite: React.FC = () => {
       authors: "Yuyang Hu, Shichun Liu, Yanwei Yue, Guibin Zhang, Boyang Liu, Fangyi Zhu, Jiahang Lin, Honglin Guo, Shihan Dou, Zhiheng Xi, Senjie Jin, Jiejun Tan, Yanbin Yin, Jiongnan Liu, Zeyu Zhang, Zhongxiang Sun, Yutao Zhu, Hao Sun, Boci Peng, Zhenrong Cheng, Xuanbo Fan, Jiaxin Guo, Xinlei Yu, Zhenhong Zhou, Zewen Hu, Jiahao Huo, Junhao Wang, Yuwei Niu, Yu Wang, Zhenfei Yin, Xiaobin Hu, Yue Liao, Qiankun Li, Kun Wang, Wangchunshu Zhou, Yixin Liu, Dawei Cheng, Qi Zhang, Tao Gui, Shirui Pan, Yan Zhang, Philip Torr, Zhicheng Dou, Ji-Rong Wen, Xuanjing Huang, Yu-Gang Jiang, Shuicheng Yan",
       venue: "Arxiv Preprint",
       year: 2025,
-      link: "https://arxiv.org/abs/2501.00000",
+      link: "https://arxiv.org/abs/2512.13564",
       github: "https://github.com/Shichun-Liu/Agent-Memory-Paper-List",
       stars: "https://img.shields.io/github/stars/Shichun-Liu/Agent-Memory-Paper-List.svg"
     },
