@@ -249,6 +249,15 @@ const PersonalWebsite: React.FC = () => {
 
   const allPublications: Publication[] = [
     {
+      title: "Agentic Reasoning for Large Language Models",
+      authors: "Tianxin Wei*, Ting-Wei Li*, Zhining Liu*, Xuying Ning, Ze Yang, Jiaru Zou, Zhichen Zeng, Ruizhong Qiu, Xiao Lin, Dongqi Fu, Zihao Li, Mengting Ai, Duo Zhou, Wenxuan Bao, Yunzhe Li, Gaotang Li, Cheng Qian, Yu Wang, Xiangru Tang, Yin Xiao, Liri Fang, Hui Liu, Xianfeng Tang, Yuji Zhang, Chi Wang, Jiaxuan You, Heng Ji, Hanghang Tong, Jingrui He",
+      venue: "Arxiv Preprint",
+      year: 2026,
+      link: "https://arxiv.org/pdf/2601.12538",
+      github: "https://github.com/weitianxin/Awesome-Agentic-Reasoning",
+      stars: "https://img.shields.io/github/stars/weitianxin/Awesome-Agentic-Reasoning.svg"
+    },
+    {
       title: "Memory in the Age of AI Agents: A Survey",
       authors: "Yuyang Hu, Shichun Liu, Yanwei Yue, Guibin Zhang, Boyang Liu, Fangyi Zhu, Jiahang Lin, Honglin Guo, Shihan Dou, Zhiheng Xi, Senjie Jin, Jiejun Tan, Yanbin Yin, Jiongnan Liu, Zeyu Zhang, Zhongxiang Sun, Yutao Zhu, Hao Sun, Boci Peng, Zhenrong Cheng, Xuanbo Fan, Jiaxin Guo, Xinlei Yu, Zhenhong Zhou, Zewen Hu, Jiahao Huo, Junhao Wang, Yuwei Niu, Yu Wang, Zhenfei Yin, Xiaobin Hu, Yue Liao, Qiankun Li, Kun Wang, Wangchunshu Zhou, Yixin Liu, Dawei Cheng, Qi Zhang, Tao Gui, Shirui Pan, Yan Zhang, Philip Torr, Zhicheng Dou, Ji-Rong Wen, Xuanjing Huang, Yu-Gang Jiang, Shuicheng Yan",
       venue: "Arxiv Preprint",
