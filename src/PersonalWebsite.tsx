@@ -195,14 +195,14 @@ const PersonalWebsite: React.FC = () => {
     {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
       authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
-      venue: "Arxiv Preprint",
-      year: 2025,
+      venue: "ICLR",
+      year: 2026,
       link: "https://arxiv.org/abs/2507.05257",
       github: "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
       stars: "https://img.shields.io/github/stars/HUST-AI-HYZ/MemoryAgentBench.svg",
       huggingface: "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench",
       huggingfaceDatasetId: "ai-hyz/MemoryAgentBench",
-      huggingfaceDownloads: "4.7k/month"
+      huggingfaceDownloads: "15k/month"
     },
     {
       title: "M+: Extending MemoryLLM with Scalable Long-Term Memory",
@@ -294,14 +294,14 @@ const PersonalWebsite: React.FC = () => {
     {
       title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
       authors: "Yuanzhe Hu*, Yu Wang*, Julian McAuley",
-      venue: "Submitted",
-      year: 2025,
+      venue: "ICLR",
+      year: 2026,
       link: "https://arxiv.org/abs/2507.05257",
       github: "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
       stars: "https://img.shields.io/github/stars/HUST-AI-HYZ/MemoryAgentBench.svg",
       huggingface: "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench",
       huggingfaceDatasetId: "ai-hyz/MemoryAgentBench",
-      huggingfaceDownloads: "4.7k/month"
+      huggingfaceDownloads: "15k/month"
     },
     {
       title: "A comprehensive survey in llm (-agent) full stack safety: Data, training and deployment",
@@ -320,8 +320,8 @@ const PersonalWebsite: React.FC = () => {
     {
       title: "RM-R1: Reward Modeling as Reasoning",
       authors: "Xiusi Chen, Gaotang Li, Ziqi Wang, Bowen Jin, Cheng Qian, Yu Wang, Hongru Wang, Yu Zhang, Denghui Zhang, Tong Zhang, Hanghang Tong, Heng Ji",
-      venue: "Submitted",
-      year: 2025,
+      venue: "ICLR",
+      year: 2026,
       link: "https://arxiv.org/abs/2505.02387",
       github: "https://github.com/RM-R1-UIUC/RM-R1",
       stars: "https://img.shields.io/github/stars/RM-R1-UIUC/RM-R1.svg"
