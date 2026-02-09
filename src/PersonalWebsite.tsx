@@ -627,10 +627,10 @@ const PersonalWebsite: React.FC = () => {
                 <div className="publication-authors-compact">
                   {pub.authors.split(', ').map((author, authorIndex) => (
                     <span key={authorIndex}>
-                      {author.includes('Yu Wang') ? (
-                        <span className="primary-author">{author}</span>
+                      {author.includes('Yu Wang') && !author.includes('(other)') ? (
+                        <span className="primary-author">{author.replace(' (other)', '')}</span>
                       ) : (
-                        <span className="co-author">{author}</span>
+                        <span className="co-author">{author.replace(' (other)', '')}</span>
                       )}
                       {authorIndex < pub.authors.split(', ').length - 1 && ', '}
                     </span>
@@ -784,10 +784,10 @@ const PersonalWebsite: React.FC = () => {
                 <div className="publication-authors-compact">
                   {pub.authors.split(', ').map((author, authorIndex) => (
                     <span key={authorIndex}>
-                      {author.includes('Yu Wang') ? (
-                        <span className="primary-author">{author}</span>
+                      {author.includes('Yu Wang') && !author.includes('(other)') ? (
+                        <span className="primary-author">{author.replace(' (other)', '')}</span>
                       ) : (
-                        <span className="co-author">{author}</span>
+                        <span className="co-author">{author.replace(' (other)', '')}</span>
                       )}
                       {authorIndex < pub.authors.split(', ').length - 1 && ', '}
                     </span>
