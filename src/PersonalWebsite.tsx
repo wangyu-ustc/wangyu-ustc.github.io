@@ -249,6 +249,15 @@ const PersonalWebsite: React.FC = () => {
 
   const allPublications: Publication[] = [
     {
+      title: "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
+      authors: "Peng Xia, Jianwen Chen, Hanyang Wang, Jiaqi Liu, Kaide Zeng, Yu Wang, Siwei Han, Yiyang Zhou, Xujiang Zhao, Haifeng Chen, Zeyu Zheng, Cihang Xie, Huaxiu Yao",
+      venue: "Arxiv Preprint",
+      year: 2026,
+      link: "https://arxiv.org/abs/2602.08234",
+      github: "https://github.com/aiming-lab/SkillRL",
+      stars: "https://img.shields.io/github/stars/aiming-lab/SkillRL.svg"
+    },
+    {
       title: "Rethinking Memory Mechanisms of Foundation Agents in the Second Half",
       authors: "Wei-Chieh Huang, Weizhi Zhang, Yueqing Liang, Yuanchen Bei, Yankai Chen, Tao Feng, Xinyu Pan, Zhen Tan, Yu Wang, Tianxin Wei, Shanglin Wu, Ruiyao Xu, Liangwei Yang, Rui Yang, Wooseong Yang, Chin-Yuan Yeh, Hanrong Zhang, Haozhen Zhang, Siqi Zhu, Henry Peng Zou, Wanjia Zhao, Song Wang, Wujiang Xu, Zixuan Ke, Zheng Hui, Dawei Li, Yaozu Wu, Langzhou He, Chen Wang, Xiongxiao Xu, Baixiang Huang, Juntao Tan, Shelby Heinecke, Huan Wang, Caiming Xiong, Ahmed A. Metwally, Jun Yan, Chen-Yu Lee, Hanqing Zeng, Yinglong Xia, Xiaokai Wei, Ali Payani, Yu Wang (other), Haitong Ma, Wenya Wang, Chengguang Wang, Yu Zhang, Xin Wang, Yongfeng Zhang, Jiaxuan You, Hanghang Tong, Xiao Luo, Yizhou Sun, Wei Wang, Julian McAuley, James Zou, Jiawei Han, Philip S. Yu, Kai Shu",
       venue: "Arxiv Preprint",
