@@ -175,6 +175,15 @@ const PersonalWebsite: React.FC = () => {
 
   const publications: Publication[] = [
     {
+      title: "Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
+      authors: "Zexue He*, Yu Wang*, Churan Zhi*, Yuanzhe Hu, Tzu-Ping Chen, Lang Yin, Ze Chen, Tong Arthur Wu, Siru Ouyang, Zihan Wang, Jiaxin Pei, Julian McAuley, Yejin Choi, Alex Pentland",
+      venue: "Arxiv Preprint",
+      year: 2026,
+      link: "https://arxiv.org/pdf/2602.16313",
+      github: "https://memoryarena.github.io/",
+      stars: "https://img.shields.io/badge/Project-Homepage-blue"
+    },
+    {
       title: "Mem-α: Learning Memory Construction via Reinforcement Learning",
       authors: "Yu Wang, Ryuichi Takanobu, Zhiqi Liang, Yuzhen Mao, Yuanzhe Hu, Julian McAuley, Xiaojian Wu",
       venue: "Arxiv Preprint",
@@ -248,6 +257,15 @@ const PersonalWebsite: React.FC = () => {
   ];
 
   const allPublications: Publication[] = [
+    {
+      title: "Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
+      authors: "Zexue He*, Yu Wang*, Churan Zhi*, Yuanzhe Hu, Tzu-Ping Chen, Lang Yin, Ze Chen, Tong Arthur Wu, Siru Ouyang, Zihan Wang, Jiaxin Pei, Julian McAuley, Yejin Choi, Alex Pentland",
+      venue: "Arxiv Preprint",
+      year: 2026,
+      link: "https://arxiv.org/pdf/2602.16313",
+      github: "https://memoryarena.github.io/",
+      stars: "https://img.shields.io/badge/Project-Homepage-blue"
+    },
     {
       title: "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
       authors: "Peng Xia, Jianwen Chen, Hanyang Wang, Jiaqi Liu, Kaide Zeng, Yu Wang, Siwei Han, Yiyang Zhou, Xujiang Zhao, Haifeng Chen, Zeyu Zheng, Cihang Xie, Huaxiu Yao",
@@ -819,4 +837,3 @@ const PersonalWebsite: React.FC = () => {
 };
 
 export default PersonalWebsite; 
-
